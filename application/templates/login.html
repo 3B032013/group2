@@ -1,0 +1,13 @@
+{% extends "base_auth.html" %}
+
+{% block title %}登入{% endblock %}
+
+{% block content %}
+    <h2>歡迎回來，請登入</h2>
+    <form action="/dashboard/" method="get">
+        <input type="email" placeholder="電子郵件" required>
+        <input type="password" placeholder="密碼" required>
+        <button type="submit" class="btn">登入</button>
+    </form>
+    <a href="/register" class="link">還沒有帳號？ <span>立即註冊</span></a>
+{% endblock %}
