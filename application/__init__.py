@@ -587,8 +587,9 @@ def create_app():
     server = Flask(__name__)
     
     with server.app_context():
-        from .routes import auth_bp
+        from .routes import auth_bp, member_bp
         server.register_blueprint(auth_bp)
+        server.register_blueprint(member_bp)
 
     @server.route('/')
     def index():
@@ -629,9 +630,9 @@ def create_app():
             html.H5("會員專區", style={'fontSize': '16px', 'color': THEME['primary'], 'fontWeight': 'bold', 'marginTop': '20px'}),
             dbc.Nav(
                 [
-                    dbc.NavLink([html.Span("👤 ", style={'marginRight':'8px'}), "個人偏好設定"], href="#", disabled=True),
-                    dbc.NavLink([html.Span("❤️ ", style={'marginRight':'8px'}), "我的收藏行程"], href="#", disabled=True),
-                    dbc.NavLink([html.Span("📅 ", style={'marginRight':'8px'}), "行程排程管理"], href="#", disabled=True),
+                    dbc.NavLink([html.Span("👤 ", style={'marginRight':'8px'}), "個人偏好設定"], href="/member/preferences",external_link=True),
+                    dbc.NavLink([html.Span("❤️ ", style={'marginRight':'8px'}), "我的收藏行程"], href="/member/favorites",external_link=True),
+                    dbc.NavLink([html.Span("📅 ", style={'marginRight':'8px'}), "行程排程管理"], href="/member/schedule",external_link=True),
                 ],
                 vertical=True,
                 pills=True,
