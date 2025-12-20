@@ -2,133 +2,62 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}SlowDays 會員專區{% endblock %}</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: "Noto Sans TC", Arial, sans-serif;
-            background-color: #f6f7f9;
-        }
-
-        /* Header */
-        .header {
-            height: 70px;
-            background-color: #f2e6da; /* 接近你 Dashboard 的淺色系 */
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #d97706; /* 暖橘色 */
-        }
-
-        .header a {
-            text-decoration: none;
-            color: #d97706;
-            border: 1.5px solid #d97706;
-            padding: 6px 16px;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        /* Layout */
-        .container {
-            display: flex;
-            min-height: calc(100vh - 70px);
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 220px;
-            background-color: #ffffff;
-            padding: 24px;
-            border-right: 1px solid #e5e7eb;
-        }
-
-        .sidebar h3 {
-            font-size: 16px;
-            color: #d97706;
-            margin-bottom: 12px;
-        }
-
-        .sidebar a {
-            display: block;
-            margin-bottom: 10px;
-            text-decoration: none;
-            color: #374151;
-        }
-        .sidebar a {
-            display: block;
-            margin-bottom: 10px;
-            padding: 10px 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #374151;
-        }
-        /* 👉 被選中的狀態（藍底） */
-        .sidebar a.active {
-            background-color: #2563eb;   /* 藍底 */
-            color: white;
-            font-weight: 600;
-        }
-
-
-
-
-        /* Content */
-        .content {
-            flex: 1;
-            padding: 32px;
-        }
-
-        .content h1 {
-            margin-top: 0;
-            color: #374151;
-        }
-    </style>
+    <title>{% block title %}SlowDays{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/dashboard/assets/shared_style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="logo">SlowDays</div>
-        <a href="/dashboard/overview">回 Dashboard</a>
-    </div>
-
-    <!-- Main Layout -->
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h3>會員專區</h3>
-            <a href="/member/preferences"
-            class="{% if request.path == '/member/preferences' %}active{% endif %}">
-            👤 個人偏好設定
-        </a>
+    <div class="custom-header">
+        <div class="header-left">
+            <button id="sidebar-toggle" class="toggle-btn">☰</button>
+            <div class="header-logo">SlowDays Dashboard</div>
+        </div>
         
-            <a href="/member/favorites"
-            class="{% if request.path == '/member/favorites' %}active{% endif %}">
-            ❤️ 我的收藏行程
-        </a>
-
-            <a href="/member/schedule"
-            class="{% if request.path == '/member/schedule' %}active{% endif %}">
-            📅 行程排程管理
-        </a>
-    </div>
-
-
-
-
-        <!-- Content -->
-        <div class="content">
-            {% block content %}{% endblock %}
+        <div>
+            {% if current_user.is_authenticated %}
+                <span style="color: #FFA97F; font-weight: bold; margin-right: 15px;">Hi, {{ current_user.username }}</span>
+                <a href="/logout" class="btn-slow-primary">登出</a>
+            {% else %}
+                <a href="/login" class="btn-slow-outline">登入</a>
+            {% endif %}
         </div>
     </div>
+
+    <div class="custom-sidebar">
+        <div class="nav flex-column nav-pills">
+            {% for item in sidebar_items %}
+                {% if item.type == 'header' %}
+                    {% if item.margin_top %}
+                        <div class="sidebar-sub-header">{{ item.label }}</div>
+                    {% else %}
+                        <div class="sidebar-header">{{ item.label }}</div>
+                        <hr style="margin: 0 0 10px 0;">
+                    {% endif %}
+                {% elif item.type == 'link' %}
+                    <a href="{{ item.href }}" 
+                       class="nav-link {% if request.path == item.href %}active{% endif %}">
+                       <span style="margin-right: 8px;">{{ item.icon }}</span>
+                       <span>{{ item.label }}</span>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="custom-content">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="alert alert-warning" style="background-color: #FFF3CD; border-color: #FFECB5; color: #856404;">
+                {{ messages[0] }}
+            </div>
+          {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+    
+    <script src="/dashboard/assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

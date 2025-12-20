@@ -6,3 +6,6 @@ dash_leaflet
 geopy
 numpy
 flask
+psycopg2-binary
+flask-sqlalchemy
+flask-login

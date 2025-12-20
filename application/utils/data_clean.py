@@ -344,7 +344,7 @@ def load_and_merge_attractions_data(
         
         # 類別與圖片
         'PrimaryCategory', 'AttractionCategory', 'ThumbnailURL',
-        'PostalAddress.City', 'PostalAddress.Town', # 假設已經攤平
+        'PostalAddress.City', 'PostalAddress.Town', 'PostalAddress.StreetAddress', # 假設已經攤平
         
         # 摘要與服務
         'FeesSummary', 'ServiceTimesSummary',
@@ -416,7 +416,7 @@ def load_and_clean_event_data(event_path: str) -> pd.DataFrame:
     # 4. 欄位整理
     # ==========================================================
     keep_cols = [
-        'EventID', 'EventName', 'Description', 'PostalAddress.City', 'PostalAddress.Town',
+        'EventID', 'EventName', 'Description', 'PostalAddress.City', 'PostalAddress.Town', 'PostalAddress.StreetAddress',
         'Lat', 'Lon', 'StartDateTime', 'EndDateTime', 
         'DurationDays', 
         'EventCategoryIDs', 
@@ -495,7 +495,7 @@ def load_and_clean_hotel_data(hotel_path: str) -> pd.DataFrame:
     keep_cols = [
         # 核心識別與地理
         'HotelID', 'HotelName', 'Description', 
-        'PostalAddress.City', 'PostalAddress.Town',
+        'PostalAddress.City', 'PostalAddress.Town', 'PostalAddress.StreetAddress',
         'Lat', 'Lon', 
         
         # 價格與容量
@@ -683,6 +683,7 @@ def load_and_merge_restaurant_data(
         'Lon', 
         'PostalAddress.City',
         'PostalAddress.Town',
+        'PostalAddress.StreetAddress',
         
         # 服務與分類資訊
         'CuisineClasses',           # 原始代碼
