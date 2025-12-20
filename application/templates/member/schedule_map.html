@@ -1,0 +1,134 @@
+{% extends "member/base_member.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4><i class="bi bi-map me-2"></i>{{ plan.title }} - 行程路線圖</h4>
+        <a href="{{ url_for('member.edit_schedule', itinerary_id=plan.id) }}" class="btn btn-outline-secondary rounded-pill">
+            <i class="bi bi-arrow-left"></i> 返回編輯
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card shadow-sm mb-3">
+                <div class="card-header fw-bold">每日路線開關</div>
+                <div class="card-body">
+                    {% for day, points in daily_routes.items() %}
+                    <div class="form-check form-switch mb-2">
+                        <input class="form-check-input layer-toggle" type="checkbox" id="toggle-day-{{ day }}" checked data-day="{{ day }}">
+                        <label class="form-check-label fw-bold" for="toggle-day-{{ day }}" style="color: var(--day-color-{{ day }});">
+                            第 {{ day }} 天 ({{ points|length }} 個點)
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id="map" class="shadow-sm rounded" style="height: 80vh; width: 100%;"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    // 1. 初始化地圖
+    var map = L.map('map').setView([23.6, 120.9], 8); // 預設台灣中心
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // 2. 接收後端數據
+    var routesData = {{ daily_routes | tojson }};
+    
+    // 定義顏色庫 (給每一天不同顏色)
+    var colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#FFC300', '#33FFF5', '#8E44AD'];
+    var layers = {}; // 儲存每一天的 LayerGroup
+    var allMarkers = []; // 用來調整視野範圍
+
+    // 3. 繪製路線
+    Object.keys(routesData).forEach(function(day, index) {
+        var points = routesData[day];
+        var color = colors[(day - 1) % colors.length];
+        
+        // 設定 CSS 變數給左側選單用
+        document.documentElement.style.setProperty('--day-color-' + day, color);
+
+        var latlngs = [];
+        var dayGroup = L.layerGroup(); // 建立群組
+
+        points.forEach(function(p, i) {
+            var latlng = [p.lat, p.lng];
+            latlngs.push(latlng);
+            allMarkers.push(latlng);
+
+            // 建立圓形標記 (含順序數字)
+            var markerHtml = `
+                <div style="
+                    background-color: ${color}; 
+                    color: white; 
+                    width: 24px; height: 24px; 
+                    border-radius: 50%; 
+                    text-align: center; 
+                    line-height: 24px; 
+                    font-weight: bold; 
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+                    font-size: 12px;">
+                    ${i + 1}
+                </div>`;
+            
+            var customIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: markerHtml,
+                iconSize: [24, 24],
+                iconAnchor: [12, 12]
+            });
+
+            var marker = L.marker(latlng, {icon: customIcon})
+                .bindPopup(`<b>${p.name}</b><br><span class="text-muted">${p.time}</span>`);
+            
+            dayGroup.addLayer(marker);
+        });
+
+        // 畫連線
+        if (latlngs.length > 1) {
+            var polyline = L.polyline(latlngs, {
+                color: color, 
+                weight: 4, 
+                opacity: 0.7, 
+                dashArray: '5, 10' // 虛線效果
+            });
+            dayGroup.addLayer(polyline);
+            
+            // 加入箭頭裝飾 (選擇性)
+            // 需要引入 leaflet-arrowheads 插件才會有箭頭，這裡先省略
+        }
+
+        // 加到地圖並存入管理物件
+        dayGroup.addTo(map);
+        layers[day] = dayGroup;
+    });
+
+    // 4. 自動調整視野以包含所有點
+    if (allMarkers.length > 0) {
+        var bounds = L.latLngBounds(allMarkers);
+        map.fitBounds(bounds, {padding: [50, 50]});
+    }
+
+    // 5. 控制開關邏輯
+    document.querySelectorAll('.layer-toggle').forEach(function(toggle) {
+        toggle.addEventListener('change', function() {
+            var day = this.getAttribute('data-day');
+            if (this.checked) {
+                map.addLayer(layers[day]);
+            } else {
+                map.removeLayer(layers[day]);
+            }
+        });
+    });
+</script>
+{% endblock %}

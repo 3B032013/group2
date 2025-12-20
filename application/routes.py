@@ -5,6 +5,9 @@ from . import db
 from .models import User, Favorite, Itinerary, ItineraryDetail
 from .nav_config import SIDEBAR_ITEMS
 from datetime import datetime
+import pandas as pd
+import json
+import os
 
 # ======================
 # Auth Blueprint（原本的）
@@ -77,6 +80,38 @@ def logout():
     logout_user() # 清除 session
     return redirect('/login')
 
+
+# ======================
+# 引入你的資料處理工具 (確保這些函式能被引用)
+from .utils.data_clean import (
+    load_and_merge_attractions_data,
+    load_and_clean_event_data,
+    load_and_clean_hotel_data,
+    load_and_merge_restaurant_data
+)
+
+# 設定資料路徑 (自動抓取上一層的 data 資料夾)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+
+def get_data_path(filename):
+    return os.path.join(DATA_DIR, filename)
+
+print("正在 routes.py 中載入地圖資料庫...")
+
+# 載入 4 大資料表 (這樣 routes.py 就能直接使用這些變數)
+attraction_df = load_and_merge_attractions_data(
+    attraction_path=get_data_path('AttractionList.json'),
+    fee_path=get_data_path('AttractionFeeList.json'),
+    service_time_path=get_data_path('AttractionServiceTimeList.json')
+)
+event_df = load_and_clean_event_data(get_data_path('EventList.json'))
+hotel_df = load_and_clean_hotel_data(get_data_path('HotelList.json'))
+restaurant_df = load_and_merge_restaurant_data(
+    restaurant_path=get_data_path('RestaurantList.json'),
+    service_time_path=get_data_path('RestaurantServiceTimeList.json')
+)
+# ======================
 
 # ======================
 # Member Blueprint（新增的）
@@ -244,14 +279,113 @@ def save_all_schedule():
         print(f"DEBUG Save Error: {e}") # 方便你排錯
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
-# 2. 刪除單一地點
-@member_bp.route('/schedule/delete_item/<int:detail_id>', methods=['DELETE'])
+@member_bp.route('/schedule/rename/<int:itinerary_id>', methods=['POST'])
 @login_required
-def delete_schedule_item(detail_id):
-    detail = ItineraryDetail.query.get_or_404(detail_id)
-    # 安全檢查：確保這是該使用者的行程
-    if detail.itinerary.user_id == current_user.id:
+def rename_itinerary(itinerary_id):
+    # 驗證權限
+    plan = Itinerary.query.filter_by(id=itinerary_id, user_id=current_user.id).first_or_404()
+    
+    data = request.get_json()
+    new_title = data.get('title', '').strip()
+    
+    if not new_title:
+        return jsonify({'status': 'error', 'message': '標題不能為空'}), 400
+        
+    try:
+        plan.title = new_title
+        db.session.commit()
+        return jsonify({'status': 'success', 'message': '標題已更新'})
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
+# 2. 刪除單一地點
+@member_bp.route('/schedule/delete/<int:itinerary_id>', methods=['POST'])
+@login_required
+def delete_itinerary(itinerary_id):
+    # 1. 搜尋該行程，並確保是當前使用者的
+    plan = Itinerary.query.filter_by(id=itinerary_id, user_id=current_user.id).first_or_404()
+    
+    try:
+        # 2. 刪除行程 (SQLAlchemy 會自動刪除關聯的 details，如果有關聯設定的話)
+        # 如果沒有設定 cascade，這裡可能需要手動刪除 details，但通常 Itinerary 刪除就好
+        db.session.delete(plan)
+        db.session.commit()
+        return jsonify({'status': 'success', 'message': '行程已刪除'})
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+    
+@member_bp.route('/schedule/detail/delete/<int:detail_id>', methods=['POST'])
+@login_required
+def delete_itinerary_detail(detail_id):
+    # 搜尋該細節，並透過 join 確保它屬於當前使用者的行程
+    detail = ItineraryDetail.query.join(Itinerary).filter(
+        ItineraryDetail.id == detail_id,
+        Itinerary.user_id == current_user.id
+    ).first_or_404()
+    
+    try:
         db.session.delete(detail)
         db.session.commit()
-        return jsonify({'status': 'success'})
-    return jsonify({'status': 'error', 'message': '權限不足'}), 403
+        return jsonify({'status': 'success', 'message': '項目已刪除'})
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+    
+@member_bp.route('/schedule/map/<int:itinerary_id>')
+@login_required
+def schedule_map(itinerary_id):
+    plan = Itinerary.query.filter_by(id=itinerary_id, user_id=current_user.id).first_or_404()
+    
+    daily_routes = {}
+    
+    # ⭐️ 移除這一行，因為我們已經在上面定義全域變數了
+    # from .app import attraction_df, restaurant_df... (這行刪掉)
+
+    # 建立查找 Helper
+    def get_coords(item_id, category):
+        row = None
+        # 注意：這裡直接使用全域變數 attraction_df 等
+        if category == '景點':
+            row = attraction_df[attraction_df['AttractionID'].astype(str) == str(item_id)]
+        elif category == '餐飲' or category == '餐廳':
+            row = restaurant_df[restaurant_df['RestaurantID'].astype(str) == str(item_id)]
+        elif category == '住宿':
+            row = hotel_df[hotel_df['HotelID'].astype(str) == str(item_id)]
+        elif category == '活動':
+            row = event_df[event_df['EventID'].astype(str) == str(item_id)]
+            
+        if row is not None and not row.empty:
+            # 兼容不同的欄位名稱 (有些資料可能是 PositionLat，有些是 Lat)
+            lat = row.iloc[0].get('Lat')
+            lon = row.iloc[0].get('Lon')
+            
+            # 如果是 NaN，嘗試讀取 PositionLat
+            if pd.isna(lat): lat = row.iloc[0].get('PositionLat')
+            if pd.isna(lon): lon = row.iloc[0].get('PositionLon')
+                
+            return lat, lon
+        return None, None
+
+    # 整理資料
+    sorted_details = sorted(plan.details, key=lambda x: (x.day_number, x.start_time or '00:00'))
+    
+    for detail in sorted_details:
+        if detail.day_number == 0: continue 
+        
+        lat, lng = get_coords(detail.item_id, detail.category)
+        
+        if lat and lng and not pd.isna(lat) and not pd.isna(lng):
+            if detail.day_number not in daily_routes:
+                daily_routes[detail.day_number] = []
+            
+            daily_routes[detail.day_number].append({
+                'name': detail.name,
+                'lat': float(lat),
+                'lng': float(lng),
+                'time': f"{detail.start_time} - {detail.end_time}",
+                'category': detail.category
+            })
+
+    return render_template('member/schedule_map.html', plan=plan, daily_routes=daily_routes)
