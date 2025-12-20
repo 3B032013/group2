@@ -8,7 +8,7 @@ import math
 from flask import Flask, redirect
 from .extensions import db, login_manager
 from flask_login import current_user
-from dash import Dash, html, dcc, Input, State, Output, dash_table, no_update, ctx, ALL
+from dash import Dash, html, dcc, Input, State, Output, dash_table, no_update, ctx, ALL, set_props
 from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 import dash_leaflet as dl
@@ -801,7 +801,6 @@ def register_callbacks(app):
             return is_open, no_update, no_update, no_update
 
     @app.callback(
-        Output("redirect-login", "pathname"),
         [Output({'type': 'btn-add-cart', 'index': ALL, 'category': ALL}, 'children'), 
         Output({'type': 'btn-add-cart', 'index': ALL, 'category': ALL}, 'color'), 
         Output("cart-items-content", "children", allow_duplicate=True), 
@@ -813,24 +812,26 @@ def register_callbacks(app):
     def add_to_cart_global(n_clicks_list):
         trigger = ctx.triggered_id
         
-        # 0. 初始化回傳值：所有原本的 Output 都設為 no_update
+        # 初始化：全部 no_update
         no_updates_list = [no_update] * len(n_clicks_list)
         
         # 1. 防止 Ghost Fire (剛載入頁面時的自動觸發)
         if not trigger or not any(n for n in n_clicks_list if n): 
-            # Url=no_update, 其他維持原樣
-            return no_update, no_updates_list, no_updates_list, no_update, no_update, no_update
+            return no_updates_list, no_updates_list, no_update, no_update, no_update
 
-        # 2. 【關鍵導向】檢查是否登入
+        # 2. 【安全檢查】確認是否登入
+        # 如果沒登入，直接結束函式，不做任何動作 (避免讀取 current_user.id 導致崩潰)
         if not current_user.is_authenticated:
-            print("使用者未登入，準備導向至登入頁面...")
-            return "/login", no_updates_list, no_updates_list, no_update, no_update, no_update
+            print("使用者未登入，忽略加入行程操作")
+            return no_updates_list, no_updates_list, no_update, no_update, no_update
+
+        # --- 以下是已登入才會執行的區域 ---
 
         target_id = str(trigger['index'])
         category = trigger['category']
         
         try:
-            # 3. 寫入資料庫邏輯 (保持原本不變)
+            # 3. 寫入資料庫邏輯
             if not CartItem.query.filter_by(user_id=current_user.id, item_id=target_id).first():
                 row = get_data_by_id(target_id, category)
                 if row is not None:
@@ -844,7 +845,7 @@ def register_callbacks(app):
             print(f"Database Error: {e}")
             db.session.rollback()
         
-        # 4. 更新 UI 邏輯 (保持原本不變)
+        # 4. 更新 UI 邏輯
         curr_ids = {str(c.item_id) for c in CartItem.query.filter_by(user_id=current_user.id).all()}
         
         children, colors = [], []
@@ -858,7 +859,7 @@ def register_callbacks(app):
         
         cart_html, badge = generate_cart_html()
         
-        return no_update, children, colors, cart_html, badge, no_update
+        return children, colors, cart_html, badge, no_update
 
     @app.callback(
         [Output("cart-items-content", "children", allow_duplicate=True), 
