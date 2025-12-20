@@ -36,3 +36,39 @@ class Favorite(db.Model):
 
     def __repr__(self):
         return f'<Favorite {self.name}>'
+    
+class CartItem(db.Model):
+    __tablename__ = 'cart_items'
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    item_id = db.Column(db.String(100), nullable=False)
+    category = db.Column(db.String(50))
+    name = db.Column(db.String(255), nullable=False)
+    image_url = db.Column(db.Text)
+    location = db.Column(db.String(100))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+class Itinerary(db.Model):
+    __tablename__ = 'itineraries'
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)   
+    title = db.Column(db.String(100), nullable=False)
+    start_date = db.Column(db.Date)
+    end_date = db.Column(db.Date)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    
+    details = db.relationship('ItineraryDetail', backref='itinerary', lazy=True, cascade="all, delete-orphan")
+
+class ItineraryDetail(db.Model):
+    __tablename__ = 'itinerary_details'
+    id = db.Column(db.Integer, primary_key=True)
+    itinerary_id = db.Column(db.Integer, db.ForeignKey('itineraries.id'), nullable=False)
+    day_number = db.Column(db.Integer, default=1)
+    item_id = db.Column(db.String(100))
+    name = db.Column(db.String(255))
+    category = db.Column(db.String(50))
+    image_url = db.Column(db.Text)
+    location = db.Column(db.String(100))
+    sort_order = db.Column(db.Integer, default=0)
+    start_time = db.Column(db.String(10)) # 例如 "09:00"
+    end_time = db.Column(db.String(10))   # 例如 "11:30"

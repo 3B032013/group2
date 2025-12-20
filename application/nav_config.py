@@ -34,19 +34,19 @@ SIDEBAR_ITEMS = [
     {
         "type": "link", 
         "label": "個人偏好設定", 
-        "href": "/member/preferences", 
+        "href": "/preferences", 
         "icon": "👤 "
     },
     {
         "type": "link", 
         "label": "我的收藏行程", 
-        "href": "/member/favorites", 
+        "href": "/favorites", 
         "icon": "❤️ "
     },
     {
         "type": "link", 
         "label": "行程排程管理", 
-        "href": "/member/schedule", 
+        "href": "/schedule", 
         "icon": "📅 "
     },
 ]

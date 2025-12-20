@@ -24,7 +24,7 @@ db = SQLAlchemy()
 login_manager = LoginManager()
 
 from .nav_config import SIDEBAR_ITEMS
-from .models import User, Favorite
+from .models import User, Favorite, CartItem, Itinerary, ItineraryDetail
 
 # 1: Import 路徑
 from .utils.const import get_constants, TAB_STYLE, ALL_COMPARE_METRICS, get_constants_event, get_constants_hotel, get_constants_restaurant
@@ -149,41 +149,41 @@ def generate_trip_card(row, type_tag, user_favs=None):
     return html.Div(
         className="trip-card",
         children=[
-            html.Div(
-                [
-                    html.Img(src=img_url, className="trip-card-img"),
-                    
-                    # ⭐️ 3. 設定按鈕樣式
+            html.Div([
+                html.Img(src=img_url, className="trip-card-img"),
+                # 原有的收藏按鈕
+                dbc.Button(
+                    html.Span("❤", style={'fontSize': '24px', 'color': 'inherit'}),
+                    id={'type': 'btn-add-favorite', 'index': item_id, 'category': type_tag},
+                    className="btn-favorite-overlay",
+                    style={'color': initial_color},
+                    n_clicks=0
+                )
+            ], className="trip-card-img-container"),
+
+            html.Div(className="trip-card-body", children=[
+                html.Div([
+                    html.Span(location_str, className="trip-location"),
+                    html.Span(" • ", style={'margin': '0 5px', 'color': '#ccc'}),
+                    html.Span(type_tag, style={'color': '#888'})
+                ], className="trip-tag-line"),
+                html.Div(name, className="trip-card-title", title=name),
+                
+                # ⭐️ 按鈕組：詳情 + 加入行程
+                html.Div([
                     dbc.Button(
-                        html.Span("❤", className="heart-icon", style={'fontSize': '24px', 'lineHeight': '1', 'color': 'inherit'}),
-                        id={'type': 'btn-add-favorite', 'index': item_id, 'category': type_tag},
-                        className="btn-favorite-overlay",
-                        style={'color': initial_color}, # 這裡設定顏色
-                        n_clicks=0
+                        "詳情 >", 
+                        id={'type': 'btn-view-detail', 'index': item_id, 'category': type_tag},
+                        color="link", className="p-0 text-decoration-none fw-bold"
+                    ),
+                    dbc.Button(
+                        [html.I(className="bi bi-cart-plus me-1"), "加入行程"],
+                        id={'type': 'btn-add-cart', 'index': item_id, 'category': type_tag},
+                        color="success", size="sm", className="rounded-pill px-3 shadow-sm",
+                        style={'fontSize': '0.8rem'}
                     )
-                ],
-                className="trip-card-img-container"
-            ),
-            html.Div(
-                className="trip-card-body",
-                children=[
-                    html.Div([
-                        html.Span(location_str, className="trip-location"),
-                        html.Span(" • ", style={'margin': '0 5px', 'color': '#ccc'}),
-                        html.Span(type_tag, style={'color': '#888'})
-                    ], className="trip-tag-line"),
-                    html.Div(name, className="trip-card-title", title=name),
-                    html.Div([
-                        dbc.Button(
-                            "查看詳情 >", 
-                            id={'type': 'btn-view-detail', 'index': item_id, 'category': type_tag},
-                            color="link", 
-                            className="link-details p-0", 
-                            style={'textDecoration': 'none', 'fontWeight': '600'}
-                        ),
-                    ], className="trip-card-footer")
-                ]
-            )
+                ], className="d-flex justify-content-between align-items-center mt-3")
+            ])
         ]
     )
 
@@ -781,7 +781,6 @@ def register_callbacks(app):
     # --------------------------------------------------------------------------------
     # 這裡開始是你所有的 Callbacks 
     # --------------------------------------------------------------------------------
-
     # 1. 長條圖 (Bar Chart)
     @app.callback(Output('tabs-content-1', 'children'), [Input('dropdown-bar-1', 'value'), Input('url', 'pathname')])
     def update_bar_chart(dropdown_value, pathname):
@@ -1247,6 +1246,234 @@ def register_callbacks(app):
 
         return is_open, no_update, no_update
 
+    @app.callback(
+        [Output("btn-open-cart", "style"),
+         Output("cart-badge", "children"),
+         Output("cart-items-content", "children")],
+        [Input("url", "pathname")]
+    )
+    def init_and_control_cart(pathname):
+        # 1. 判斷是否顯示按鈕
+        if pathname != "/dashboard/planner":
+            return {'display': 'none'}, "", ""
+        
+        btn_style = {
+            'position': 'fixed', 'bottom': '30px', 'right': '30px', 
+            'width': '60px', 'height': '60px', 'zIndex': '1000',
+            'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center'
+        }
+
+        # 2. 檢查登入
+        if not current_user.is_authenticated:
+            return btn_style, "", html.P("請先登入以檢視行程籃", className="text-center mt-5 text-muted")
+
+        # 3. 抓取資料庫
+        try:
+            items = CartItem.query.filter_by(user_id=current_user.id).order_by(CartItem.created_at.desc()).all()
+            count = len(items)
+            
+            if not items:
+                cart_html = html.P("籃子目前是空的", className="text-center mt-5 text-muted")
+            else:
+                cart_html = [
+                    html.Div([
+                        html.Img(src=item.image_url, style={'width': '50px', 'height': '50px', 'objectFit': 'cover', 'borderRadius': '5px'}),
+                        html.Div([
+                            html.Div(item.name, className="fw-bold small"),
+                            html.Small(item.category, className="text-muted")
+                        ], className="ms-3")
+                    ], className="d-flex align-items-center mb-3 border-bottom pb-2") for item in items
+                ]
+            return btn_style, (str(count) if count > 0 else ""), cart_html
+        except Exception as e:
+            return btn_style, "", f"載入錯誤: {str(e)}"
+
+    @app.callback(
+        [Output({'type': 'btn-add-cart', 'index': ALL, 'category': ALL}, 'children'),
+         Output({'type': 'btn-add-cart', 'index': ALL, 'category': ALL}, 'color'),
+         Output("cart-items-content", "children", allow_duplicate=True),
+         Output("cart-badge", "children", allow_duplicate=True),
+         Output("itinerary-cart-sidebar", "is_open", allow_duplicate=True)],
+        [Input({'type': 'btn-add-cart', 'index': ALL, 'category': ALL}, 'n_clicks')],
+        prevent_initial_call=True
+    )
+    def add_to_itinerary_cart(n_clicks_list):
+        # 1. 取得觸發資訊
+        trigger = ctx.triggered_id  # 這會直接回傳像 {'type': '...', 'index': '...', 'category': '...'}
+        
+        if not trigger or not current_user.is_authenticated:
+            return [no_update]*len(n_clicks_list), [no_update]*len(n_clicks_list), no_update, no_update, no_update
+
+        # 2. 取得點擊按鈕的資訊
+        item_id = str(trigger['index'])
+        category = trigger['category']
+        print(f"DEBUG: 🚀 觸發加入動作! ID: {item_id}, Category: {category}")
+
+        # 3. 資料庫寫入邏輯
+        try:
+            # 檢查是否重複
+            exists = CartItem.query.filter_by(user_id=current_user.id, item_id=item_id).first()
+            if not exists:
+                # 取得正確的 DataFrame
+                target_map = {
+                    "景點": (attraction_df, 'AttractionID', 'AttractionName'),
+                    "活動": (event_df, 'EventID', 'EventName'),
+                    "住宿": (hotel_df, 'HotelID', 'HotelName'),
+                    "餐廳": (restaurant_df, 'RestaurantID', 'RestaurantName')
+                }
+                
+                df, id_col, name_col = target_map.get(category, (None, None, None))
+                
+                if df is not None:
+                    # 強制轉型為字串進行比對
+                    filtered = df[df[id_col].astype(str) == item_id]
+                    
+                    if not filtered.empty:
+                        row = filtered.iloc[0]
+                        
+                        # 圖片與地點處理
+                        img = row.get('ThumbnailURL') or row.get('Picture.PictureUrl1') or row.get('PictureUrl1')
+                        if not img or pd.isna(img) or str(img).lower() == 'nan':
+                            img = "https://placehold.co/600x400/f5f5f5/999?text=No+Image"
+                        
+                        loc = row.get('PostalAddress.City') or row.get('City') or "台灣"
+                        if pd.isna(loc): loc = "台灣"
+
+                        new_item = CartItem(
+                            user_id=current_user.id,
+                            item_id=item_id,
+                            category=category,
+                            name=row.get(name_col, "未命名"),
+                            image_url=img,
+                            location=loc
+                        )
+                        db.session.add(new_item)
+                        db.session.commit()
+                        print(f"DEBUG: ✅ 成功寫入資料庫: {new_item.name}")
+                    else:
+                        print(f"DEBUG: ⚠️ 在 DataFrame 中找不到 ID 為 {item_id} 的資料")
+            else:
+                print(f"DEBUG: ℹ️ 項目 {item_id} 已在行程籃中")
+        
+        except Exception as e:
+            db.session.rollback()
+            print(f"DEBUG: ❌ 資料庫錯誤: {str(e)}")
+
+        # 4. 重新抓取資料庫以更新介面
+        current_cart = CartItem.query.filter_by(user_id=current_user.id).all()
+        user_cart_ids = {str(c.item_id) for c in current_cart}
+        
+        # 更新按鈕狀態
+        updated_children = []
+        updated_colors = []
+        # 注意：ctx.outputs_list[0] 是對應第一個 Output (即按鈕 children)
+        for spec in ctx.outputs_list[0]:
+            bid = str(spec['id']['index'])
+            if bid in user_cart_ids:
+                updated_children.append([html.I(className="bi bi-check-circle-fill me-1"), "已加入"])
+                updated_colors.append("secondary")
+            else:
+                updated_children.append([html.I(className="bi bi-cart-plus me-1"), "加入行程"])
+                updated_colors.append("success")
+
+        # 更新側邊欄內容
+        if not current_cart:
+            cart_html = html.P("籃子是空的", className="text-center mt-5")
+        else:
+            cart_html = [
+                html.Div([
+                    html.Img(src=item.image_url, style={'width': '50px', 'borderRadius': '5px'}),
+                    html.Div([
+                        html.Div(item.name, className="fw-bold small"),
+                        html.Small(item.category, className="text-muted")
+                    ], className="ms-3")
+                ], className="d-flex align-items-center mb-2 border-bottom pb-2") for item in current_cart
+            ]
+
+        return updated_children, updated_colors, cart_html, str(len(current_cart)), no_update
+    
+    # 手動點擊右下角圖示開啟籃子
+    @app.callback(
+        Output("itinerary-cart-sidebar", "is_open", allow_duplicate=True),
+        [Input("btn-open-cart", "n_clicks")],
+        [State("itinerary-cart-sidebar", "is_open")],
+        prevent_initial_call=True
+    )
+    def toggle_cart_sidebar(n_clicks, is_open):
+        if n_clicks:
+            return not is_open
+        return is_open
+    
+    # 1. 當側邊欄開啟時，動態讀取該使用者的行程清單
+    @app.callback(
+        Output("select-target-itinerary", "options"),
+        [Input("itinerary-cart-sidebar", "is_open")]
+    )
+    def load_itineraries_to_dropdown(is_open):
+        # 只有在側邊欄打開且使用者已登入時才抓取
+        if is_open and current_user.is_authenticated:
+            try:
+                # 從資料庫撈取該會員的所有 Itinerary 專案
+                plans = Itinerary.query.filter_by(user_id=current_user.id).order_by(Itinerary.created_at.desc()).all()
+                print(f"DEBUG: 抓取到 {len(plans)} 個行程專案") # Debug 用
+                
+                # 回傳給 dcc.Dropdown 的格式必須是 [{'label': '名稱', 'value': ID}, ...]
+                return [{'label': p.title, 'value': p.id} for p in plans]
+            except Exception as e:
+                print(f"DEBUG: 抓取行程失敗: {e}")
+                return []
+        return []
+
+    # 2. 處理「存入行程」的動作
+    @app.callback(
+        [Output("cart-items-content", "children", allow_duplicate=True),
+         Output("cart-badge", "children", allow_duplicate=True),
+         Output("save-status-message", "children")], # 這是顯示成功訊息的地方
+        [Input("btn-save-to-itinerary", "n_clicks")],
+        [State("select-target-itinerary", "value")], # 抓取選單選了哪個 ID
+        prevent_initial_call=True
+    )
+    def confirm_save_to_itinerary(n_clicks, itinerary_id):
+        if not n_clicks:
+            raise PreventUpdate
+        
+        if not itinerary_id:
+            return no_update, no_update, html.Span("❌ 請先選擇一個目標行程！", className="text-danger")
+
+        try:
+            # A. 找出暫存籃裡的所有項目
+            cart_items = CartItem.query.filter_by(user_id=current_user.id).all()
+            if not cart_items:
+                return no_update, no_update, html.Span("⚠️ 籃子是空的喔！", className="text-warning")
+
+            # B. 將每一筆搬到 ItineraryDetail
+            for item in cart_items:
+                new_detail = ItineraryDetail(
+                    itinerary_id=itinerary_id,
+                    item_id=item.item_id,
+                    name=item.name,
+                    category=item.category,
+                    image_url=item.image_url,
+                    location=item.location,
+                    day_number=0,
+                    sort_order=0 # 初始排序設為 0
+                )
+                db.session.add(new_detail)
+            
+            # C. 刪除暫存籃內容 (清空購物車)
+            CartItem.query.filter_by(user_id=current_user.id).delete()
+            db.session.commit()
+            
+            print(f"DEBUG: 成功將項目匯入行程 ID: {itinerary_id}")
+            
+            # 回傳：清空畫面清單、清空紅點、顯示成功訊息
+            return html.P("已匯入行程表！", className="text-center mt-5 text-success"), "", "✅ 存入成功！"
+            
+        except Exception as e:
+            db.session.rollback()
+            print(f"DEBUG: 匯入失敗: {e}")
+            return no_update, no_update, html.Span(f"❌ 錯誤: {str(e)}", className="text-danger")
+
     # POI地圖
     # 1. 切換搜尋模式 (控制 UI 顯示)
     @app.callback(
@@ -1444,7 +1671,7 @@ def create_app():
         assets_folder='assets',   
         external_stylesheets=[dbc.themes.BOOTSTRAP],
         title='SlowDays', 
-        suppress_callback_exceptions=True
+        suppress_callback_exceptions=True,
     )
 
     # --- 動態生成 Sidebar (根據 Config) ---
@@ -1478,7 +1705,6 @@ def create_app():
 
     # --- Serve Layout ---
     def serve_layout():
-        # 登入按鈕邏輯 (保持不變)
         if current_user.is_authenticated:
             auth_component = html.Div([
                 html.Span(f"Hi, {current_user.username}", style={'color': '#FFA97F', 'fontWeight': 'bold', 'marginRight': '15px'}),
@@ -1491,26 +1717,56 @@ def create_app():
 
         return html.Div([
             dcc.Location(id="url", refresh=False),
-
+            
             # Header
             html.Div([
-                # 左側：按鈕 + Logo
                 html.Div([
-                    # ⭐️ 新增：縮放按鈕
                     html.Button("☰", id="sidebar-toggle", className="toggle-btn"), 
                     html.Div("SlowDays Dashboard", className="header-logo"),
-                ], className="header-left"), # 記得加這個 class (CSS有定義)
-                
-                # 右側：登入資訊
+                ], className="header-left"),
                 auth_component
             ], className="custom-header"),
 
-            # Sidebar
             sidebar,
 
-            # Content
-            html.Div(id="page-content", className="custom-content")
+            # 主內容區
+            html.Div(id="page-content", className="custom-content"),
 
+            # 右下角浮動按鈕 (預設隱藏)
+            html.Button(
+                [
+                    html.I(className="bi bi-calendar-week", style={'fontSize': '1.5rem'}),
+                    html.Span("", id="cart-badge", className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger")
+                ],
+                id="btn-open-cart",
+                className="btn btn-primary rounded-circle shadow-lg",
+                style={'position': 'fixed', 'bottom': '30px', 'right': '30px', 'width': '60px', 'height': '60px', 'zIndex': '1000', 'display': 'none'}
+            ),
+
+            # 側邊欄 (Offcanvas)
+            dbc.Offcanvas(
+                id="itinerary-cart-sidebar",
+                title="🗓️ 分配景點至行程",
+                is_open=False,
+                placement="end",
+                children=[
+                    html.Div([
+                        html.Label("1. 選擇目標行程專案", className="fw-bold small mb-1"),
+                        dcc.Dropdown(
+                            id="select-target-itinerary",
+                            placeholder="--- 請選擇行程 ---",
+                            className="mb-3"
+                        ),
+                        html.Hr(),
+                        html.Label("2. 待分配的項目", className="fw-bold small mb-1"),
+                        html.Div(id="cart-items-content"),
+                        
+                        dbc.Button("確認存入選定行程", id="btn-save-to-itinerary", 
+                                color="primary", className="w-100 mt-4 rounded-pill"),
+                        html.Div(id="save-status-message", className="mt-2 small text-center")
+                    ], className="p-2")
+                ],
+            ),
         ])
 
     dash_app.layout = serve_layout

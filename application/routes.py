@@ -1,9 +1,10 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash
+from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
-from .models import User, Favorite
+from .models import User, Favorite, Itinerary, ItineraryDetail
 from .nav_config import SIDEBAR_ITEMS
+from datetime import datetime
 
 # ======================
 # Auth Blueprint（原本的）
@@ -86,7 +87,7 @@ member_bp = Blueprint('member', __name__)
 def inject_common_vars():
     return dict(sidebar_items=SIDEBAR_ITEMS)
 
-@member_bp.route('/member/preferences', methods=['GET', 'POST'])
+@member_bp.route('/preferences', methods=['GET', 'POST'])
 @login_required
 def preferences():
     if request.method == 'POST':
@@ -100,7 +101,7 @@ def preferences():
 
     return render_template('member/preferences.html')
 
-@member_bp.route('/member/favorites')
+@member_bp.route('/favorites')
 @login_required
 def favorites():
     # 1. 取得 URL 參數 (預設第 1 頁，預設類別 'all')
@@ -162,14 +163,95 @@ def remove_favorite(fav_id):
         db.session.commit()
     return redirect(url_for('member.favorites'))
 
-@member_bp.route('/member/schedule')
+@member_bp.route('/schedule')
 @login_required
 def schedule():
-    schedules = [
-        {"date": "2025-04-03", "trip": "金門慢活三日遊"},
-        {"date": "2025-06-20", "trip": "台東藝文週末"},
-    ]
+    # 讀取該會員的所有行程專案
+    itineraries = Itinerary.query.filter_by(user_id=current_user.id).order_by(Itinerary.created_at.desc()).all()
+    return render_template('member/schedule.html', itineraries=itineraries)
+
+@member_bp.route('/schedule/create', methods=['POST'])
+@login_required
+def create_itinerary():
+    title = request.form.get('title')
+    # 接收日期字串並轉為 Python date 物件
+    start_date_str = request.form.get('start_date')
+    end_date_str = request.form.get('end_date')
+    
+    if title and start_date_str and end_date_str:
+        # 將字串轉換為 date 物件 (格式 YYYY-MM-DD)
+        start_date = datetime.strptime(start_date_str, '%Y-%m-%d').date()
+        end_date = datetime.strptime(end_date_str, '%Y-%m-%d').date()
+        
+        new_plan = Itinerary(
+            user_id=current_user.id, 
+            title=title,
+            start_date=start_date,
+            end_date=end_date
+        )
+        db.session.add(new_plan)
+        db.session.commit()
+        
+    return redirect(url_for('member.schedule'))
+
+# 這個是之後要做的「拖曳排程」詳細頁面
+@member_bp.route('/schedule/edit/<int:itinerary_id>')
+@login_required
+def edit_schedule(itinerary_id):
+    from datetime import timedelta
+    plan = Itinerary.query.get_or_404(itinerary_id)
+    if plan.user_id != current_user.id:
+        return "權限不足", 403
+    
+    # ⭐️ 核心修正：在後端先計算好總天數
+    if plan.start_date and plan.end_date:
+        total_days = (plan.end_date - plan.start_date).days + 1
+    else:
+        total_days = 1 # 防呆，若沒設定日期預設為 1 天
+
     return render_template(
-        'member/schedule.html',
-        schedules=schedules
+        'member/edit_schedule.html', 
+        plan=plan, 
+        timedelta=timedelta, 
+        total_days=total_days
     )
+
+# 1. 儲存拖曳後的排序與抵達時間
+@member_bp.route('/schedule/save_all', methods=['POST'])
+@login_required
+def save_all_schedule():
+    data = request.get_json()
+    items = data.get('items', [])
+    try:
+        for item in items:
+            # 確保傳入的 ID 是整數
+            detail_id = int(item['id'])
+            detail = ItineraryDetail.query.get(detail_id)
+            
+            if detail and detail.itinerary.user_id == current_user.id:
+                # ⭐️ 更新所有欄位
+                detail.day_number = int(item['day_number'])
+                detail.sort_order = int(item['sort_order'])
+                
+                # 如果在 day 0 (池子)，時間可以存 null
+                detail.start_time = item.get('start_time')
+                detail.end_time = item.get('end_time')
+                
+        db.session.commit()
+        return jsonify({'status': 'success'})
+    except Exception as e:
+        db.session.rollback()
+        print(f"DEBUG Save Error: {e}") # 方便你排錯
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
+# 2. 刪除單一地點
+@member_bp.route('/schedule/delete_item/<int:detail_id>', methods=['DELETE'])
+@login_required
+def delete_schedule_item(detail_id):
+    detail = ItineraryDetail.query.get_or_404(detail_id)
+    # 安全檢查：確保這是該使用者的行程
+    if detail.itinerary.user_id == current_user.id:
+        db.session.delete(detail)
+        db.session.commit()
+        return jsonify({'status': 'success'})
+    return jsonify({'status': 'error', 'message': '權限不足'}), 403
