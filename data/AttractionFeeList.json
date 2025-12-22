@@ -1,0 +1,3640 @@
+﻿{
+  "UpdateTime": "2025-11-07T14:31:43+08:00",
+  "UpdateInterval": 86400,
+  "Language": "Zh_tw",
+  "ProviderID": "A15010000H",
+  "AttractionFees": [
+    {
+      "AttractionID": "Attraction_376480000A_000004",
+      "AttractionName": "雲龍瀑布",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000020",
+      "AttractionName": "楓香巨木群公園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000022",
+      "AttractionName": "武昌宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000023",
+      "AttractionName": "奕青酒莊",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000053",
+      "AttractionName": "竹山連興宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000067",
+      "AttractionName": "日月潭涵碧步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000078",
+      "AttractionName": "水雲橋",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000080",
+      "AttractionName": "永興大樟樹",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000086",
+      "AttractionName": "名間新街冷泉濕地",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000089",
+      "AttractionName": "日月潭土亭仔步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000090",
+      "AttractionName": "日月潭─月潭自行車道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000094",
+      "AttractionName": "臺灣菸酒(股)公司南投觀光酒廠",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000096",
+      "AttractionName": "八通關古道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000097",
+      "AttractionName": "水里鵲橋",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000099",
+      "AttractionName": "紫南宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000100",
+      "AttractionName": "欣隆休閒農場",
+      "Fees": [
+        {
+          "Name": "門票",
+          "Price": 100,
+          "Description": "一般旅客",
+          "URL": "https://www.senlon.com.tw/view-experience.php?id=19"
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "兒童120公分以下免費",
+          "URL": "https://www.senlon.com.tw/view-experience.php?id=19"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000129",
+      "AttractionName": "軟鞍八卦茶園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000134",
+      "AttractionName": "拉魯島",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000143",
+      "AttractionName": "雙十吊橋",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000152",
+      "AttractionName": "林家養鹿場",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000159",
+      "AttractionName": "水里蛇窯陶藝文化園區",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 150,
+          "Description": "一般旅客",
+          "URL": null
+        },
+        {
+          "Name": "優惠票",
+          "Price": 120,
+          "Description": "110公分以上之孩童/學生&軍警/65歲以上",
+          "URL": null
+        },
+        {
+          "Name": "博愛票",
+          "Price": 75,
+          "Description": "殘障人士(憑證)及陪同者一人",
+          "URL": null
+        },
+        {
+          "Name": "免費票",
+          "Price": 0,
+          "Description": "10公分以下之孩童/南投縣水里鄉人士(憑證)",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000161",
+      "AttractionName": "廣興紙寮",
+      "Fees": [
+        {
+          "Name": "門票",
+          "Price": 50,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000162",
+      "AttractionName": "埔里寶湖宮天地堂地母廟",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000176",
+      "AttractionName": "鎮國寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000179",
+      "AttractionName": "軍功綠美橋",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000186",
+      "AttractionName": "登瀛書院",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000189",
+      "AttractionName": "南投縣竹藝博物館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000192",
+      "AttractionName": "芙蓉谷瀑布",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000196",
+      "AttractionName": "仙峰日月洞",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000197",
+      "AttractionName": "桂花森林",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000198",
+      "AttractionName": "藍田書院",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000208",
+      "AttractionName": "龍興吊橋",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000245",
+      "AttractionName": "造紙龍手創館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000250",
+      "AttractionName": "璞園藝術坊",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000253",
+      "AttractionName": "清境農場",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 200,
+          "Description": "一般民眾",
+          "URL": "https://www.cingjing.gov.tw/grassland/index.php?index_id=24"
+        },
+        {
+          "Name": "優待票",
+          "Price": 160,
+          "Description": "軍公教(現職)/軍公教(現職)/原住民/學生(13歲以上學生，憑有效學生證購票)/設籍南投縣埔里鎮、信義鄉之民眾，請出示身分證購票/團體(寒暑假全票人數達30位，非寒暑假全票人數達20位)",
+          "URL": "https://www.cingjing.gov.tw/grassland/index.php?index_id=24"
+        },
+        {
+          "Name": "半票",
+          "Price": 100,
+          "Description": "年滿65歲以上長者/低收入戶/兒童(6歲以上至12歲以下且未滿150公分)，若超過150公分但未滿13歲，請出示附照片之健保卡購票",
+          "URL": "https://www.cingjing.gov.tw/grassland/index.php?index_id=24"
+        },
+        {
+          "Name": "保險行政費",
+          "Price": 20,
+          "Description": "榮民、第二類退除役官兵與隨行配偶及直系血親/0歲至未滿6歲未滿115公分嬰幼兒，若超過115公分但未滿6歲，請出示附照片之健保卡購票/身心障礙者與一名陪伴者/設籍南投縣仁愛鄉之居民，請出示身分證購票/持內政部(地方政府)核發之志願服務榮譽卡之志工/導遊、領隊/持有數位榮福卡者，限本人使用",
+          "URL": "https://www.cingjing.gov.tw/grassland/index.php?index_id=24"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000254",
+      "AttractionName": "奧萬大國家森林遊樂區",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 200,
+          "Description": "一般成人無優待條件入園者。",
+          "URL": "https://awdonline.forest.gov.tw/basic/?mode=detail&node=29"
+        },
+        {
+          "Name": "一般優待票",
+          "Price": 150,
+          "Description": "非假日入園者。/搭乘大眾運輸工具，持有票根者。/購買二十張以上全票者。",
+          "URL": "https://awdonline.forest.gov.tw/basic/?mode=detail&node=29"
+        },
+        {
+          "Name": "半票",
+          "Price": 100,
+          "Description": "軍警人員持有證件者。/學生(憑學生證)、兒童(7~12歲)。/因公撫恤之遺族，持有證明者。/替代役男憑證。/南投縣民，持有證明者",
+          "URL": "https://awdonline.forest.gov.tw/basic/?mode=detail&node=29"
+        },
+        {
+          "Name": "優待票",
+          "Price": 10,
+          "Description": "六十五歲以上者，持有證明文件者。/兒童(3~6歲)。/小學生非假日戶外教學，由學校組隊，教師帶隊並出具公函者。/導遊人員持交通部觀光局核發之執業證者。",
+          "URL": "https://awdonline.forest.gov.tw/basic/?mode=detail&node=29"
+        },
+        {
+          "Name": "免購門票",
+          "Price": 0,
+          "Description": "身體殘障易辨者或持有殘障手冊者及其必要之陪伴者一人。/績優志工持有「志願服務榮譽卡」者。/設籍於仁愛鄉之原住民，憑相關證明原住民身分文件者,得免購門票及停車費。/公務人員因公出差至遊樂區，有出差單等證明文件者。/兒童(0~2歲，需由購票大人陪同)。/各級民意代表、義警、義消、民防隊員，因業務需要進入遊樂區而有証件者。/位於森林遊樂區附近之村民因林務農事通過該區時，憑國民身分証得免購門票。/區內機關(構)、公用事業經營單位或團體，其區內以外之人員，因業務需要至園區洽公持有證明文件者。",
+          "URL": "https://awdonline.forest.gov.tw/basic/?mode=detail&node=29"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000257",
+      "AttractionName": "台光香草園",
+      "Fees": [
+        {
+          "Name": "全套香草行程",
+          "Price": 370,
+          "Description": null,
+          "URL": null
+        },
+        {
+          "Name": "半套香草行程",
+          "Price": 150,
+          "Description": null,
+          "URL": null
+        },
+        {
+          "Name": "香草初體驗行程",
+          "Price": 60,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000267",
+      "AttractionName": "集集大山",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000272",
+      "AttractionName": "特有生物研究保育中心",
+      "Fees": [
+        {
+          "Name": "成人票",
+          "Price": 60,
+          "Description": null,
+          "URL": null
+        },
+        {
+          "Name": "學生票",
+          "Price": 30,
+          "Description": null,
+          "URL": null
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "65歲以上老人/集集鎮之居民（出示身分證証明）/持有身心障礙手冊/兒童身高未滿110公分/星期二學生免費入館",
+          "URL": null
+        },
+        {
+          "Name": "團體票",
+          "Price": 40,
+          "Description": "20人以上團體",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000274",
+      "AttractionName": "明新書院",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000281",
+      "AttractionName": "集集攔河堰",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000282",
+      "AttractionName": "集集綠色隧道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000284",
+      "AttractionName": "日月老茶廠",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000285",
+      "AttractionName": "杉林溪森林生態渡假園區",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 300,
+          "Description": "一般旅客",
+          "URL": "https://www.goto307.com.tw/tour/index.php?index_id=23"
+        },
+        {
+          "Name": "優待票",
+          "Price": 250,
+          "Description": "適用對象 / 高中、國中、國小(7歲-未滿18歲之兒童少年)。/南投縣居民 (憑國民身分證或相關證件)，於非假日入園。",
+          "URL": "https://www.goto307.com.tw/tour/index.php?index_id=23"
+        },
+        {
+          "Name": "博愛票",
+          "Price": 150,
+          "Description": "65 歲以上長者/持有身心障礙手冊者及其監護人或必要之陪伴者一人",
+          "URL": "https://www.goto307.com.tw/tour/index.php?index_id=23"
+        },
+        {
+          "Name": "清潔費",
+          "Price": 50,
+          "Description": "竹山鎮或鹿谷鄉之居民(憑國民身分證或相關證件)",
+          "URL": "https://www.goto307.com.tw/tour/index.php?index_id=23"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000288",
+      "AttractionName": "仙洞坪棋盤石",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000289",
+      "AttractionName": "埔里鯉魚潭",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000291",
+      "AttractionName": "桃米生態村",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000292",
+      "AttractionName": "大眾爺祠（大樟樹）",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000299",
+      "AttractionName": "雙龍瀑布七彩吊橋",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 100,
+          "Description": "一般旅客",
+          "URL": "https://nantou.welcometw.com/tour/2dMy"
+        },
+        {
+          "Name": "優待票",
+          "Price": 70,
+          "Description": "滿六歲至未滿十二歲兒童。/應購買全票者三十人以上之團體。/設籍本縣之縣民（憑國民身分證）。/現役軍警人員（憑證明文件）。",
+          "URL": "https://nantou.welcometw.com/tour/2dMy"
+        },
+        {
+          "Name": "特惠票",
+          "Price": 30,
+          "Description": "持地方主管機關核發之志願服務榮譽卡之志工。/年滿六十五歲以上者（憑國民身分證）。",
+          "URL": "https://nantou.welcometw.com/tour/2dMy"
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "未滿六歲之兒童。/身心障礙人士及陪同者一名(憑身心障礙證明)。/進入園區接洽公務並持有證明文件者。/設籍信義鄉之鄉民及設籍水里鄉民和村之村民(憑國民身份證)。",
+          "URL": "https://nantou.welcometw.com/tour/2dMy"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000301",
+      "AttractionName": "溪頭自然教育園區",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 200,
+          "Description": "一般民眾",
+          "URL": "https://www.exfo.ntu.edu.tw/xitou/page.php?id=16"
+        },
+        {
+          "Name": "優待票",
+          "Price": 160,
+          "Description": "12歲以上在學學生(憑學生證)。/凡30人（購買全票者）以上之團體。/臺大校友(憑臺大核發之校友證)。",
+          "URL": "https://www.exfo.ntu.edu.tw/xitou/page.php?id=16"
+        },
+        {
+          "Name": "半票",
+          "Price": 100,
+          "Description": "6歲以上(含)至12歲(未滿)之兒童。/設籍於南投縣之居民(憑國民身分證)。",
+          "URL": "https://www.exfo.ntu.edu.tw/xitou/page.php?id=16"
+        },
+        {
+          "Name": "特惠票",
+          "Price": 30,
+          "Description": "年滿65歲以上(含65歲)之長者(憑國民身分證)。/信義、水里二鄉鎮之各級學校經本處核准舉辦教學參觀活動之師生。/志工持地方主管機關核發「志願服務榮譽卡」者。",
+          "URL": "https://www.exfo.ntu.edu.tw/xitou/page.php?id=16"
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "未滿6歲以下兒童。/往自然教育園區接洽公務並持有證明文件者。/經本處專案核准前往自然教育園區教學實習、試驗調查、專題研究者。/鹿谷鄉、竹山鎮居民(憑國民身分證)，及在該二鄉鎮公務機關服務者(憑服務證)， 及二鄉鎮之各級學校經本處核准舉辦教學、參觀活動之師生。/臺大教職員工生(憑教職員證件、學生證)。/身體障礙易辨或持有身心障礙手冊者及其監護人或必要之陪伴者一人。(99年9月1日起實施)/前列得享免費入園者，請至售票處敘明身分索取免費票，憑此驗票聯入園，該驗票聯請妥善收存，出入售票處或需保險理賠時，皆須出示，倘若遺失，此聯恕不補發。",
+          "URL": "https://www.exfo.ntu.edu.tw/xitou/page.php?id=16"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000305",
+      "AttractionName": "長源圳生態步道-林爽文古戰場",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000306",
+      "AttractionName": "松柏嶺遊客中心",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000312",
+      "AttractionName": "九族文化村",
+      "Fees": [
+        {
+          "Name": "成人票",
+          "Price": 900,
+          "Description": "一般成人",
+          "URL": "https://www.nine.com.tw/page/about/index.aspx?kind=225&lang=TW"
+        },
+        {
+          "Name": "學生票",
+          "Price": 800,
+          "Description": "國中以上學生、高中、大專院校學生憑證購票",
+          "URL": "https://www.nine.com.tw/page/about/index.aspx?kind=225&lang=TW"
+        },
+        {
+          "Name": "兒童票",
+          "Price": 700,
+          "Description": "12歲以下(無法出示證明者以身高120公分以上未達150公分)國小學童適用。",
+          "URL": "https://www.nine.com.tw/page/about/index.aspx?kind=225&lang=TW"
+        },
+        {
+          "Name": "博幼票",
+          "Price": 450,
+          "Description": "65歲以上長者、孕婦、持有身心障礙手冊者(身障者必要陪伴者一人，同享博幼票價)、3歲以上未滿6歲幼童 (無法出示證明者以身高100公分以上未滿120公分)，憑證購票。",
+          "URL": "https://www.nine.com.tw/page/about/index.aspx?kind=225&lang=TW"
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "未滿3歲或身高未滿100公分者免費，須出示證明及家長陪同方可入園。(依交通部觀光局規定：照顧    者與3歲以下之幼兒人數比例應為1:3；對有特殊需求之幼兒，得由幼兒之法定代理人或志工1:1隨行照顧)。",
+          "URL": "https://www.nine.com.tw/page/about/index.aspx?kind=225&lang=TW"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000313",
+      "AttractionName": "泰雅渡假村",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 300,
+          "Description": "一般旅客",
+          "URL": "https://www.atayal.com.tw/zh-tw/ticket.php"
+        },
+        {
+          "Name": "團體票",
+          "Price": 250,
+          "Description": "25人以上。",
+          "URL": "https://www.atayal.com.tw/zh-tw/ticket.php"
+        },
+        {
+          "Name": "半票",
+          "Price": 250,
+          "Description": "學生、軍警、身障朋友/身障朋友陪護者一名、65歲以上者。",
+          "URL": "https://www.atayal.com.tw/zh-tw/ticket.php"
+        },
+        {
+          "Name": "學生票",
+          "Price": 250,
+          "Description": "12歲以下或身高115-150公分，國中、高中、大專憑證購票。",
+          "URL": "https://www.atayal.com.tw/zh-tw/ticket.php"
+        },
+        {
+          "Name": "幼童票",
+          "Price": 200,
+          "Description": "90-115公分未滿6歲之兒童。",
+          "URL": "https://www.atayal.com.tw/zh-tw/ticket.php"
+        },
+        {
+          "Name": "星光票",
+          "Price": 150,
+          "Description": "開放時間從下午18:00~22:00。",
+          "URL": "https://www.atayal.com.tw/zh-tw/ticket.php"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000315",
+      "AttractionName": "小半天石馬公園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000319",
+      "AttractionName": "車埕火車站",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000322",
+      "AttractionName": "東埔溫泉",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000329",
+      "AttractionName": "八通關古道-萬年亨衢碣",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000330",
+      "AttractionName": "德興瀑布",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000332",
+      "AttractionName": "日月潭文武廟",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000334",
+      "AttractionName": "竹山天梯風景區(梯子吊橋)",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 100,
+          "Description": "一般旅客",
+          "URL": "https://nantou.welcometw.com/tour/M1Y7"
+        },
+        {
+          "Name": "優待票",
+          "Price": 80,
+          "Description": "滿六歲至未滿十二歲兒童。/應購買全票者三十人以上之團體。/設籍本縣之縣民（憑國民身分證）。/現役軍警人員（憑證明文件）。/持地方主管機關核發之志願服務榮譽卡之志工。/年滿六十五歲以上者（憑證明文件）。",
+          "URL": "https://nantou.welcometw.com/tour/M1Y7"
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "設籍竹山鎮之鎮民（憑國民身份證）。/未滿六歲之兒童。/身心障礙人士及陪同者一名(憑身心障礙證明)。/進入園區接洽公務並持有證明文件者。",
+          "URL": "https://nantou.welcometw.com/tour/M1Y7"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000341",
+      "AttractionName": "七星陣地公園(碉堡)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000342",
+      "AttractionName": "九份二山地震紀念園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000349",
+      "AttractionName": "東埔吊橋",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000353",
+      "AttractionName": "王英信美術館",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 180,
+          "Description": "一般民眾",
+          "URL": "http://www.wang-art.com.tw/article_d.php?lang=tw&tb=5&id=179"
+        },
+        {
+          "Name": "優待票",
+          "Price": 150,
+          "Description": "國小(1~6年級)學童",
+          "URL": "http://www.wang-art.com.tw/article_d.php?lang=tw&tb=5&id=179"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000355",
+      "AttractionName": "敷榮堂",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000357",
+      "AttractionName": "竹山文化園區",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 100,
+          "Description": null,
+          "URL": "https://nantou.welcometw.com/tour/1N71"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000358",
+      "AttractionName": "農田水利教育園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000360",
+      "AttractionName": "九九峰生態藝術園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000369",
+      "AttractionName": "車籠埔斷層保存園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000372",
+      "AttractionName": "林班道商圈",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000373",
+      "AttractionName": "茶二指-茶業故事館",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 100,
+          "Description": null,
+          "URL": null
+        },
+        {
+          "Name": "半票",
+          "Price": 50,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000379",
+      "AttractionName": "瑞龍瀑布園區",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 100,
+          "Description": "一般旅客",
+          "URL": "https://nantou.welcometw.com/tour/EkKz"
+        },
+        {
+          "Name": "優待票",
+          "Price": 70,
+          "Description": "滿六歲至未滿十二歲兒童。/應購買全票者三十人以上之團體。/設籍本縣之縣民（憑國民身分證）。/現役軍警人員（憑證明文件）。",
+          "URL": "https://nantou.welcometw.com/tour/EkKz"
+        },
+        {
+          "Name": "特惠票",
+          "Price": 30,
+          "Description": "持地方主管機關核發之志願服務榮譽卡之志工。/年滿六十五歲以上者（憑國民身分證）。",
+          "URL": "https://nantou.welcometw.com/tour/EkKz"
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "未滿六歲之兒童。/身心障礙人士及陪同者一名(憑身心障礙證明)。/進入園區接洽公務並持有證明文件者。/設籍竹山鎮之鎮民(憑國民身份證)。",
+          "URL": "https://nantou.welcometw.com/tour/EkKz"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000380",
+      "AttractionName": "臺灣省政資料館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000381",
+      "AttractionName": "鳶峰觀景台(合歡山暗空公園)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000382",
+      "AttractionName": "日月潭伊達邵碼頭商圈",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000383",
+      "AttractionName": "忘憂森林",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000384",
+      "AttractionName": "猴探井遊憩區",
+      "Fees": [
+        {
+          "Name": "門票",
+          "Price": 50,
+          "Description": "一般旅客",
+          "URL": null
+        },
+        {
+          "Name": "團體票",
+          "Price": 30,
+          "Description": null,
+          "URL": null
+        },
+        {
+          "Name": "南投市民票",
+          "Price": 10,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000385",
+      "AttractionName": "木屐寮生態園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000386",
+      "AttractionName": "神仙瀑布",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000387",
+      "AttractionName": "鹿谷鄉農會茶葉文化館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000388",
+      "AttractionName": "帖比倫峽谷",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000389",
+      "AttractionName": "武界部落",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000390",
+      "AttractionName": "鳳凰谷鳥園生態園區 - 國立自然科學博物館",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 50,
+          "Description": "一般旅客",
+          "URL": "https://www.nmns.edu.tw/park_fhk/visit/ticket/index.html"
+        },
+        {
+          "Name": "團體票",
+          "Price": 30,
+          "Description": "20人以上團體",
+          "URL": "https://www.nmns.edu.tw/park_fhk/visit/ticket/index.html"
+        },
+        {
+          "Name": "優待票",
+          "Price": 30,
+          "Description": "12歲以上學生(請出示證件)",
+          "URL": "https://www.nmns.edu.tw/park_fhk/visit/ticket/index.html"
+        },
+        {
+          "Name": "兒童優待票",
+          "Price": 25,
+          "Description": "6 歲以上，未滿 12 歲兒童(請出示證件)",
+          "URL": "https://www.nmns.edu.tw/park_fhk/visit/ticket/index.html"
+        },
+        {
+          "Name": "免費票",
+          "Price": 0,
+          "Description": "滿 65 歲以上長者平日入館(請出示證件)/未滿 6 歲兒童(請出示證件)/持恐龍卡觀眾/身心障礙與其陪同者(需領有身心障礙證明文件，陪同者 1 人)/志工人員(持志願服務榮譽卡之志工)",
+          "URL": "https://www.nmns.edu.tw/park_fhk/visit/ticket/index.html"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000391",
+      "AttractionName": "大崙山觀光茶園銀杏林區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000392",
+      "AttractionName": "撼龍步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000393",
+      "AttractionName": "阿坤香茅工坊",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000394",
+      "AttractionName": "世寶農場",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000395",
+      "AttractionName": "龍南天然漆博物館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000396",
+      "AttractionName": "埔里小埔社客家文化園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000397",
+      "AttractionName": "配天宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000398",
+      "AttractionName": "永隆開山廟",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000399",
+      "AttractionName": "敦和宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000400",
+      "AttractionName": "柳家梅園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000401",
+      "AttractionName": "日月潭頭社活盆地休閒農業區(金針花海)",
+      "Fees": [
+        {
+          "Name": "門票",
+          "Price": 100,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000402",
+      "AttractionName": "雲清李子園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000403",
+      "AttractionName": "廣靈宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000404",
+      "AttractionName": "慶福寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000405",
+      "AttractionName": "柯仔坑怡威農場",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000406",
+      "AttractionName": "落羽松森林",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000407",
+      "AttractionName": "國史館台灣文獻館圖書館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000408",
+      "AttractionName": "妖怪村",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000409",
+      "AttractionName": "南投縣農工商會展中心",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000410",
+      "AttractionName": "香里活力豬展覽館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000411",
+      "AttractionName": "水里永興村水火同源",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000412",
+      "AttractionName": "明湖水庫觀湖台",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000413",
+      "AttractionName": "上安村觀光農園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000414",
+      "AttractionName": "二坪山古道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000415",
+      "AttractionName": "和菓森林 Hugosum",
+      "Fees": [
+        {
+          "Name": "門票",
+          "Price": 100,
+          "Description": null,
+          "URL": "https://www.hugosum.com.tw/factory.php?CNo=4"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000416",
+      "AttractionName": "大竹湖步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000417",
+      "AttractionName": "水社大山登山步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000418",
+      "AttractionName": "青龍山步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000419",
+      "AttractionName": "日月潭後尖山歩道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000420",
+      "AttractionName": "水蛙頭步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000421",
+      "AttractionName": "水社親水步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000422",
+      "AttractionName": "澀水窯",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000423",
+      "AttractionName": "日月潭國家風景區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000424",
+      "AttractionName": "毓繡美術館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000425",
+      "AttractionName": "伊達邵親水步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000426",
+      "AttractionName": "茶業改良場－魚池分場",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000427",
+      "AttractionName": "清境高空觀景步道",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 50,
+          "Description": "一般民眾",
+          "URL": "https://nantou.welcometw.com/tour/Z9MB"
+        },
+        {
+          "Name": "優待票",
+          "Price": 30,
+          "Description": "滿6歲至未滿12歲兒童/應購買全票者20人以上之團體/設籍本縣之縣民（憑國民身分證）/現役軍警消人員及因公撫卹之遺族（憑證明文件）",
+          "URL": "https://nantou.welcometw.com/tour/Z9MB"
+        },
+        {
+          "Name": "特惠票",
+          "Price": 10,
+          "Description": "國軍退除役官兵輔導條例第2條第1項及第2項所稱退除役官兵、其隨行之配偶及直系血親（憑證明文件）/設籍仁愛鄉之鄉民（憑國民身分證）/年滿65歲以上者（憑國民身分證）",
+          "URL": "https://nantou.welcometw.com/tour/Z9MB"
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "未滿六歲之兒童/身心障礙人士及隌同者1名（憑身心障礙手冊或身心障礙證明）/進入步道接洽公務並持有證明文件者/持地方主管機關核發之志願服務榮譽卡之志工",
+          "URL": "https://nantou.welcometw.com/tour/Z9MB"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000428",
+      "AttractionName": "草鞋墩人文夜市",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000429",
+      "AttractionName": "臺灣工藝研究發展中心",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000430",
+      "AttractionName": "白滄沂天彫博物館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000431",
+      "AttractionName": "游漆園 (麗淑漆坊)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000432",
+      "AttractionName": "白木全-心陶園工作室",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000433",
+      "AttractionName": "九九峰健行步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000434",
+      "AttractionName": "北港溪糯米石橋",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000435",
+      "AttractionName": "橋聳雲天綠雕園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000436",
+      "AttractionName": "韭菜溪湖",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000437",
+      "AttractionName": "北港溪溫泉區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000438",
+      "AttractionName": "福龜草莓園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000439",
+      "AttractionName": "廣霖菇菇的家",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000440",
+      "AttractionName": "台一生態休閒農場(楓樺台一渡假村)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000441",
+      "AttractionName": "紙教堂",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000442",
+      "AttractionName": "果寶歡酵觀光工廠",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000443",
+      "AttractionName": "埔里酒廠",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000444",
+      "AttractionName": "中興新村",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000445",
+      "AttractionName": "臺灣地理中心碑",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000446",
+      "AttractionName": "松柏嶺受天宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000447",
+      "AttractionName": "木生昆蟲博物館",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 150,
+          "Description": "一般遊客",
+          "URL": null
+        },
+        {
+          "Name": "優待票",
+          "Price": 120,
+          "Description": "年滿3歲-12歲以下兒童/年滿65歲以上長者/戶籍地為埔里鎮及魚池鄉/暨南大學教職員&學生",
+          "URL": null
+        },
+        {
+          "Name": "愛心票",
+          "Price": 60,
+          "Description": "持有身心障礙手冊及陪同者1人",
+          "URL": null
+        },
+        {
+          "Name": "免費入園",
+          "Price": 0,
+          "Description": "未滿3歲或身高未滿100公分者",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000448",
+      "AttractionName": "豐年靈芝菇類生態農場",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000449",
+      "AttractionName": "埔里觀音瀑布",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000450",
+      "AttractionName": "集集車站",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000451",
+      "AttractionName": "添興窯陶藝村",
+      "Fees": [
+        {
+          "Name": "門票",
+          "Price": 100,
+          "Description": null,
+          "URL": "http://www.txkiln.com/tw/4service/pages/2.html"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000452",
+      "AttractionName": "jijibanana集元果觀光工廠",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000453",
+      "AttractionName": "中台禪寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000454",
+      "AttractionName": "鹿谷麒麟潭",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000455",
+      "AttractionName": "內湖國小",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000456",
+      "AttractionName": "台大鳳凰自然教育園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000457",
+      "AttractionName": "烏松崙觀光梅園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000458",
+      "AttractionName": "草坪頭玉山觀光茶園",
+      "Fees": [
+        {
+          "Name": "門票",
+          "Price": 50,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000459",
+      "AttractionName": "信義鄉農會梅子夢工廠(酒莊)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000460",
+      "AttractionName": "豐丘觀光果園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000461",
+      "AttractionName": "風櫃斗休閒觀光農區(梅園)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000462",
+      "AttractionName": "父不知子斷崖(東埔斷崖)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000463",
+      "AttractionName": "茶二指故事館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000464",
+      "AttractionName": "遊山茶訪茶文化館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000465",
+      "AttractionName": "竹山老街",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000466",
+      "AttractionName": "荷花田陶工房",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000467",
+      "AttractionName": "三育基督教學院",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000468",
+      "AttractionName": "金龍山步道觀景臺(日出雲海琉璃光)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000469",
+      "AttractionName": "向山行政暨遊客中心",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000470",
+      "AttractionName": "日月潭自行車步道(向山天空步道)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000471",
+      "AttractionName": "埔里妮娜巧克力夢想城堡",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000472",
+      "AttractionName": "車埕木業休閒園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000473",
+      "AttractionName": "澀水森林步道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000474",
+      "AttractionName": "糯米橋休閒農業區(茄苳神木)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000475",
+      "AttractionName": "敲敲木工房",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000476",
+      "AttractionName": "元首館(大黑松小倆口)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000477",
+      "AttractionName": "南投縣文化園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000478",
+      "AttractionName": "南投稅務出張所",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000479",
+      "AttractionName": "光遠燈籠觀光工廠",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000480",
+      "AttractionName": "虎山藝術館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000481",
+      "AttractionName": "集集開闢鴻荒自行車道 (開闢鴻荒碣)",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000482",
+      "AttractionName": "仁愛鄉西伯梅園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000483",
+      "AttractionName": "南投縣政府文化局展覽室",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000484",
+      "AttractionName": "18度C巧克力工房",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000485",
+      "AttractionName": "中興新村小興苑",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000486",
+      "AttractionName": "日月潭纜車站",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 350,
+          "Description": "國小以上至65歲以下成人",
+          "URL": "https://www.ropeway.com.tw/page/about/index.aspx?kind=34"
+        },
+        {
+          "Name": "優待票",
+          "Price": 280,
+          "Description": "65歲以上及領有身心障礙手冊者、孕婦、6歲以下身高100公分以上之幼童",
+          "URL": "https://www.ropeway.com.tw/page/about/index.aspx?kind=34"
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "未滿3歲或身高未滿100公分者免費，須出示證明及家長陪同方可入園",
+          "URL": "https://www.ropeway.com.tw/page/about/index.aspx?kind=34"
+        },
+        {
+          "Name": "團體票",
+          "Price": 300,
+          "Description": "限20人以上遊覽車",
+          "URL": "https://www.ropeway.com.tw/page/about/index.aspx?kind=34"
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000487",
+      "AttractionName": "彩蝶瀑布",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000488",
+      "AttractionName": "竹山菸草站文創園區",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000489",
+      "AttractionName": "福興溫泉遊客中心",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000490",
+      "AttractionName": "藝術家資料館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000491",
+      "AttractionName": "猴探井天空之橋",
+      "Fees": [
+        {
+          "Name": "門票",
+          "Price": 50,
+          "Description": "一般旅客",
+          "URL": null
+        },
+        {
+          "Name": "團體票",
+          "Price": 30,
+          "Description": null,
+          "URL": null
+        },
+        {
+          "Name": "南投市民票",
+          "Price": 10,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000492",
+      "AttractionName": "九二咖啡故事館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000493",
+      "AttractionName": "南投霧社德龍宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000494",
+      "AttractionName": "靈巖山寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000495",
+      "AttractionName": "恒吉宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000496",
+      "AttractionName": "國姓護國宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000497",
+      "AttractionName": "台灣基督長老教會羅娜教會",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000498",
+      "AttractionName": "禪機山仙佛寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000499",
+      "AttractionName": "地利天主堂",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000500",
+      "AttractionName": "崁斗山靈光寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000501",
+      "AttractionName": "惠德宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000502",
+      "AttractionName": "中寮玄義宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000503",
+      "AttractionName": "光慧文教館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000504",
+      "AttractionName": "臺灣雷藏寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000505",
+      "AttractionName": "鳳山寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000506",
+      "AttractionName": "易經風水學院八卦山",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000507",
+      "AttractionName": "玄光寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000508",
+      "AttractionName": "玄奘寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000509",
+      "AttractionName": "龍鳳宮月老廟",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000510",
+      "AttractionName": "含光山白毫禪寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000511",
+      "AttractionName": "龍善寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000512",
+      "AttractionName": "天聖宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000513",
+      "AttractionName": "森十八心靈劇場",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000514",
+      "AttractionName": "大眾爺祠",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000515",
+      "AttractionName": "鳳凰山寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000516",
+      "AttractionName": "竹山沙東宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000517",
+      "AttractionName": "靈德廟",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000518",
+      "AttractionName": "竹山克明宮",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000519",
+      "AttractionName": "彩虹瀑布",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000520",
+      "AttractionName": "東埔日月雙橋",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000521",
+      "AttractionName": "台灣麻糬主題館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000522",
+      "AttractionName": "水里親水公園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000523",
+      "AttractionName": "玉山國家公園",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000524",
+      "AttractionName": "中寮明善寺",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000526",
+      "AttractionName": "仁愛鄉梅林自行車道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000527",
+      "AttractionName": "集集綠色隧道及環鎮自行車道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000528",
+      "AttractionName": "哲學之路單車道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000529",
+      "AttractionName": "下坪自行車道",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000530",
+      "AttractionName": "炭雕藝術館博物館",
+      "Fees": [
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": null,
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000001",
+      "AttractionName": "勝利星村V.I.P Zone",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 450,
+          "Description": "一般民眾",
+          "URL": "https://www.nmmba.gov.tw/cp.aspx?n=A6476B49BA86BBD5&s=B3CCAAE6060F5DB7"
+        },
+        {
+          "Name": "優待票",
+          "Price": 250,
+          "Description": "a. 6歲(含)以上之學童(身高達115公分以上)、大學(含)以上持有效學生證者、持有效榮民證、公教人員退休證之民眾。\nb. 應屆畢業生請持當年度准考證或當年度入學通知並連同身分證件購買優待票；空中大學請持學生證及該年度之選課卡購買優待票",
+          "URL": null
+        },
+        {
+          "Name": "博愛票",
+          "Price": 225,
+          "Description": "65歲以上長者",
+          "URL": null
+        },
+        {
+          "Name": "團體票",
+          "Price": 350,
+          "Description": "20人以上同一機關團體。請3天前辦妥預約手續為宜，以利協助安排團體導覽、購票與快速驗票入館事宜（08-882-5678）",
+          "URL": null
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "a.身高115公分以下及未滿6歲需與家/師長同行之兒童 (需出示相關證明文件,且家/師長需購票)。\nb. 領有身心障礙手冊者及必要陪同者乙名",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:29"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000002",
+      "AttractionName": "屏東縣民公園",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 50,
+          "Description": "一般民眾",
+          "URL": "https://www.i-pingtung.com/glaze-bridge"
+        },
+        {
+          "Name": "優待票",
+          "Price": 40,
+          "Description": "應購買全票者三十人以上之團體",
+          "URL": null
+        },
+        {
+          "Name": "特惠票",
+          "Price": 30,
+          "Description": "1.設籍 屏東縣之縣民（憑身分證明文件）。\n\n2.年滿六十五歲以上 者 （憑身分證明文件）。\n\n3.七歲以上至未滿十二歲之兒童。\n\n4.持志願服務榮譽卡志工。\n\n5.參與其他經本府認定之活動者。",
+          "URL": null
+        },
+        {
+          "Name": "拍攝票",
+          "Price": 1000,
+          "Description": "經本府同意在所定時段進入本地區拍攝參訪者",
+          "URL": null
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "1.三地門鄉三地村、瑪家鄉北葉村及內埔鄉水門村村民。\n2.因公務之需通行並經本府核准者。\n3.身心障礙者及陪同者一名（憑身心障礙手冊）。\n4.未滿七歲之兒童（憑證明文件）。\n\n5.符合第二款規定團體之專業領隊或導遊得免費隨團通行。但該專業領隊或導遊需出示有效執業執照，且每團限一名。\n\n6.設籍屏東縣年滿六十五歲以上者（憑身分證明文件）。\n\n?7.特定節日經本府公告符合一定資格者。",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:29"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000003",
+      "AttractionName": "屏菸1936文化基地",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 80,
+          "Description": "一般民眾",
+          "URL": "https://forestpass.welcometw.com/tour/8bP3"
+        },
+        {
+          "Name": "半票",
+          "Price": 50,
+          "Description": "1.軍警人員持有証件者。\n2.學生(憑學生證)，七歲以上，未滿十三歲兒童。\n3.因公撫恤，持有證明者。\n4.遊樂區所在縣(市)民眾，持有證明文件者。",
+          "URL": null
+        },
+        {
+          "Name": "優待票",
+          "Price": 10,
+          "Description": "1.六十五歲以上者，持有證明文件者。\n2.三歲至六歲兒童，持有證明文件者。\n3.小學生非假日戶外教學，由學校組隊，教師帶隊並出具公函者。",
+          "URL": null
+        },
+        {
+          "Name": "免票",
+          "Price": 0,
+          "Description": "1.設籍於遊樂區內之居民，憑國民身分證免購門票，未取得國民身分證之孩童及有居住事實迄未設籍者，憑有關證明文件，免購門票。\n2.公務人員因公出差至遊樂區，有出差單等證明文件者。\n3.各級民意代表、義警、義消、民防隊員，因業務需要進入遊樂區而有證明者。\n4.位於森林遊樂區附近之村民因林務農事通過該區時，憑身分證得免購票者 。\n5.志工持有「志願服務榮譽卡」者，得免費入園。\n6.身心障礙易辨或持有身心障礙手冊者及其監護人或必要之陪伴者一人，免費進入森林遊樂區。\n7.零到二歲兒童免購門票(需由購票大人陪同)。\n8.設籍於遊樂區行政區域(鄉、鎮)之原住民，得持相關證明原住民身分文件，免購門票。",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:29"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000004",
+      "AttractionName": "屏東縣立圖書館總館",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 150,
+          "Description": "一般民眾",
+          "URL": "https://forestpass.welcometw.com/tour/PLKM"
+        },
+        {
+          "Name": "半票",
+          "Price": 75,
+          "Description": "1.軍警人員持有証件者。\n2.學生(憑學生證)，七歲以上，未滿十三歲兒童。\n3.因公撫恤，持有證明者。\n4.遊樂區所在縣(市)民眾，持有證明文件者。",
+          "URL": null
+        },
+        {
+          "Name": "優待票",
+          "Price": 10,
+          "Description": "1.六十五歲以上年長者，憑國民身分證。\n2. 三至六歲兒童。\n3.小學生非假日戶外教學，由學校組隊，教師帶隊並出具公函者。",
+          "URL": null
+        },
+        {
+          "Name": "免票",
+          "Price": 0,
+          "Description": "1.設籍於遊樂區內之居民，憑國民身分證免購門票，未取得國民身分證之孩童及有居住事實迄未設籍者，憑有關證明文件，免購門票。\n2.公務人員因公出差至遊樂區，有出差單等證明文件者。\n3.各級民意代表、義警、義消、民防隊員，因業務需要進入遊樂區而有證明者。\n4.位於森林遊樂區附近之村民因林務農事通過該區時，憑身分證得免購票者 。\n5.志工持有「志願服務榮譽卡」者，得免費入園。\n6.身心障礙易辨或持有身心障礙手冊者及其監護人或必要之陪伴者一人，免費進入森林遊樂區。\n7.零到二歲兒童免購門票(需由購票大人陪同)。\n8.區內機關(構)、公用事業經營單位或團體，其區內以外之人員，因業務需要至園區洽公持有證明文件者。\n9.設籍於國家森林遊樂區行政區域(鄉、鎮)內之原住民，持相關證明原住民身分文件，免費進入當地之國家森林遊樂區。",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:29"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000005",
+      "AttractionName": "職人町",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 60,
+          "Description": "一般民眾",
+          "URL": "https://liuchiu-intertidal.tw/index.php?inter=news&id=52"
+        },
+        {
+          "Name": "免票",
+          "Price": 0,
+          "Description": "琉球鄉民、未滿3歲兒童、身心障礙者及其必要陪伴者1人免收",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:29"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000006",
+      "AttractionName": "屏東美術館",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 60,
+          "Description": "一般民眾",
+          "URL": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0070228"
+        },
+        {
+          "Name": "半票",
+          "Price": 30,
+          "Description": "假日出示身分證明文件之六十五歲以上之長者",
+          "URL": null
+        },
+        {
+          "Name": "免費",
+          "Price": 0,
+          "Description": "1.出示身分證明文件之十二歲以下之兒童。\n2.非假日出示身分證明文件之六十五歲以上之長者。\n3.出示身心障礙證明之身心障礙者及其必要陪伴者一人。\n4.公務觀摩人員應出示公函。\n5.出示志願服務榮譽卡者。\n6.國民小學辦理校外教學活動來函申請。\n7.依其他相關法令得免費參觀者。",
+          "URL": null
+        },
+        {
+          "Name": "團體票",
+          "Price": 48,
+          "Description": "購票人數達四十人以上團體，票價八折優惠",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:29"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000007",
+      "AttractionName": "屏東書院",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 150,
+          "Description": "一般民眾",
+          "URL": "https://www.pthg.gov.tw/townmto/News_Content.aspx?n=0F70F2169DDED403&sms=90BEB862317E93FC&s=B1DB3CA244FCA378"
+        },
+        {
+          "Name": "半票",
+          "Price": 80,
+          "Description": "1、憑學生證之學生。 2、十三歲以下、七歲以上之兒童。 3、軍警人員持有證件者。 4、因公撫恤，持有證明者。 5、屏東縣縣民，持有證明文件者。",
+          "URL": null
+        },
+        {
+          "Name": "團體全票",
+          "Price": 100,
+          "Description": "1、車輛屬於汽車運輸業規範之客運業者，且乘客數(不含駕駛及導覽員)在車輛載客數規定上限之60%(含)以上者，視為團體，得購買團體票(載客數上限乘以60%所得乘積，小數點以下不計)。 2、應購團體全票者為符合全票身分者。 ",
+          "URL": null
+        },
+        {
+          "Name": "團體半票",
+          "Price": 50,
+          "Description": "1、團體定義如「團體全票」之敘述。 2、得購團體半票者為符合半票身分者。 ",
+          "URL": null
+        },
+        {
+          "Name": "優待票",
+          "Price": 30,
+          "Description": "1、兒童（三歲至六歲）。 2、六十五歲以上年長者，憑證明文件。 3、小學生戶外教學，由學校組隊，教師帶隊並出具公函者。 4、學術單位、團體或機構因研究需要，出具公函者。 5、由獲得屏東縣政府或墾丁國家公園管理處核發解說員證書之解說員帶領之團體成員(至少5人成團)。 ",
+          "URL": null
+        },
+        {
+          "Name": "免票",
+          "Price": 0,
+          "Description": "1、身心障礙易辨或持有身心障礙手冊者及其監護人或必要之陪伴者1人。 2、兒童(零歲至二歲)，需由購票大人陪同。 3、績優志工持有「志願服務榮譽卡」者。 4、本鄉鄉民持有證明文件者。 5、公務人員因公出差至風景區，有出差單等證明文件者。 6、各級民意代表、義警、義消、民防隊員，因業務需要進入風景區而有證件者。 7、奉派於園區施工之公民營單位備有證明文件者。 ",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:30"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000008",
+      "AttractionName": "邱姓河南堂忠實第",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 0,
+          "Description": "自113年1月1日至113年12月31日止，延長試辦免收入園費",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:30"
+    },
+    {
+      "AttractionID": "Attraction_376580000A_000001",
+      "AttractionName": "十七公里海岸線",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 50,
+          "Description": "一般民眾",
+          "URL": "https://zoo-info.hccg.gov.tw/"
+        },
+        {
+          "Name": "優待票",
+          "Price": 25,
+          "Description": "6歲以上未滿12歲",
+          "URL": "https://zoo-info.hccg.gov.tw/"
+        },
+        {
+          "Name": "團體票",
+          "Price": 40,
+          "Description": "二十人以上團體或一次購買一百張以上全票，採八折優惠。",
+          "URL": "https://zoo-info.hccg.gov.tw/"
+        },
+        {
+          "Name": "免費票",
+          "Price": 0,
+          "Description": "年滿65歲以上或未滿6歲及設籍本市未滿12歲兒童；身心障礙者及其陪伴者一人",
+          "URL": "https://zoo-info.hccg.gov.tw/"
+        }
+      ],
+      "UpdateTime": "2023-04-28T16:00:00"
+    },
+    {
+      "AttractionID": "Attraction_376580000A_000002",
+      "AttractionName": "青青草原",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 50,
+          "Description": "一般民眾",
+          "URL": "https://culture.hccg.gov.tw/ch/home.jsp?id=146&amp;parentpath=0,145"
+        },
+        {
+          "Name": "優待票",
+          "Price": 30,
+          "Description": "軍、警、學生憑證購票或20人（含）以上團體適用",
+          "URL": "https://culture.hccg.gov.tw/ch/home.jsp?id=146&amp;parentpath=0,145"
+        },
+        {
+          "Name": "免費票",
+          "Price": 0,
+          "Description": "新竹市民憑身份證、市民卡或駕照證明可免票入館。年滿65歲者及未滿6歲之兒童。身心障礙者憑手冊免票入館，其監護人或必要之陪伴者一人，憑該手冊得予免票入館。新竹市各國中、小學申請團體參觀。持有志工榮譽卡者。",
+          "URL": "https://culture.hccg.gov.tw/ch/home.jsp?id=146&amp;parentpath=0,145"
+        }
+      ],
+      "UpdateTime": "2023-04-28T16:00:00"
+    },
+    {
+      "AttractionID": "Attraction_376580000A_000003",
+      "AttractionName": "十八尖山",
+      "Fees": [
+        {
+          "Name": "個人票",
+          "Price": 150,
+          "Description": "19人以下含：$150元/人，門票皆可全額折抵廠內消費或DIY課程(一張門票抵一件)",
+          "URL": "http://springpoolglass.com/factory/"
+        },
+        {
+          "Name": "團體票",
+          "Price": 120,
+          "Description": "20人以上含：$120元/人，門票皆可全額折抵廠內消費或DIY課程(一張門票抵一件)",
+          "URL": "http://springpoolglass.com/factory/"
+        },
+        {
+          "Name": "DIY課程-吹製玻璃杯體驗",
+          "Price": 980,
+          "Description": "DIY課程—吹製玻璃杯體驗：$980元/件(含運費)",
+          "URL": "http://springpoolglass.com/factory/"
+        },
+        {
+          "Name": "DIY課程-玻璃杯噴砂體驗",
+          "Price": 270,
+          "Description": "DIY課程—玻璃杯噴砂體驗：$270元/件(當天可拿)",
+          "URL": "http://springpoolglass.com/factory/"
+        }
+      ],
+      "UpdateTime": "2023-04-28T16:00:00"
+    },
+    {
+      "AttractionID": "Attraction_376580000A_000004",
+      "AttractionName": "青草湖",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 100,
+          "Description": "一般民眾",
+          "URL": null
+        },
+        {
+          "Name": "優待票",
+          "Price": 50,
+          "Description": "學生、65歲以上成人",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-04-28T16:00:00"
+    },
+    {
+      "AttractionID": "Attraction_376580000A_000005",
+      "AttractionName": "新竹市立動物園",
+      "Fees": [
+        {
+          "Name": "全票",
+          "Price": 220,
+          "Description": "一般民眾",
+          "URL": null
+        },
+        {
+          "Name": "兒童票",
+          "Price": 150,
+          "Description": "12歲以下",
+          "URL": null
+        },
+        {
+          "Name": "有樂卡友票",
+          "Price": 180,
+          "Description": "卡友價",
+          "URL": null
+        },
+        {
+          "Name": "敬老愛心票",
+          "Price": 110,
+          "Description": "65歲以上成人",
+          "URL": null
+        }
+      ],
+      "UpdateTime": "2023-04-28T16:00:00"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{% extends "member/base_member.html" %}
+
+{% block title %}行程排程管理{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold"><i class="bi bi-calendar-range-fill text-primary me-2"></i>行程排程管理</h2>
+        <button class="btn btn-primary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#createItineraryModal">
+            <i class="bi bi-plus-lg me-1"></i>建立新行程
+        </button>
+    </div>
+
+    <div class="row g-4">
+        {% if itineraries %}
+            {% for plan in itineraries %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title fw-bold text-dark">{{ plan.title }}</h5>
+                            <span class="badge bg-light text-primary border border-primary small">
+                                {{ plan.details|length }} 個地點
+                            </span>
+                        </div>
+                        <p class="text-muted small mb-4">
+                            <i class="bi bi-clock me-1"></i>建立於 {{ plan.created_at.strftime('%Y/%m/%d') }}
+                        </p>
+                        <div class="d-grid">
+                            <a href="{{ url_for('member.edit_schedule', itinerary_id=plan.id) }}" class="btn btn-outline-primary rounded-pill fw-bold">
+                                開始排程管理 <i class="bi bi-chevron-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="text-center py-5 mt-5">
+                <i class="bi bi-calendar2-x text-muted" style="font-size: 3rem;"></i>
+                <h5 class="text-muted mt-3">目前還沒有建立任何行程</h5>
+                <p class="text-secondary">點擊右上角「建立新行程」開始規劃吧！</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="modal fade" id="createItineraryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content border-0 shadow" action="{{ url_for('member.create_itinerary') }}" method="POST" style="border-radius: 20px;">
+            <div class="modal-body p-4">
+                <h5 class="fw-bold mb-3">新行程計畫</h5>
+                
+                <div class="mb-3">
+                    <label class="form-label small fw-bold text-muted">行程名稱</label>
+                    <input type="text" name="title" class="form-control form-control-lg" placeholder="例如：金門慢活三日遊" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold text-muted">開始日期</label>
+                            <input type="date" name="start_date" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold text-muted">結束日期</label>
+                            <input type="date" name="end_date" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 mt-3">
+                    <button type="submit" class="btn btn-primary fw-bold rounded-pill">建立專案</button>
+                    <button type="button" class="btn btn-link text-secondary" data-bs-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

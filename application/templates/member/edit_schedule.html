@@ -1,0 +1,389 @@
+{% extends "member/base_member.html" %}
+
+{% block content %}
+<div class="container-fluid py-4" style="height: 100vh; overflow: hidden;">
+    <div class="d-flex justify-content-between align-items-center mb-3 px-2">
+        <div class="d-flex align-items-center" style="flex: 1;">
+            <i class="bi bi-calendar-event me-2 fs-4"></i>
+            <input type="text" id="plan-title-input" class="form-control form-control-lg fw-bold border-0 bg-transparent shadow-none ps-0" 
+                   value="{{ plan.title }}" 
+                   style="max-width: 400px; font-size: 1.5rem;"
+                   placeholder="點擊輸入行程名稱...">
+        </div>
+        <div>
+            <a href="{{ url_for('member.schedule_map', itinerary_id=plan.id) }}" target="_blank" class="btn btn-outline-primary rounded-pill me-2">
+                <i class="bi bi-map-fill"></i> 行程地圖
+            </a>
+            <a href="{{ url_for('member.schedule') }}" class="btn btn-outline-secondary rounded-pill me-2">返回</a>
+            
+            <button id="btn-delete-plan" class="btn btn-outline-danger rounded-pill me-2">
+                <i class="bi bi-trash-fill"></i> 刪除整份行程
+            </button>
+
+            <button id="save-all-btn" class="btn btn-primary rounded-pill px-4 shadow">
+                <i class="bi bi-cloud-arrow-up me-1"></i>儲存變更
+            </button>
+        </div>
+    </div>
+
+    <div class="row h-100">
+        <div class="col-md-3 h-100 d-flex flex-column">
+            <div class="card border-warning shadow-sm h-100">
+                <div class="card-header bg-warning fw-bold text-dark">
+                    📥 待分配景點
+                    <small class="d-block text-muted fw-normal" style="font-size: 0.8rem;">拖曳至右側，或按垃圾桶刪除</small>
+                </div>
+                <div class="card-body bg-light p-2 overflow-auto">
+                    <div id="unassigned-pool" class="itinerary-sortable d-flex flex-column gap-2" data-day="0" style="min-height: 200px;">
+                        {% for detail in plan.details if detail.day_number == 0 %}
+                        <div class="item-card unassigned-card bg-white border rounded shadow-sm p-2" 
+                             data-id="{{ detail.id }}" 
+                             draggable="true">
+                            <div class="card-content d-flex justify-content-between align-items-center w-100">
+                                <div class="d-flex align-items-center" style="flex-grow: 1; min-width: 0;">
+                                    <i class="bi bi-grip-vertical text-muted me-2 handle-icon"></i>
+                                    <div class="text-truncate fw-bold small">{{ detail.name }}</div>
+                                </div>
+                                <div class="right-info d-flex align-items-center" style="flex-shrink: 0;">
+                                    <span class="time-display badge bg-light text-dark border me-1">09:00</span>
+                                    <div class="duration-controls btn-group btn-group-sm me-2" role="group">
+                                        <button type="button" class="btn btn-outline-secondary py-0 px-1" onclick="adjustDuration(this, -1)">-</button>
+                                        <button type="button" class="btn btn-outline-secondary py-0 px-1" onclick="adjustDuration(this, 1)">+</button>
+                                    </div>
+                                    <i class="bi bi-arrow-left-circle-fill text-secondary action-btn unassign-btn me-2" onclick="moveToPool(this)"></i>
+                                    
+                                    <i class="bi bi-trash-fill text-danger action-btn delete-btn fs-6" 
+                                       onclick="deleteItem(this)" title="永久刪除"></i>
+                                </div>
+                            </div>
+                            <input type="hidden" class="start-time" value="09:00">
+                            <input type="hidden" class="end-time" value="10:00">
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9 h-100 d-flex flex-column">
+            <ul class="nav nav-tabs bg-white pt-2 px-2 border-bottom-0" id="pills-tab" role="tablist">
+                {% for i in range(1, total_days + 1) %}
+                <li class="nav-item">
+                    <button class="nav-link {% if i == 1 %}active fw-bold{% endif %}" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#day-tab-{{ i }}">
+                        Day {{ i }}
+                        <small class="text-muted ms-1">({{ (plan.start_date + timedelta(days=i-1)).strftime('%m/%d') }})</small>
+                    </button>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <div class="tab-content bg-white border border-top-0 flex-grow-1 overflow-auto position-relative" style="height: 0;">
+                {% for i in range(1, total_days + 1) %}
+                <div class="tab-pane fade {% if i == 1 %}show active{% endif %} h-100" id="day-tab-{{ i }}">
+                    <div class="d-flex position-relative" style="min-height: 1440px;">
+                        <div class="time-column">
+                            {% for h in range(0, 24) %}
+                            <div class="time-slot-label">{{ "%02d"|format(h) }}:00</div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="itinerary-sortable main-grid flex-grow-1 position-relative" data-day="{{ i }}">
+                            {% for h in range(0, 24) %}
+                            <div class="grid-line" style="top: {{ h * 60 }}px;"></div>
+                            {% endfor %}
+
+                            {% for detail in plan.details if detail.day_number == i %}
+                                <div class="item-card assigned-card position-absolute shadow-sm" 
+                                     data-id="{{ detail.id }}"
+                                     draggable="true">
+                                    <div class="card-content d-flex justify-content-between align-items-center h-100 w-100 px-2">
+                                        <div class="d-flex align-items-center" style="flex-grow: 1; min-width: 0;">
+                                            <i class="bi bi-grip-vertical text-muted me-2 handle-icon"></i>
+                                            <div class="text-truncate fw-bold small" title="{{ detail.name }}">{{ detail.name }}</div>
+                                        </div>
+                                        <div class="right-info d-flex align-items-center ms-2" style="flex-shrink: 0;">
+                                            <span class="time-display badge bg-light text-dark border me-2">
+                                                {{ detail.start_time or '09:00' }} - {{ detail.end_time or '10:00' }}
+                                            </span>
+                                            <div class="duration-controls btn-group btn-group-sm me-2" role="group">
+                                                <button type="button" class="btn btn-outline-secondary py-0 px-1" style="font-size: 0.7rem;" onclick="adjustDuration(this, -1)">-</button>
+                                                <button type="button" class="btn btn-outline-secondary py-0 px-1" style="font-size: 0.7rem;" onclick="adjustDuration(this, 1)">+</button>
+                                            </div>
+                                            <i class="bi bi-arrow-left-circle-fill text-secondary action-btn unassign-btn me-2" onclick="moveToPool(this)"></i>
+                                            <i class="bi bi-trash-fill text-danger action-btn delete-btn" onclick="deleteItem(this)"></i>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" class="start-time" value="{{ detail.start_time or '09:00' }}">
+                                    <input type="hidden" class="end-time" value="{{ detail.end_time or '10:00' }}">
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    initDraggable();
+    refreshAllPositions();
+
+    // ⭐️ 新增：標題自動儲存
+    const titleInput = document.getElementById('plan-title-input');
+    titleInput.addEventListener('change', function() {
+        const newTitle = this.value;
+        if(newTitle.trim() === "") return;
+
+        fetch('/schedule/rename/{{ plan.id }}', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: newTitle })
+        }).then(res => res.json()).then(data => {
+            if(data.status === 'success') {
+                // 可以加一個小提示，或什麼都不做表示成功
+                console.log('標題已更新');
+            } else {
+                alert('更新失敗: ' + data.message);
+            }
+        });
+    });
+
+    // 刪除整份行程
+    const deletePlanBtn = document.getElementById('btn-delete-plan');
+    if (deletePlanBtn) {
+        deletePlanBtn.addEventListener('click', function() {
+            if (confirm('🚨 確定要刪除整份行程嗎？\n此動作無法復原！')) {
+                fetch('/schedule/delete/{{ plan.id }}', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                }).then(res => res.json()).then(data => {
+                    if (data.status === 'success') {
+                        alert('✅ 行程已刪除');
+                        window.location.href = "{{ url_for('member.schedule') }}";
+                    }
+                });
+            }
+        });
+    }
+
+    // 儲存按鈕
+    document.getElementById('save-all-btn').addEventListener('click', function() {
+        const payload = [];
+        document.querySelectorAll('.item-card').forEach(card => {
+            const parent = card.closest('.itinerary-sortable');
+            const day = parent ? parent.getAttribute('data-day') : 0;
+            payload.push({
+                id: card.getAttribute('data-id'),
+                day_number: parseInt(day),
+                start_time: card.querySelector('.start-time').value,
+                end_time: card.querySelector('.end-time').value,
+                sort_order: 0
+            });
+        });
+        fetch('/schedule/save_all', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ items: payload })
+        }).then(res => res.json()).then(data => {
+            if (data.status === 'success') alert('✅ 儲存成功！');
+            else alert('❌ 錯誤：' + data.message);
+        });
+    });
+
+    window.refreshAllPositions = refreshAllPositions;
+});
+
+function initDraggable() {
+    const items = document.querySelectorAll('.item-card');
+    items.forEach(item => {
+        item.addEventListener('dragstart', handleDragStart);
+        item.addEventListener('dragend', handleDragEnd);
+    });
+    const containers = document.querySelectorAll('.itinerary-sortable');
+    containers.forEach(container => {
+        container.addEventListener('dragover', handleDragOver);
+        container.addEventListener('drop', handleDrop);
+    });
+}
+
+function handleDragStart(e) {
+    e.dataTransfer.setData('text/plain', e.target.getAttribute('data-id'));
+    e.dataTransfer.effectAllowed = 'move';
+    e.target.classList.add('dragging');
+    setTimeout(() => e.target.style.opacity = '0.5', 0);
+}
+function handleDragEnd(e) {
+    e.target.classList.remove('dragging');
+    e.target.style.opacity = '1';
+    document.querySelectorAll('.drag-active').forEach(el => el.classList.remove('drag-active'));
+}
+function handleDragOver(e) { e.preventDefault(); e.currentTarget.classList.add('drag-active'); }
+
+function handleDrop(e) {
+    e.preventDefault();
+    const container = e.currentTarget;
+    container.classList.remove('drag-active');
+    const id = e.dataTransfer.getData('text/plain');
+    const card = document.querySelector(`.item-card[data-id="${id}"]`);
+    if (!card) return;
+
+    if (container.id === 'unassigned-pool') {
+        resetCardToPool(card, container);
+    } else if (container.classList.contains('main-grid')) {
+        const rect = container.getBoundingClientRect();
+        const offsetY = e.clientY - rect.top + container.scrollTop;
+        let hour = Math.floor(offsetY / 60);
+        if (hour < 0) hour = 0; if (hour > 23) hour = 23;
+
+        let currentStart = card.querySelector('.start-time').value;
+        let currentEnd = card.querySelector('.end-time').value;
+        let durationMinutes = 60;
+        if (currentStart && currentEnd && card.classList.contains('assigned-card')) {
+             const [sH, sM] = currentStart.split(':').map(Number);
+             const [eH, eM] = currentEnd.split(':').map(Number);
+             durationMinutes = (eH * 60 + eM) - (sH * 60 + sM);
+        }
+        const startTimeStr = `${hour.toString().padStart(2, '0')}:00`;
+        let endTotalMinutes = (hour * 60) + durationMinutes;
+        if (endTotalMinutes > 24 * 60) endTotalMinutes = 24 * 60 - 1;
+        const endHour = Math.floor(endTotalMinutes / 60);
+        const endMin = endTotalMinutes % 60;
+        const endTimeStr = `${endHour.toString().padStart(2, '0')}:${endMin.toString().padStart(2, '0')}`;
+
+        card.querySelector('.start-time').value = startTimeStr;
+        card.querySelector('.end-time').value = endTimeStr;
+        card.classList.remove('unassigned-card');
+        card.classList.add('assigned-card', 'position-absolute');
+        container.appendChild(card);
+        refreshAllPositions();
+    }
+}
+
+function refreshAllPositions() {
+    document.querySelectorAll('.main-grid .item-card').forEach(card => {
+        const startInput = card.querySelector('.start-time').value;
+        const endInput = card.querySelector('.end-time').value;
+        if (startInput && endInput) {
+            const [startH, startM] = startInput.split(':').map(Number);
+            const [endH, endM] = endInput.split(':').map(Number);
+            const startTotal = startH * 60 + startM;
+            const endTotal = endH * 60 + endM;
+            const duration = Math.max(30, endTotal - startTotal);
+            card.style.top = `${startTotal}px`;
+            card.style.height = `${duration}px`;
+            const timeLabel = card.querySelector('.time-display');
+            if (timeLabel) timeLabel.innerText = `${startInput} - ${endInput}`;
+        }
+    });
+}
+
+function adjustDuration(btn, deltaHours) {
+    const card = btn.closest('.item-card');
+    const startInput = card.querySelector('.start-time');
+    const endInput = card.querySelector('.end-time');
+    if (!startInput.value || !endInput.value) return;
+    const [sH, sM] = startInput.value.split(':').map(Number);
+    const [eH, eM] = endInput.value.split(':').map(Number);
+    let startTotal = sH * 60 + sM;
+    let endTotal = eH * 60 + eM;
+    let newEndTotal = endTotal + (deltaHours * 60);
+    if (newEndTotal - startTotal < 60) newEndTotal = startTotal + 60;
+    if (newEndTotal >= 24 * 60) newEndTotal = 24 * 60 - 1;
+    const newEndH = Math.floor(newEndTotal / 60);
+    const newEndM = newEndTotal % 60;
+    endInput.value = `${newEndH.toString().padStart(2, '0')}:${newEndM.toString().padStart(2, '0')}`;
+    if (window.refreshAllPositions) window.refreshAllPositions();
+}
+
+function moveToPool(btn) {
+    const card = btn.closest('.item-card');
+    const pool = document.getElementById('unassigned-pool');
+    resetCardToPool(card, pool);
+}
+
+function resetCardToPool(card, pool) {
+    card.classList.remove('assigned-card', 'position-absolute');
+    card.classList.add('unassigned-card');
+    card.querySelector('.start-time').value = '09:00';
+    card.querySelector('.end-time').value = '10:00';
+    card.style.top = ''; card.style.height = ''; card.style.width = ''; card.style.left = '';
+    pool.appendChild(card);
+}
+
+function deleteItem(btn) {
+    const card = btn.closest('.item-card');
+    const id = card.getAttribute('data-id');
+    const name = card.querySelector('.fw-bold').innerText;
+
+    if (confirm(`🗑️ 確定要永久刪除「${name}」嗎？`)) {
+        fetch(`/schedule/detail/delete/${id}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        }).then(res => res.json()).then(data => {
+            if (data.status === 'success') {
+                card.remove();
+            } else {
+                alert('刪除失敗：' + data.message);
+            }
+        }).catch(err => {
+            console.error(err);
+            alert('發生錯誤，請稍後再試');
+        });
+    }
+}
+</script>
+
+<style>
+    :root { --time-slot-height: 60px; }
+    .action-btn { cursor: pointer; opacity: 0.7; font-size: 1.1rem; transition: opacity 0.2s; }
+    .action-btn:hover { opacity: 1; }
+
+    .unassigned-card {
+        border-left: 4px solid #ffc107 !important;
+        cursor: grab;
+        transition: transform 0.1s;
+    }
+    .unassigned-card:hover { transform: translateY(-2px); }
+    
+    /* ⭐️ 核心修正：隱藏池子裡不該顯示的東西，但保留垃圾桶 */
+    .unassigned-card .time-display,
+    .unassigned-card .duration-controls,
+    .unassigned-card .unassign-btn {
+        display: none !important;
+    }
+    /* ⭐️ 確保右側區塊本身是顯示的，且不會被壓縮 */
+    .unassigned-card .right-info {
+        display: flex !important;
+        flex-shrink: 0;
+    }
+
+    .assigned-card {
+        left: 5px; right: 10px; width: calc(100% - 15px);
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid #dee2e6; border-left: 4px solid #0d6efd !important;
+        border-radius: 4px; cursor: grab; z-index: 10; overflow: hidden;
+        transition: box-shadow 0.2s, z-index 0s; display: flex; align-items: center; 
+    }
+    .assigned-card:hover { z-index: 100; box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+    .assigned-card .handle-icon { display: none !important; }
+    
+    .drag-active { background-color: rgba(13, 110, 253, 0.05); }
+    .time-column { width: 60px; flex-shrink: 0; background: #f8f9fa; border-right: 1px solid #dee2e6; }
+    .time-slot-label { height: var(--time-slot-height); border-bottom: 1px solid #eee; font-size: 11px; color: #888; text-align: center; padding-top: 4px; }
+    .grid-line { position: absolute; left: 0; right: 0; height: 1px; background: #f0f0f0; pointer-events: none; }
+    .main-grid { background-color: #fff; }
+    .duration-controls button { line-height: 1; border-color: #ccc; }
+    .duration-controls button:hover { background-color: #e9ecef; color: #333; }
+    
+    /* Input 樣式優化 */
+    #plan-title-input:hover, #plan-title-input:focus {
+        background-color: #f8f9fa !important;
+        cursor: text;
+    }
+</style>
+{% endblock %}
