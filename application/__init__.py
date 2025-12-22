@@ -4,6 +4,12 @@ import re
 from datetime import datetime
 import math
 
+#以圖搜圖
+from PIL import Image
+import base64
+from io import BytesIO
+from .utils.image_search import search_similar_images
+
 # Flask 與 Dash 核心
 from flask import Flask, redirect
 from .extensions import db, login_manager
@@ -349,7 +355,17 @@ def register_callbacks(app):
                             dbc.Col([html.Label("鄉鎮市區", className="fw-bold small"), dcc.Dropdown(id='planner-att-town', placeholder="請先選縣市")], width=6, md=3),
                             dbc.Col([html.Label("景點主題", className="fw-bold small"), dcc.Dropdown(id='planner-att-categories', options=[{'label': t, 'value': t} for t in att_categories], multi=True, placeholder="選擇主題...")], width=12, md=6),
                         ]),
-                        dbc.Row([dbc.Col([html.Label("其他條件", className="fw-bold small"), dbc.Checklist(id='planner-att-filters', options=[{'label': ' 免費參觀', 'value': 'FREE'}, {'label': ' 有停車場', 'value': 'PARKING'}], inline=True)], width=12)])
+                        dbc.Row([dbc.Col([html.Label("其他條件", className="fw-bold small"), dbc.Checklist(id='planner-att-filters', options=[{'label': ' 免費參觀', 'value': 'FREE'}, {'label': ' 有停車場', 'value': 'PARKING'}], inline=True)], width=12)]),
+                        dbc.Row([
+                            dbc.Col([
+                                dbc.Button(
+                                    [html.I(className="bi bi-image me-2"), "用圖片找景點"],
+                                    id="btn-open-image-search",
+                                    color="outline-secondary",
+                                    className="rounded-pill px-4",
+                                )
+                            ], width=12, className="mt-3 text-end")
+                        ])
                     ]),
                     html.Div(id='filter-event', style={'display': 'none'}, children=[
                         dbc.Row([
@@ -373,6 +389,20 @@ def register_callbacks(app):
                     ]),
                 ])], className="mb-4 shadow-sm", style={"border": "none", "borderRadius": "12px", "backgroundColor": "#fff"}),
 
+                dcc.Store(id="attraction-view-mode", data="default"),
+                dcc.Store(id="image-search-results", data=None),
+                html.Div(
+                    id="image-search-banner",
+                    style={
+                        "display": "none",
+                        "backgroundColor": "#fff3cd",
+                        "border": "1px solid #ffeeba",
+                        "borderRadius": "8px",
+                        "padding": "12px 16px",
+                        "marginBottom": "12px"
+                    }
+                ),
+
                 dcc.Loading(type="default", color="#FFA97F", children=[
                     html.Div(id='result-attraction'), html.Div(id='result-event', style={'display': 'none'}), html.Div(id='result-hotel', style={'display': 'none'}), html.Div(id='result-restaurant', style={'display': 'none'}),
                     html.Div(id='pagination-attraction-container', children=[dbc.Button("◀", id="btn-prev-att", outline=True, size="sm"), html.Span("第", className="mx-1"), dcc.Input(id="input-page-att", type="number", min=1, value=1, style={'width': '50px'}), html.Span(id="label-total-att", className="mx-1"), dbc.Button("▶", id="btn-next-att", outline=True, size="sm")]),
@@ -391,6 +421,48 @@ def register_callbacks(app):
                     ],
                 )
                 ], id="modal-detail", size="lg", is_open=False, scrollable=True, centered=True),
+                dbc.Modal(
+                    [
+                        dbc.ModalHeader(
+                            dbc.ModalTitle("🖼️ 用圖片搜尋相似景點"),
+                            close_button=True
+                        ),
+                        dbc.ModalBody([
+                            html.P(
+                                "上傳你看過的旅遊照片，SlowDays 會幫你找出相似的景點。",
+                                className="text-muted small"
+                            ),
+                            dcc.Upload(
+                                id="image-search-upload",
+                                children=html.Div([
+                                    html.I(className="bi bi-cloud-upload fs-1"),
+                                    html.P("拖曳圖片或點擊上傳")
+                                ]),
+                                style={
+                                    'width': '100%',
+                                    'height': '200px',
+                                    'lineHeight': '200px',
+                                    'borderWidth': '2px',
+                                    'borderStyle': 'dashed',
+                                    'borderRadius': '12px',
+                                    'textAlign': 'center',
+                                    'cursor': 'pointer'
+                                },
+                                accept="image/*",
+                                multiple=False
+                            ),
+                            html.Div(id="image-search-preview", className="mt-3"),
+                        ]),
+                        dbc.ModalFooter([
+                            dbc.Button("開始搜尋", id="btn-run-image-search", color="primary"),
+                            dbc.Button("取消", id="btn-close-image-search", color="secondary")
+                        ])
+                    ],
+                    id="modal-image-search",
+                    is_open=False,
+                    centered=True,
+                )
+
             ])
 
         elif pathname == "/dashboard/attractions":
@@ -502,137 +574,155 @@ def register_callbacks(app):
     # --------------------------------------------------------------------------------
     @app.callback(
         [Output('result-attraction', 'children'), Output('label-total-att', 'children'), Output('input-page-att', 'value')],
-        [Input('planner-att-city', 'value'), Input('planner-att-town', 'value'), Input('planner-att-categories', 'value'), Input('planner-att-filters', 'value'), Input('btn-prev-att', 'n_clicks'), Input('btn-next-att', 'n_clicks'), Input('input-page-att', 'value')]
+        [Input('planner-att-city', 'value'), Input('planner-att-town', 'value'), Input('planner-att-categories', 'value'), 
+         Input('planner-att-filters', 'value'), Input('btn-prev-att', 'n_clicks'), Input('btn-next-att', 'n_clicks'), Input('input-page-att', 'value')],
+        [State("attraction-view-mode", "data"), State("image-search-results", "data")]
     )
-    def update_attraction_cards(city, town, cats, filters, btn_prev, btn_next, page_input):
-        df = preprocess_attraction_df(attraction_df).copy()
+    def update_attraction_cards(city, town, cats, filters, btn_prev, btn_next, page_input, view_mode, image_results):
+        trigger = ctx.triggered_id
+        
+        # 決定基礎資料來源：如果是圖片模式且有結果，就顯示相似景點
+        if view_mode == "image" and image_results:
+            df = attraction_df[attraction_df['AttractionID'].isin(image_results)].copy()
+            df['AttractionID'] = pd.Categorical(df['AttractionID'], categories=image_results, ordered=True)
+            df = df.sort_values('AttractionID')
+        else:
+            df = preprocess_attraction_df(attraction_df).copy()
+
+        # 執行過濾 (讓結果可連動縣市下拉選單)
         if city: df = df[df['PostalAddress.City'] == city]
         if town: df = df[df['PostalAddress.Town'] == town]
         cats = sanitize_list_input(cats)
         if cats: df = df[df['PrimaryCategory'].isin(cats)]
-        filters = sanitize_list_input(filters)
-        if filters:
-            if 'FREE' in filters: df = df[(df['IsAccessibleForFree'] == True) | (df['FeeInfo'].isna()) | (df['FeeInfo'] == "")]
-            if 'PARKING' in filters: df = df[df['ParkingInfo'].notna() & (df['ParkingInfo'] != "")]
         
+        # 分頁邏輯
         per_page = 15
-        total = len(df)
-        pages = math.ceil(total / per_page) or 1
-        curr = page_input or 1
-        trigger = ctx.triggered_id
-        if trigger == 'btn-prev-att': curr = max(1, curr - 1)
-        elif trigger == 'btn-next-att': curr = min(pages, curr + 1)
-        elif trigger == 'input-page-att': curr = max(1, min(pages, curr))
+        pages = math.ceil(len(df) / per_page) or 1
+        if trigger == 'btn-prev-att': curr = max(1, (page_input or 1) - 1)
+        elif trigger == 'btn-next-att': curr = min(pages, (page_input or 1) + 1)
+        elif trigger == 'input-page-att': curr = max(1, min(pages, page_input or 1))
         else: curr = 1
-        
-        if df.empty: return html.Div("無資料", className="text-center mt-5 text-muted"), " / 1 頁", 1
+
+        if df.empty: return html.Div("無符合資料", className="text-center mt-5 text-muted"), " / 1 頁", 1
         df_p = df.iloc[(curr-1)*per_page : curr*per_page]
         favs = {fav.item_id for fav in Favorite.query.filter_by(user_id=current_user.id).all()} if current_user.is_authenticated else set()
         cards = [generate_trip_card(row, "景點", favs) for _, row in df_p.iterrows()]
         return html.Div(cards, className="planner-grid"), f" / {pages} 頁", curr
-
+    # --------------------------------------------------------------------------------
+    # 4-A. 以圖搜圖 Modal 開關
+    # --------------------------------------------------------------------------------    
     @app.callback(
-        [Output('result-event', 'children'), Output('label-total-event', 'children'), Output('input-page-event', 'value')],
-        [Input('planner-event-date-range', 'start_date'), Input('planner-event-date-range', 'end_date'), Input('planner-event-city', 'value'), Input('planner-event-categories', 'value'), Input('btn-prev-event', 'n_clicks'), Input('btn-next-event', 'n_clicks'), Input('input-page-event', 'value')]
+        Output("modal-image-search", "is_open"),
+        [
+            Input("btn-open-image-search", "n_clicks"),
+            Input("btn-close-image-search", "n_clicks"),
+        ],
+        State("modal-image-search", "is_open"),
+        prevent_initial_call=True
     )
-    def update_event_cards(start, end, city, cats, btn_prev, btn_next, page_input):
-        df = preprocess_event_df(event_df).copy()
-        if city: df = df[df['PostalAddress.City'] == city]
-        if start and end:
-            try:
-                s, e = pd.to_datetime(start).tz_localize(None), pd.to_datetime(end).tz_localize(None)
-                df['StartDateTime'] = pd.to_datetime(df['StartDateTime']).dt.tz_localize(None)
-                df['EndDateTime'] = pd.to_datetime(df['EndDateTime']).dt.tz_localize(None)
-                df = df[(df['StartDateTime'] <= e) & (df['EndDateTime'] >= s)]
-            except: pass
-        cats = sanitize_list_input(cats)
-        if cats: 
-            pat = '|'.join(map(re.escape, cats))
-            try: df = df[df['EventCategoryNames'].astype(str).str.contains(pat, na=False)]
-            except: pass
-        
-        per_page = 15
-        total = len(df)
-        pages = math.ceil(total / per_page) or 1
-        curr = page_input or 1
-        trigger = ctx.triggered_id
-        if trigger == 'btn-prev-event': curr = max(1, curr - 1)
-        elif trigger == 'btn-next-event': curr = min(pages, curr + 1)
-        elif trigger == 'input-page-event': curr = max(1, min(pages, curr))
-        else: curr = 1
-        
-        if df.empty: return html.Div("無資料", className="text-center mt-5 text-muted"), " / 1 頁", 1
-        df_p = df.iloc[(curr-1)*per_page : curr*per_page]
-        favs = {fav.item_id for fav in Favorite.query.filter_by(user_id=current_user.id).all()} if current_user.is_authenticated else set()
-        cards = [generate_trip_card(row, "活動", favs) for _, row in df_p.iterrows()]
-        return html.Div(cards, className="planner-grid"), f" / {pages} 頁", curr
+    def toggle_image_search_modal(open_click, close_click, is_open):
+        if ctx.triggered_id in ["btn-open-image-search", "btn-close-image-search"]:
+            return not is_open
+        return is_open
 
+    # --------------------------------------------------------------------------------
+    # 4-B. 以圖搜圖 圖片預覽
+    # --------------------------------------------------------------------------------    
     @app.callback(
-        [Output('result-hotel', 'children'), Output('label-total-hotel', 'children'), Output('input-page-hotel', 'value')],
-        [Input('planner-hotel-city', 'value'), Input('planner-cost-min', 'value'), Input('planner-cost-max', 'value'), Input('planner-hotel-stars', 'value'), Input('btn-prev-hotel', 'n_clicks'), Input('btn-next-hotel', 'n_clicks'), Input('input-page-hotel', 'value')]
+        Output("image-search-preview", "children"),
+        Input("image-search-upload", "contents"),
+        State("image-search-upload", "filename"),
+        prevent_initial_call=True
     )
-    def update_hotel_cards(city, min_p, max_p, mixed_types, btn_prev, btn_next, page_input):
-        df = preprocess_hotel_df(hotel_df).copy()
-        if city: df = df[df['PostalAddress.City'] == city]
-        min_p, max_p = sanitize_cost_bounds(min_p, max_p)
-        if min_p is not None and 'LowestPrice' in df.columns: df = df[df['LowestPrice'] >= min_p]
-        if max_p is not None and 'LowestPrice' in df.columns: df = df[df['LowestPrice'] <= max_p]
-        mixed_types = sanitize_list_input(mixed_types)
-        if mixed_types:
-            stars = [x for x in mixed_types if isinstance(x, (int, float)) or (isinstance(x, str) and x.isdigit())]
-            types = [x for x in mixed_types if isinstance(x, str) and not x.isdigit()]
-            cond = pd.Series(False, index=df.index)
-            if stars: 
-                df['HotelStars'] = pd.to_numeric(df['HotelStars'], errors='coerce')
-                cond |= df['HotelStars'].isin([int(s) for s in stars])
-            if types: cond |= df['HotelClassName'].isin(types)
-            df = df[cond]
-        
-        per_page = 15
-        total = len(df)
-        pages = math.ceil(total / per_page) or 1
-        curr = page_input or 1
-        trigger = ctx.triggered_id
-        if trigger == 'btn-prev-hotel': curr = max(1, curr - 1)
-        elif trigger == 'btn-next-hotel': curr = min(pages, curr + 1)
-        elif trigger == 'input-page-hotel': curr = max(1, min(pages, curr))
-        else: curr = 1
-        
-        if df.empty: return html.Div("無資料", className="text-center mt-5 text-muted"), " / 1 頁", 1
-        df_p = df.iloc[(curr-1)*per_page : curr*per_page]
-        favs = {fav.item_id for fav in Favorite.query.filter_by(user_id=current_user.id).all()} if current_user.is_authenticated else set()
-        cards = [generate_trip_card(row, "住宿", favs) for _, row in df_p.iterrows()]
-        return html.Div(cards, className="planner-grid"), f" / {pages} 頁", curr
+    def preview_uploaded_image(contents, filename):
+        if not contents:
+            return no_update
 
+        return html.Div([
+            html.P(f"已上傳：{filename}", className="small text-muted"),
+            html.Img(
+                src=contents,
+                style={
+                    'maxWidth': '100%',
+                    'borderRadius': '8px',
+                    'marginTop': '10px'
+                }
+            )
+        ])
+    # --------------------------------------------------------------------------------
+    # 4-C. 圖片 → 相似景點卡片
+    # --------------------------------------------------------------------------------    
     @app.callback(
-        [Output('result-restaurant', 'children'), Output('label-total-restaurant', 'children'), Output('input-page-restaurant', 'value')],
-        [Input('planner-restaurant-city', 'value'), Input('planner-restaurant-cuisine', 'value'), Input('btn-prev-restaurant', 'n_clicks'), Input('btn-next-restaurant', 'n_clicks'), Input('input-page-restaurant', 'value')]
+        [Output("result-attraction", "children", allow_duplicate=True),
+         Output("attraction-view-mode", "data"),
+         Output("image-search-banner", "children"),
+         Output("image-search-banner", "style"),
+         Output("image-search-results", "data"),
+         Output("modal-image-search", "is_open", allow_duplicate=True)],
+        Input("btn-run-image-search", "n_clicks"),
+        State("image-search-upload", "contents"),
+        prevent_initial_call=True
     )
-    def update_restaurant_cards(city, cuisines, btn_prev, btn_next, page_input):
-        df = restaurant_df.copy()
-        if city: df = df[df['PostalAddress.City'] == city]
-        cuisines = sanitize_list_input(cuisines)
-        if cuisines and 'CuisineNames' in df.columns:
-            pat = '|'.join(map(re.escape, cuisines))
-            try: df = df[df['CuisineNames'].astype(str).str.contains(pat, na=False)]
-            except: pass
-        
-        per_page = 15
-        total = len(df)
-        pages = math.ceil(total / per_page) or 1
-        curr = page_input or 1
-        trigger = ctx.triggered_id
-        if trigger == 'btn-prev-restaurant': curr = max(1, curr - 1)
-        elif trigger == 'btn-next-restaurant': curr = min(pages, curr + 1)
-        elif trigger == 'input-page-restaurant': curr = max(1, min(pages, curr))
-        else: curr = 1
-        
-        if df.empty: return html.Div("無資料", className="text-center mt-5 text-muted"), " / 1 頁", 1
-        df_p = df.iloc[(curr-1)*per_page : curr*per_page]
-        favs = {fav.item_id for fav in Favorite.query.filter_by(user_id=current_user.id).all()} if current_user.is_authenticated else set()
-        cards = [generate_trip_card(row, "餐廳", favs) for _, row in df_p.iterrows()]
-        return html.Div(cards, className="planner-grid"), f" / {pages} 頁", curr
+    def run_image_search(n, contents):
+        if not contents or n is None: raise PreventUpdate
+        try:
+            content_type, content_string = contents.split(',')
+            img_bytes = base64.b64decode(content_string)
+            img = Image.open(BytesIO(img_bytes)).convert("RGB") 
 
+            # 呼叫 ResNet-50 搜尋
+            results = search_similar_images(img, index_path=get_data_path("attraction_image_index.npy"), top_k=20)
+            valid_ids = [r["index"] for r in results if r["index"] in attraction_df['AttractionID'].values]
+            
+            if not valid_ids: return no_update, "default", "搜尋結果為空", {"display": "block"}, None, False
+
+            df_p = attraction_df[attraction_df['AttractionID'].isin(valid_ids)].copy()
+            df_p['AttractionID'] = pd.Categorical(df_p['AttractionID'], categories=valid_ids, ordered=True)
+            df_p = df_p.sort_values('AttractionID')
+            
+            suggested_cat = df_p['PrimaryCategory'].mode()[0] if not df_p.empty else "未知"
+            favs = {fav.item_id for fav in Favorite.query.filter_by(user_id=current_user.id).all()} if current_user.is_authenticated else set()
+            cards = [generate_trip_card(row, "景點", favs) for _, row in df_p.iterrows()]
+            
+            # 生成含有「清除按鈕」的橫幅
+            banner = html.Div([
+                html.Div([
+                    html.Span("🖼️ 以圖搜圖結果 ", className="fw-bold"),
+                    html.Span(f"( AI 辨識類別：{suggested_cat} )", className="ms-2 small"),
+                    dbc.Badge("不準？點此搜自然風景", id="btn-fix-category", color="warning", className="ms-2", style={"cursor": "pointer"})
+                ]),
+                dbc.Button("❌ 清除圖片條件", id="btn-back-to-normal", color="danger", size="sm", className="rounded-pill")
+            ], className="d-flex justify-content-between align-items-center w-100")
+
+            return html.Div(cards, className="planner-grid"), "image", banner, {"display": "block", "backgroundColor": "#e3f2fd", "padding": "12px", "borderRadius": "8px", "marginBottom": "15px"}, valid_ids, False
+        except Exception as e: return no_update, no_update, f"搜尋出錯: {str(e)}", {"display": "block", "color": "red"}, None, False
+    # --------------------------------------------------------------------------------
+    # 4-D 清空搜尋結果(重置按鈕)
+    # --------------------------------------------------------------------------------
+    @app.callback(
+        [Output("attraction-view-mode", "data", allow_duplicate=True),
+         Output("image-search-results", "data", allow_duplicate=True),
+         Output("image-search-banner", "style", allow_duplicate=True),
+         Output("input-page-att", "value", allow_duplicate=True),
+         Output("image-search-upload", "contents")],
+        Input("btn-back-to-normal", "n_clicks"),
+        prevent_initial_call=True
+    )
+    def back_to_normal_logic(n):
+        if n: return "default", None, {"display": "none"}, 1, None
+        return no_update
+    # --------------------------------------------------------------------------------
+    # 4-E 以圖搜圖類別不準的挽救
+    # --------------------------------------------------------------------------------
+    @app.callback(
+        [Output('planner-att-categories', 'value'), Output('btn-run-image-search', 'n_clicks')],
+        Input('btn-fix-category', 'n_clicks'),
+        State('btn-run-image-search', 'n_clicks'),
+        prevent_initial_call=True
+    )
+    def fix_category_search(n, run_clicks):
+        if n: return ["自然風景類"], (run_clicks or 0) + 1
+        return no_update
     # --------------------------------------------------------------------------------
     # 5. 互動功能 (收藏, Modal, 購物車)
     # --------------------------------------------------------------------------------
@@ -968,179 +1058,29 @@ def register_callbacks(app):
         return (show, show, hide, hide) if mode == 'city' else (hide, hide, show, show)
     
     @app.callback(
-        Output("login-warning-dialog", "displayed"),  # 控制警告視窗顯示
-        # 這裡可能還有 Output("cart-store", "data") 用來存行程
-        
+        Output("login-warning-dialog", "displayed"), 
         Input({'type': 'btn-add-cart', 'index': ALL, 'category': ALL}, 'n_clicks'),
-        State("user-login-store", "data"),  # <---【關鍵】這裡換成你儲存使用者登入資訊的 Store ID
+        # 💡 移除原本的 State("user-login-store", "data")
         prevent_initial_call=True
     )
-    def add_to_itinerary(n_clicks_list, user_data):
+    def add_to_itinerary(n_clicks_list): # 💡 參數減少一個
         trigger = ctx.triggered_id
 
-        # 1. Ghost Fire 檢查 (剛學到的，防止頁面載入時自動跳出)
+        # 1. 防止 Ghost Fire (剛載入頁面時的自動觸發)
         if not n_clicks_list or all((c is None or c == 0) for c in n_clicks_list):
             return False
 
-        # 2. 確認是否為「加入行程」按鈕觸發
+        # 2. 確認是點擊「加入行程」按鈕
         if isinstance(trigger, dict) and trigger.get('type') == 'btn-add-cart':
             
-            # 3.【核心邏輯】檢查使用者是否登入
-            # 假設 user_data 是一個字典，裡面有 'is_login': True 或是有 user_id
-            # 請依據你實際的資料結構修改這裡的判斷式
-            is_logged_in = user_data and user_data.get('is_login', False)
-            
-            if not is_logged_in:
+            # 💡 關鍵修正：直接利用 Flask-Login 的 current_user 物件判斷
+            # 這是在後端運行的，最準確且不需要組件 ID
+            if not current_user.is_authenticated:
                 print(f"擋下操作：使用者未登入 (ID: {trigger['index']})")
-                return True  # 回傳 True 會彈出 ConfirmDialog 視窗
+                return True # 顯示警告視窗
             
-            # 4. 如果已登入，執行原本的加入邏輯
-            item_id = trigger['index']
-            category = trigger['category']
-            print(f"成功加入行程：ID={item_id}, Category={category}")
-            
-            # 這裡寫你原本要加入資料庫或 Store 的程式碼...
-            
-            return False # 不顯示警告
+            # 如果已登入，這裡可以放其他邏輯（或單純回傳 False 不顯示警告）
+            return False
 
         return False
 
-##########################
-#### 4: 工廠模式 ####
-##########################
-def create_app():
-    server = Flask(__name__)
-
-    server.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:12345678@localhost:5432/slowdays_db'
-    server.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    server.config['SECRET_KEY'] = 'my_secret_key_123'
-
-    db.init_app(server)
-
-    login_manager.init_app(server)
-    login_manager.login_view = 'auth.login'
-    
-    with server.app_context():
-        from .routes import auth_bp, member_bp
-        server.register_blueprint(auth_bp)
-        server.register_blueprint(member_bp)
-
-        db.create_all()
-
-    @login_manager.user_loader
-    def load_user(user_id):
-        return User.query.get(int(user_id))
-
-    @server.route('/')
-    def index():
-        return redirect('/dashboard/')
-
-    dash_app = Dash(
-        __name__,
-        server=server,
-        url_base_pathname='/dashboard/',
-        assets_folder='assets',   
-        external_stylesheets=[dbc.themes.BOOTSTRAP],
-        title='SlowDays', 
-        suppress_callback_exceptions=True,
-    )
-
-    # --- 動態生成 Sidebar (根據 Config) ---
-    nav_components = []
-    for item in SIDEBAR_ITEMS:
-        if item["type"] == "header":
-            # ... (標題部分保持不變) ...
-            if item.get("margin_top"):
-                nav_components.append(html.Div(item["label"], className="sidebar-sub-header"))
-            else:
-                nav_components.append(html.Div(item["label"], className="sidebar-header"))
-                nav_components.append(html.Hr(style={'margin': '0 0 10px 0'}))
-                
-        elif item["type"] == "link":
-            # 連結區塊
-            nav_components.append(
-                dbc.NavLink(
-                    [html.Span(item["icon"], style={'marginRight':'8px'}), item["label"]],
-                    href=item["href"],
-                    active="exact",
-                    className="nav-link",
-                    external_link=True 
-                )
-            )
-
-    # 組合 Sidebar
-    sidebar = html.Div(
-        [dbc.Nav(nav_components, vertical=True, pills=True)],
-        className="custom-sidebar" # ⭐️ 對應 shared_style.css
-    )
-
-    # --- Serve Layout ---
-    def serve_layout():
-        if current_user.is_authenticated:
-            auth_component = html.Div([
-                html.Span(f"Hi, {current_user.username}", style={'color': '#FFA97F', 'fontWeight': 'bold', 'marginRight': '15px'}),
-                html.A("登出", href="/logout", className="btn-slow-primary") 
-            ], style={'display': 'flex', 'alignItems': 'center'})
-        else:
-            auth_component = html.Div([
-                html.A("登入", href="/login", className="btn-slow-outline")
-            ])
-
-        return html.Div([
-            dcc.Location(id="url", refresh=False),
-            
-            # Header
-            html.Div([
-                html.Div([
-                    html.Button("☰", id="sidebar-toggle", className="toggle-btn"), 
-                    html.Div("SlowDays Dashboard", className="header-logo"),
-                ], className="header-left"),
-                auth_component
-            ], className="custom-header"),
-
-            sidebar,
-
-            # 主內容區
-            html.Div(id="page-content", className="custom-content"),
-
-            # 右下角浮動按鈕 (預設隱藏)
-            html.Button(
-                [
-                    html.I(className="bi bi-calendar-week", style={'fontSize': '1.5rem'}),
-                    html.Span("", id="cart-badge", className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger")
-                ],
-                id="btn-open-cart",
-                className="btn btn-primary rounded-circle shadow-lg",
-                style={'position': 'fixed', 'bottom': '30px', 'right': '30px', 'width': '60px', 'height': '60px', 'zIndex': '1000', 'display': 'none'}
-            ),
-
-            # 側邊欄 (Offcanvas)
-            dbc.Offcanvas(
-                id="itinerary-cart-sidebar",
-                title="🗓️ 分配景點至行程",
-                is_open=False,
-                placement="end",
-                children=[
-                    html.Div([
-                        html.Label("1. 選擇目標行程專案", className="fw-bold small mb-1"),
-                        dcc.Dropdown(
-                            id="select-target-itinerary",
-                            placeholder="--- 請選擇行程 ---",
-                            className="mb-3"
-                        ),
-                        html.Hr(),
-                        html.Label("2. 待分配的項目", className="fw-bold small mb-1"),
-                        html.Div(id="cart-items-content"),
-                        
-                        dbc.Button("確認存入選定行程", id="btn-save-to-itinerary", 
-                                color="primary", className="w-100 mt-4 rounded-pill"),
-                        html.Div(id="save-status-message", className="mt-2 small text-center")
-                    ], className="p-2")
-                ],
-            ),
-        ])
-
-    dash_app.layout = serve_layout
-
-    register_callbacks(dash_app)
-    return server
