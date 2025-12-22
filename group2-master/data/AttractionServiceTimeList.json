@@ -1,0 +1,7678 @@
+﻿{
+  "UpdateTime": "2025-11-07T14:31:42+08:00",
+  "UpdateInterval": 86400,
+  "Language": "Zh_tw",
+  "ProviderID": "A15010000H",
+  "AttractionServiceTimes": [
+    {
+      "AttractionID": "Attraction_345040000G_000001",
+      "AttractionName": "太平山國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "平日（星期一~星期五）及寒假期間平日",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "20:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日（星期六、星期日）、國定例假日及暑假",
+          "Description": null,
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "04:00:00",
+          "EndTime": "20:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000002",
+      "AttractionName": "滿月圓國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "平日營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000003",
+      "AttractionName": "內洞國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "平日營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000004",
+      "AttractionName": "東眼山國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "平日營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000005",
+      "AttractionName": "觀霧國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000006",
+      "AttractionName": "拉拉山國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000007",
+      "AttractionName": "武陵國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000008",
+      "AttractionName": "八仙山國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000009",
+      "AttractionName": "大雪山國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000010",
+      "AttractionName": "合歡山國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000011",
+      "AttractionName": "奧萬大國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000012",
+      "AttractionName": "阿里山國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000013",
+      "AttractionName": "藤枝國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000014",
+      "AttractionName": "墾丁國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000015",
+      "AttractionName": "雙流國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000016",
+      "AttractionName": "知本國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "夏季營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": "2025-07-01T00:00:00+08:00",
+          "ExpireDate": "2025-08-31T23:59:59+08:00"
+        },
+        {
+          "Name": "夏季營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": "2026-07-01T00:00:00+08:00",
+          "ExpireDate": "2026-08-31T23:59:59+08:00"
+        }
+      ],
+      "UpdateTime": "2025-01-01T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000018",
+      "AttractionName": "富源國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_000019",
+      "AttractionName": "池南國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_020020",
+      "AttractionName": "鰲鼓濕地森林園區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_020021",
+      "AttractionName": "林後四林平地森林園區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_020022",
+      "AttractionName": "大農大富平地森林園區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "寒假",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": "2025-01-01T00:00:00+08:00",
+          "ExpireDate": "2025-02-28T23:59:59+08:00"
+        },
+        {
+          "Name": "寒假",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": "2026-01-01T00:00:00+08:00",
+          "ExpireDate": "2026-02-28T23:59:59+08:00"
+        },
+        {
+          "Name": "暑假",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": "2025-07-01T00:00:00+08:00",
+          "ExpireDate": "2025-08-31T23:59:59+08:00"
+        },
+        {
+          "Name": "暑假",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": "2026-07-01T00:00:00+08:00",
+          "ExpireDate": "2026-08-31T23:59:59+08:00"
+        }
+      ],
+      "UpdateTime": "2025-01-01T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_030023",
+      "AttractionName": "奧萬大自然教育中心",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_030024",
+      "AttractionName": "八仙山自然教育中心",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_030025",
+      "AttractionName": "觸口自然教育中心",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2025-08-12T21:05:55"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_030026",
+      "AttractionName": "池南自然教育中心",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2025-01-23T14:06:33"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_030027",
+      "AttractionName": "東眼山自然教育中心",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_030028",
+      "AttractionName": "知本自然教育中心",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "夏季營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": "2025-07-01T00:00:00+08:00",
+          "ExpireDate": "2025-08-31T23:59:59+08:00"
+        },
+        {
+          "Name": "夏季營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": "2026-07-01T00:00:00+08:00",
+          "ExpireDate": "2026-08-31T23:59:59+08:00"
+        }
+      ],
+      "UpdateTime": "2025-01-01T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_030029",
+      "AttractionName": "羅東自然教育中心",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_030030",
+      "AttractionName": "雙流自然教育中心",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2025-01-24T08:39:42"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_100031",
+      "AttractionName": "羅東林業文化園區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_100032",
+      "AttractionName": "東勢林業文化園區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "7、8月營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": "2025-07-01T00:00:00+08:00",
+          "ExpireDate": "2025-08-31T23:59:59+08:00"
+        },
+        {
+          "Name": "7、8月營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": "2026-07-01T00:00:00+08:00",
+          "ExpireDate": "2026-08-31T23:59:59+08:00"
+        }
+      ],
+      "UpdateTime": "2025-01-01T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_100033",
+      "AttractionName": "林田山林業文化園區",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "16:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_100034",
+      "AttractionName": "阿里山林業村暨檜意森活村",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_110035",
+      "AttractionName": "太平山蹦蹦車",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "14:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "夏季營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "15:30:00",
+          "EffectiveDate": "2025-06-01T00:00:00+08:00",
+          "ExpireDate": "2025-09-30T23:59:59+08:00"
+        },
+        {
+          "Name": "夏季營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "15:30:00",
+          "EffectiveDate": "2026-06-01T00:00:00+08:00",
+          "ExpireDate": "2026-09-30T23:59:59+08:00"
+        }
+      ],
+      "UpdateTime": "2025-01-01T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_110036",
+      "AttractionName": "烏來台車",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "夏季營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": "2025-07-01T00:00:00+08:00",
+          "ExpireDate": "2025-08-31T23:59:59+08:00"
+        },
+        {
+          "Name": "夏季營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": "2026-07-01T00:00:00+08:00",
+          "ExpireDate": "2026-08-31T23:59:59+08:00"
+        }
+      ],
+      "UpdateTime": "2025-01-01T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_110037",
+      "AttractionName": "阿里山林業鐵路",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:30:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_120038",
+      "AttractionName": "阿里山生態教育館",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:30:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_120039",
+      "AttractionName": "大武山生態教育館",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_120042",
+      "AttractionName": "火炎山生態教育館",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2025-01-02T10:59:59"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_120044",
+      "AttractionName": "南澳生態教育館",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "16:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-11-30T00:00:00"
+    },
+    {
+      "AttractionID": "Attraction_345040000G_120045",
+      "AttractionName": "瑞穗生態教育館",
+      "ServiceTimes": [
+        {
+          "Name": "一般營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2024-12-30T14:11:43"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000004",
+      "AttractionName": "雲龍瀑布",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000020",
+      "AttractionName": "楓香巨木群公園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000022",
+      "AttractionName": "武昌宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000023",
+      "AttractionName": "奕青酒莊",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000053",
+      "AttractionName": "竹山連興宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000067",
+      "AttractionName": "日月潭涵碧步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000078",
+      "AttractionName": "水雲橋",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000080",
+      "AttractionName": "永興大樟樹",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000086",
+      "AttractionName": "名間新街冷泉濕地",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000089",
+      "AttractionName": "日月潭土亭仔步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000090",
+      "AttractionName": "日月潭─月潭自行車道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000094",
+      "AttractionName": "臺灣菸酒(股)公司南投觀光酒廠",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000096",
+      "AttractionName": "八通關古道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000097",
+      "AttractionName": "水里鵲橋",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000099",
+      "AttractionName": "紫南宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "21:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000100",
+      "AttractionName": "欣隆休閒農場",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000129",
+      "AttractionName": "軟鞍八卦茶園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000134",
+      "AttractionName": "拉魯島",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000143",
+      "AttractionName": "雙十吊橋",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000152",
+      "AttractionName": "林家養鹿場",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000159",
+      "AttractionName": "水里蛇窯陶藝文化園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:30:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Wednesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000161",
+      "AttractionName": "廣興紙寮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000162",
+      "AttractionName": "埔里寶湖宮天地堂地母廟",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "21:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000176",
+      "AttractionName": "鎮國寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000179",
+      "AttractionName": "軍功綠美橋",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000186",
+      "AttractionName": "登瀛書院",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000189",
+      "AttractionName": "南投縣竹藝博物館",
+      "ServiceTimes": [
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000192",
+      "AttractionName": "芙蓉谷瀑布",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000196",
+      "AttractionName": "仙峰日月洞",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000197",
+      "AttractionName": "桂花森林",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000198",
+      "AttractionName": "藍田書院",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "22:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000208",
+      "AttractionName": "龍興吊橋",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000245",
+      "AttractionName": "造紙龍手創館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Wednesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000250",
+      "AttractionName": "璞園藝術坊",
+      "ServiceTimes": [
+        {
+          "Name": "平日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000253",
+      "AttractionName": "清境農場",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000254",
+      "AttractionName": "奧萬大國家森林遊樂區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000257",
+      "AttractionName": "台光香草園",
+      "ServiceTimes": [
+        {
+          "Name": "上午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "12:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "下午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "StartTime": "13:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000267",
+      "AttractionName": "集集大山",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000272",
+      "AttractionName": "特有生物研究保育中心",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000274",
+      "AttractionName": "明新書院",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "21:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000281",
+      "AttractionName": "集集攔河堰",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000282",
+      "AttractionName": "集集綠色隧道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000284",
+      "AttractionName": "日月老茶廠",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000285",
+      "AttractionName": "杉林溪森林生態渡假園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "21:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000288",
+      "AttractionName": "仙洞坪棋盤石",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000289",
+      "AttractionName": "埔里鯉魚潭",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000291",
+      "AttractionName": "桃米生態村",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "19:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000292",
+      "AttractionName": "大眾爺祠（大樟樹）",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000299",
+      "AttractionName": "雙龍瀑布七彩吊橋",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Wednesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000301",
+      "AttractionName": "溪頭自然教育園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000305",
+      "AttractionName": "長源圳生態步道-林爽文古戰場",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000306",
+      "AttractionName": "松柏嶺遊客中心",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:30:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000312",
+      "AttractionName": "九族文化村",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:30:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000313",
+      "AttractionName": "泰雅渡假村",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:30:00",
+          "EndTime": "22:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000315",
+      "AttractionName": "小半天石馬公園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000319",
+      "AttractionName": "車埕火車站",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000322",
+      "AttractionName": "東埔溫泉",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000329",
+      "AttractionName": "八通關古道-萬年亨衢碣",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000330",
+      "AttractionName": "德興瀑布",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000332",
+      "AttractionName": "日月潭文武廟",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000334",
+      "AttractionName": "竹山天梯風景區(梯子吊橋)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000341",
+      "AttractionName": "七星陣地公園(碉堡)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000342",
+      "AttractionName": "九份二山地震紀念園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000349",
+      "AttractionName": "東埔吊橋",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000353",
+      "AttractionName": "王英信美術館",
+      "ServiceTimes": [
+        {
+          "Name": "上午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "12:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "下午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "14:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000355",
+      "AttractionName": "敷榮堂",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000357",
+      "AttractionName": "竹山文化園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000358",
+      "AttractionName": "農田水利教育園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Wednesday",
+            "Friday"
+          ],
+          "StartTime": "13:30:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Thursday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000360",
+      "AttractionName": "九九峰生態藝術園區",
+      "ServiceTimes": [
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000369",
+      "AttractionName": "車籠埔斷層保存園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000372",
+      "AttractionName": "林班道商圈",
+      "ServiceTimes": [
+        {
+          "Name": "平日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000373",
+      "AttractionName": "茶二指-茶業故事館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:30:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000380",
+      "AttractionName": "臺灣省政資料館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000381",
+      "AttractionName": "鳶峰觀景台(合歡山暗空公園)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000382",
+      "AttractionName": "日月潭伊達邵碼頭商圈",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "23:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000383",
+      "AttractionName": "忘憂森林",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "16:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000384",
+      "AttractionName": "猴探井遊憩區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000385",
+      "AttractionName": "木屐寮生態園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000386",
+      "AttractionName": "神仙瀑布",
+      "ServiceTimes": [
+        {
+          "Name": "暫停營業",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000387",
+      "AttractionName": "鹿谷鄉農會茶葉文化館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000388",
+      "AttractionName": "帖比倫峽谷",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000389",
+      "AttractionName": "武界部落",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000390",
+      "AttractionName": "鳳凰谷鳥園生態園區 - 國立自然科學博物館",
+      "ServiceTimes": [
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000391",
+      "AttractionName": "大崙山觀光茶園銀杏林區",
+      "ServiceTimes": [
+        {
+          "Name": "平日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "15:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Thursday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000392",
+      "AttractionName": "撼龍步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000393",
+      "AttractionName": "阿坤香茅工坊",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000394",
+      "AttractionName": "世寶農場",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "20:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000395",
+      "AttractionName": "龍南天然漆博物館",
+      "ServiceTimes": [
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "上午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "12:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "下午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "13:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000396",
+      "AttractionName": "埔里小埔社客家文化園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000397",
+      "AttractionName": "配天宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:30:00",
+          "EndTime": "21:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000398",
+      "AttractionName": "永隆開山廟",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000399",
+      "AttractionName": "敦和宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "05:00:00",
+          "EndTime": "21:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000400",
+      "AttractionName": "柳家梅園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000401",
+      "AttractionName": "日月潭頭社活盆地休閒農業區(金針花海)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000402",
+      "AttractionName": "雲清李子園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000403",
+      "AttractionName": "廣靈宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "22:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000404",
+      "AttractionName": "慶福寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000405",
+      "AttractionName": "柯仔坑怡威農場",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000406",
+      "AttractionName": "落羽松森林",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Friday",
+            "Saturday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "18:40:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Thursday"
+          ],
+          "StartTime": "12:30:00",
+          "EndTime": "18:40:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000407",
+      "AttractionName": "國史館台灣文獻館圖書館",
+      "ServiceTimes": [
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000408",
+      "AttractionName": "妖怪村",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "20:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000409",
+      "AttractionName": "南投縣農工商會展中心",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000410",
+      "AttractionName": "香里活力豬展覽館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000411",
+      "AttractionName": "水里永興村水火同源",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000412",
+      "AttractionName": "明湖水庫觀湖台",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000413",
+      "AttractionName": "上安村觀光農園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000414",
+      "AttractionName": "二坪山古道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000415",
+      "AttractionName": "和菓森林 Hugosum",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000416",
+      "AttractionName": "大竹湖步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000417",
+      "AttractionName": "水社大山登山步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000418",
+      "AttractionName": "青龍山步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000419",
+      "AttractionName": "日月潭後尖山歩道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000420",
+      "AttractionName": "水蛙頭步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000421",
+      "AttractionName": "水社親水步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000422",
+      "AttractionName": "澀水窯",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000423",
+      "AttractionName": "日月潭國家風景區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000424",
+      "AttractionName": "毓繡美術館",
+      "ServiceTimes": [
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Thursday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "15:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000425",
+      "AttractionName": "伊達邵親水步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000426",
+      "AttractionName": "茶業改良場－魚池分場",
+      "ServiceTimes": [
+        {
+          "Name": "上午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "12:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "下午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "13:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000427",
+      "AttractionName": "清境高空觀景步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000428",
+      "AttractionName": "草鞋墩人文夜市",
+      "ServiceTimes": [
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "18:00:00",
+          "EndTime": "23:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000429",
+      "AttractionName": "臺灣工藝研究發展中心",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "20:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000430",
+      "AttractionName": "白滄沂天彫博物館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000431",
+      "AttractionName": "游漆園 (麗淑漆坊)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "16:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000432",
+      "AttractionName": "白木全-心陶園工作室",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000433",
+      "AttractionName": "九九峰健行步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000434",
+      "AttractionName": "北港溪糯米石橋",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000435",
+      "AttractionName": "橋聳雲天綠雕園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000436",
+      "AttractionName": "韭菜溪湖",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000437",
+      "AttractionName": "北港溪溫泉區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000438",
+      "AttractionName": "福龜草莓園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000439",
+      "AttractionName": "廣霖菇菇的家",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000440",
+      "AttractionName": "台一生態休閒農場(楓樺台一渡假村)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000441",
+      "AttractionName": "紙教堂",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000442",
+      "AttractionName": "果寶歡酵觀光工廠",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000443",
+      "AttractionName": "埔里酒廠",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000444",
+      "AttractionName": "中興新村",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000445",
+      "AttractionName": "臺灣地理中心碑",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000446",
+      "AttractionName": "松柏嶺受天宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "05:30:00",
+          "EndTime": "22:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000447",
+      "AttractionName": "木生昆蟲博物館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Wednesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000448",
+      "AttractionName": "豐年靈芝菇類生態農場",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000449",
+      "AttractionName": "埔里觀音瀑布",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000450",
+      "AttractionName": "集集車站",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000451",
+      "AttractionName": "添興窯陶藝村",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Thursday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000452",
+      "AttractionName": "jijibanana集元果觀光工廠",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Wednesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000453",
+      "AttractionName": "中台禪寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000454",
+      "AttractionName": "鹿谷麒麟潭",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000455",
+      "AttractionName": "內湖國小",
+      "ServiceTimes": [
+        {
+          "Name": "假日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000456",
+      "AttractionName": "台大鳳凰自然教育園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000457",
+      "AttractionName": "烏松崙觀光梅園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000458",
+      "AttractionName": "草坪頭玉山觀光茶園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "16:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000459",
+      "AttractionName": "信義鄉農會梅子夢工廠(酒莊)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000460",
+      "AttractionName": "豐丘觀光果園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000461",
+      "AttractionName": "風櫃斗休閒觀光農區(梅園)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000462",
+      "AttractionName": "父不知子斷崖(東埔斷崖)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000463",
+      "AttractionName": "茶二指故事館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:30:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000464",
+      "AttractionName": "遊山茶訪茶文化館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000465",
+      "AttractionName": "竹山老街",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000466",
+      "AttractionName": "荷花田陶工房",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000467",
+      "AttractionName": "三育基督教學院",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000468",
+      "AttractionName": "金龍山步道觀景臺(日出雲海琉璃光)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000469",
+      "AttractionName": "向山行政暨遊客中心",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000470",
+      "AttractionName": "日月潭自行車步道(向山天空步道)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000471",
+      "AttractionName": "埔里妮娜巧克力夢想城堡",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000472",
+      "AttractionName": "車埕木業休閒園區",
+      "ServiceTimes": [
+        {
+          "Name": "平日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "09:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:30:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000473",
+      "AttractionName": "澀水森林步道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000474",
+      "AttractionName": "糯米橋休閒農業區(茄苳神木)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000475",
+      "AttractionName": "敲敲木工房",
+      "ServiceTimes": [
+        {
+          "Name": "上午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "09:30:00",
+          "EndTime": "12:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "下午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "13:30:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "其他營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Wednesday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:30:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000476",
+      "AttractionName": "元首館(大黑松小倆口)",
+      "ServiceTimes": [
+        {
+          "Name": "平日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000477",
+      "AttractionName": "南投縣文化園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000478",
+      "AttractionName": "南投稅務出張所",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:30:00",
+          "EndTime": "18:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000479",
+      "AttractionName": "光遠燈籠觀光工廠",
+      "ServiceTimes": [
+        {
+          "Name": "平日上午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "12:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "平日下午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "13:00:00",
+          "EndTime": "16:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:30:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000480",
+      "AttractionName": "虎山藝術館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000481",
+      "AttractionName": "集集開闢鴻荒自行車道 (開闢鴻荒碣)",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000482",
+      "AttractionName": "仁愛鄉西伯梅園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000483",
+      "AttractionName": "南投縣政府文化局展覽室",
+      "ServiceTimes": [
+        {
+          "Name": "上午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "12:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "下午營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "13:30:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000484",
+      "AttractionName": "18度C巧克力工房",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "20:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000485",
+      "AttractionName": "中興新村小興苑",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000486",
+      "AttractionName": "日月潭纜車站",
+      "ServiceTimes": [
+        {
+          "Name": "平日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "10:30:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000487",
+      "AttractionName": "彩蝶瀑布",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000488",
+      "AttractionName": "竹山菸草站文創園區",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000489",
+      "AttractionName": "福興溫泉遊客中心",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000490",
+      "AttractionName": "藝術家資料館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000491",
+      "AttractionName": "猴探井天空之橋",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:30:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000492",
+      "AttractionName": "九二咖啡故事館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "10:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "公休日",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000493",
+      "AttractionName": "南投霧社德龍宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000494",
+      "AttractionName": "靈巖山寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000495",
+      "AttractionName": "恒吉宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "20:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000496",
+      "AttractionName": "國姓護國宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000497",
+      "AttractionName": "台灣基督長老教會羅娜教會",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "20:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000498",
+      "AttractionName": "禪機山仙佛寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000499",
+      "AttractionName": "地利天主堂",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000500",
+      "AttractionName": "崁斗山靈光寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "16:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000501",
+      "AttractionName": "惠德宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000502",
+      "AttractionName": "中寮玄義宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000503",
+      "AttractionName": "光慧文教館",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000504",
+      "AttractionName": "臺灣雷藏寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000505",
+      "AttractionName": "鳳山寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "05:00:00",
+          "EndTime": "21:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000506",
+      "AttractionName": "易經風水學院八卦山",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000507",
+      "AttractionName": "玄光寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000508",
+      "AttractionName": "玄奘寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000509",
+      "AttractionName": "龍鳳宮月老廟",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "21:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000510",
+      "AttractionName": "含光山白毫禪寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000511",
+      "AttractionName": "龍善寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000512",
+      "AttractionName": "天聖宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000513",
+      "AttractionName": "森十八心靈劇場",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000514",
+      "AttractionName": "大眾爺祠",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "20:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000515",
+      "AttractionName": "鳳凰山寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "16:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000516",
+      "AttractionName": "竹山沙東宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000517",
+      "AttractionName": "靈德廟",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "21:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000518",
+      "AttractionName": "竹山克明宮",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "21:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000519",
+      "AttractionName": "彩虹瀑布",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000520",
+      "AttractionName": "東埔日月雙橋",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000521",
+      "AttractionName": "台灣麻糬主題館",
+      "ServiceTimes": [
+        {
+          "Name": "平日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000522",
+      "AttractionName": "水里親水公園",
+      "ServiceTimes": [
+        {
+          "Name": "平日公休",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "假日營業時間",
+          "Description": "",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000523",
+      "AttractionName": "玉山國家公園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000524",
+      "AttractionName": "中寮明善寺",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000526",
+      "AttractionName": "仁愛鄉梅林自行車道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000527",
+      "AttractionName": "集集綠色隧道及環鎮自行車道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000528",
+      "AttractionName": "哲學之路單車道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000529",
+      "AttractionName": "下坪自行車道",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "23:59:59",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376480000A_000530",
+      "AttractionName": "炭雕藝術館博物館",
+      "ServiceTimes": [
+        {
+          "Name": "暫停營業",
+          "Description": "",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-06-30T17:30:00"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000001",
+      "AttractionName": "勝利星村V.I.P Zone",
+      "ServiceTimes": [
+        {
+          "Name": "1月至6月營運時間",
+          "Description": "平日營運時間",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "7月至8月平日營運時間",
+          "Description": "平日營運時間",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "7月至8月假日營運時間",
+          "Description": "假日日營運時間",
+          "ServiceDays": [
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "18:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "9月至12月營運時間",
+          "Description": null,
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:36"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000002",
+      "AttractionName": "屏東縣民公園",
+      "ServiceTimes": [
+        {
+          "Name": "夏令時間",
+          "Description": "3月至9月平日營運時間",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "16:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "冬令時間",
+          "Description": "10月至2月平日營運時間",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "15:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊日營運時間",
+          "Description": "颱風假期間全天不營運",
+          "ServiceDays": [
+            "TyphoonDay"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:36"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000003",
+      "AttractionName": "屏菸1936文化基地",
+      "ServiceTimes": [
+        {
+          "Name": "每日開放",
+          "Description": "平日營運時間",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊日營運時間",
+          "Description": "颱風假期間全天不營運",
+          "ServiceDays": [
+            "TyphoonDay"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:37"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000004",
+      "AttractionName": "屏東縣立圖書館總館",
+      "ServiceTimes": [
+        {
+          "Name": "每日開放",
+          "Description": "平日營運時間",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊日營運時間",
+          "Description": "颱風假期間全天不營運",
+          "ServiceDays": [
+            "TyphoonDay"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:37"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000005",
+      "AttractionName": "職人町",
+      "ServiceTimes": [
+        {
+          "Name": "1月至3月營運時間",
+          "Description": "平日營運時間",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "4月至9月營運時間",
+          "Description": "平日營運時間",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "06:30:00",
+          "EndTime": "18:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "10月至12月營運時間",
+          "Description": "平日營運時間",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊日營運時間",
+          "Description": "颱風假期間全天不營運",
+          "ServiceDays": [
+            "TyphoonDay"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:38"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000006",
+      "AttractionName": "屏東美術館",
+      "ServiceTimes": [
+        {
+          "Name": "每日開放",
+          "Description": "平日營運時間",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "07:30:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊日營運時間",
+          "Description": "颱風假期間全天不營運",
+          "ServiceDays": [
+            "TyphoonDay"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:38"
+    },
+    {
+      "AttractionID": "Attraction_376530000A_000007",
+      "AttractionName": "屏東書院",
+      "ServiceTimes": [
+        {
+          "Name": "4月至10月營運時間",
+          "Description": "平日營運時間",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:30:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "11月至3月營運時間",
+          "Description": "平日營運時間",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "特殊日營運時間",
+          "Description": "颱風假期間全天不營運",
+          "ServiceDays": [
+            "TyphoonDay"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2024-09-16T08:17:38"
+    },
+    {
+      "AttractionID": "Attraction_376580000A_000001",
+      "AttractionName": "十七公里海岸線",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "每周一及除夕休園，連續假期遇到週一則是視同假日開園，售票時間至16:30",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "不營運時間",
+          "Description": "每周一及除夕休園，連續假期遇到週一則是視同假日開園，售票時間至16:30",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-04-28T16:00:00"
+    },
+    {
+      "AttractionID": "Attraction_376580000A_000002",
+      "AttractionName": "青青草原",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "週二~週日09:00~17:00，每週一、除夕及選舉日休館，售票至16:30",
+          "ServiceDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "不營運時間",
+          "Description": "每週一、除夕及選舉日休館",
+          "ServiceDays": [
+            "Monday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-04-28T16:00:00"
+    },
+    {
+      "AttractionID": "Attraction_376580000A_000003",
+      "AttractionName": "十八尖山",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "營業時間：週一至週六，8:00~17:00(採預約制)，導覽時段：9:00、10:30、1:30、15:00，預約專線：03-5389187",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "不營運時間",
+          "Description": "每週日不營運",
+          "ServiceDays": [
+            "Sunday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-04-28T16:00:00"
+    },
+    {
+      "AttractionID": "Attraction_376580000A_000004",
+      "AttractionName": "青草湖",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "營業時間：09:00–12:00，13:00–16:00，相關問題請洽 0955-590136 謝經理",
+          "ServiceDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "09:00:00",
+          "EndTime": "14:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-04-28T16:00:00"
+    },
+    {
+      "AttractionID": "Attraction_376580000A_000005",
+      "AttractionName": "新竹市立動物園",
+      "ServiceTimes": [
+        {
+          "Name": "營運時間",
+          "Description": "週一、週三至週日（週二公休），影院-依電影放映時刻表、書店13:00-21:30、餐酒館18:00-24:00。若遇特殊狀況（如連假）則機動調整後佈。",
+          "ServiceDays": [
+            "Monday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "StartTime": "08:00:00",
+          "EndTime": "17:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        },
+        {
+          "Name": "不營運時間",
+          "Description": "每週二公休",
+          "ServiceDays": [
+            "Tuesday"
+          ],
+          "StartTime": "00:00:00",
+          "EndTime": "00:00:00",
+          "EffectiveDate": null,
+          "ExpireDate": null
+        }
+      ],
+      "UpdateTime": "2023-04-28T16:00:00"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}SlowDays{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/dashboard/assets/shared_style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="custom-header">
+        <div class="header-left">
+            <button id="sidebar-toggle" class="toggle-btn">☰</button>
+            <div class="header-logo">SlowDays Dashboard</div>
+        </div>
+        
+        <div>
+            {% if current_user.is_authenticated %}
+                <span style="color: #FFA97F; font-weight: bold; margin-right: 15px;">Hi, {{ current_user.username }}</span>
+                <a href="/logout" class="btn-slow-primary">登出</a>
+            {% else %}
+                <a href="/login" class="btn-slow-outline">登入</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="custom-sidebar">
+        <div class="nav flex-column nav-pills">
+            {% for item in sidebar_items %}
+                {% if item.type == 'header' %}
+                    {% if item.margin_top %}
+                        <div class="sidebar-sub-header">{{ item.label }}</div>
+                    {% else %}
+                        <div class="sidebar-header">{{ item.label }}</div>
+                        <hr style="margin: 0 0 10px 0;">
+                    {% endif %}
+                {% elif item.type == 'link' %}
+                    <a href="{{ item.href }}" 
+                       class="nav-link {% if request.path == item.href %}active{% endif %}">
+                       <span style="margin-right: 8px;">{{ item.icon }}</span>
+                       <span>{{ item.label }}</span>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="custom-content">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="alert alert-warning" style="background-color: #FFF3CD; border-color: #FFECB5; color: #856404;">
+                {{ messages[0] }}
+            </div>
+          {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+    
+    <script src="/dashboard/assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
