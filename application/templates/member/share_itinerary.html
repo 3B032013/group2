@@ -1,0 +1,114 @@
+{% extends "member/base_member.html" %}
+
+{% block title %}分享行程檢視{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4" style="height: 100vh; overflow: hidden;">
+
+    <!-- ===== Header ===== -->
+    <div class="d-flex justify-content-between align-items-center mb-3 px-2">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-calendar-event me-2 fs-4"></i>
+            <h2 class="fw-bold mb-0">{{ plan.title }}</h2>
+            <span class="badge bg-secondary ms-3">僅供瀏覽</span>
+        </div>
+        <div>
+            <!-- ⭐ 分享連結按鈕 -->
+            <button id="btn-copy-share" class="btn btn-outline-success rounded-pill me-2">
+                <i class="bi bi-share-fill"></i> 分享連結
+            </button>
+
+            <a href="{{ url_for('member.schedule_map', itinerary_id=plan.id) }}"
+               target="_blank"
+               class="btn btn-outline-primary rounded-pill me-2">
+                <i class="bi bi-map-fill"></i> 行程地圖
+            </a>
+
+            <button class="btn btn-outline-secondary rounded-pill" onclick="window.close()">
+                關閉
+            </button>
+        </div>
+    </div>
+
+    <p class="text-muted small px-2 mb-3">
+        此為分享行程檢視頁，僅供瀏覽，無法進行編輯或修改。
+    </p>
+
+    <div class="row h-100">
+
+        <!-- ===== 左側：未排程項目（只顯示） ===== -->
+        <div class="col-md-3 h-100 d-flex flex-column">
+            <div class="card border-warning h-100">
+                <div class="card-header bg-warning fw-bold text-dark">
+                    📍 行程項目
+                </div>
+                <div class="card-body bg-light p-2 overflow-auto">
+                    {% for detail in plan.details if detail.day_number == 0 %}
+                        <div class="bg-white border rounded p-2 mb-2">
+                            <div class="fw-bold small">{{ detail.name }}</div>
+                        </div>
+                    {% else %}
+                        <div class="text-muted small">沒有未排程項目</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 右側：每日行程（只顯示） ===== -->
+        <div class="col-md-9 h-100 d-flex flex-column">
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs bg-white pt-2 px-2">
+                {% for i in range(1, total_days + 1) %}
+                <li class="nav-item">
+                    <button class="nav-link {% if i == 1 %}active fw-bold{% endif %}"
+                            data-bs-toggle="tab"
+                            data-bs-target="#day-{{ i }}">
+                        Day {{ i }}
+                        <small class="text-muted ms-1">
+                            ({{ (plan.start_date + timedelta(days=i-1)).strftime('%m/%d') }})
+                        </small>
+                    </button>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <div class="tab-content bg-white border border-top-0 flex-grow-1 overflow-auto">
+
+                {% for i in range(1, total_days + 1) %}
+                <div class="tab-pane fade {% if i == 1 %}show active{% endif %}" id="day-{{ i }}">
+                    <div class="p-3">
+                        {% for detail in plan.details if detail.day_number == i %}
+                        <div class="border rounded p-3 mb-2">
+                            <div class="fw-bold">{{ detail.name }}</div>
+                            <div class="text-muted small">
+                                ⏰ {{ detail.start_time or '09:00' }} – {{ detail.end_time or '10:00' }}
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="text-muted small">本日尚未安排項目</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== 分享連結 JS（Level 1） ===== -->
+<script>
+document.getElementById('btn-copy-share')?.addEventListener('click', () => {
+    const shareUrl = `${window.location.origin}/share/{{ plan.id }}`;
+
+    navigator.clipboard.writeText(shareUrl)
+        .then(() => {
+            alert('🔗 行程分享連結已複製！\n\n你可以直接貼給朋友查看');
+        })
+        .catch(() => {
+            alert('❌ 無法自動複製，請手動複製：\n' + shareUrl);
+        });
+});
+</script>
+{% endblock %}

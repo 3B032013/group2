@@ -26,10 +26,22 @@
                         <p class="text-muted small mb-4">
                             <i class="bi bi-clock me-1"></i>建立於 {{ plan.created_at.strftime('%Y/%m/%d') }}
                         </p>
+                        <div class="mb-3">
+                        <label class="form-label small text-muted mb-1">行程備註</label>
+                        <textarea class="form-control form-control-sm itinerary-note"
+                                rows="2"
+                                data-id="{{ plan.id }}"
+                                placeholder="輸入備註（會暫存於本次登入）">{{ notes.get(plan.id|string, '') }}</textarea>
+                    </div>
                         <div class="d-grid">
                             <a href="{{ url_for('member.edit_schedule', itinerary_id=plan.id) }}" class="btn btn-outline-primary rounded-pill fw-bold">
                                 開始排程管理 <i class="bi bi-chevron-right ms-1"></i>
                             </a>
+                            <a href="{{ url_for('member.share_itinerary', itinerary_id=plan.id) }}"
+                            target="_blank"
+                            class="btn btn-outline-secondary rounded-pill fw-bold mt-2">
+                            分享行程 <i class="bi bi-share ms-1"></i>
+                        </a>
                         </div>
                     </div>
                 </div>
@@ -44,6 +56,8 @@
         {% endif %}
     </div>
 </div>
+
+
 
 <div class="modal fade" id="createItineraryModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -79,4 +93,19 @@
         </form>
     </div>
 </div>
+<script>
+document.querySelectorAll('.itinerary-note').forEach(el => {
+  let t;
+  el.addEventListener('input', () => {
+    clearTimeout(t);
+    t = setTimeout(() => {
+      fetch(`/member/schedule/note/${el.dataset.id}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ note: el.value })
+      });
+    }, 400);
+  });
+});
+</script>
 {% endblock %}

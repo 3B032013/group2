@@ -373,8 +373,24 @@ def create_app():
         html.Div(id="page-content", className="custom-content"),
 
             
-            # 全域購物車按鈕
-            html.Button([html.I(className="bi bi-calendar-week", style={'fontSize': '1.5rem'}), html.Span("", id="cart-badge", className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger")], id="btn-open-cart", className="btn btn-primary rounded-circle shadow-lg", style=cart_btn_style),
+            # 全域行程籃子按鈕
+            html.Button([
+                # 加入購物車圖示 (bi-cart-fill)
+                html.I(className="bi bi-cart-fill me-2", style={'fontSize': '1.3rem'}), 
+                html.Span("行程籃子", className="fw-bold"),
+                # 數量小紅點
+                html.Span("", id="cart-badge", className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger")
+            ], id="btn-open-cart", 
+            # 使用 rounded-pill 呈現長橢圓膠囊狀
+            className="btn btn-primary rounded-pill shadow-lg px-4 d-flex align-items-center", 
+            style={
+                'position': 'fixed', 
+                'bottom': '30px', 
+                'right': '30px', 
+                'height': '50px', 
+                'zIndex': '1000', 
+                'border': 'none'
+            }),
             
             # 全域購物車側邊欄
             dbc.Offcanvas(id="itinerary-cart-sidebar", title="🗓️ 分配景點至行程", is_open=False, placement="end", children=[
@@ -1098,11 +1114,31 @@ def register_callbacks(app):
         ]
         return cart_html, str(count) if count > 0 else ""
 
-    @app.callback([Output("btn-open-cart", "style"), Output("cart-badge", "children"), Output("cart-items-content", "children")], [Input("url", "pathname")])
+    @app.callback(
+        [Output("btn-open-cart", "style"), 
+        Output("cart-badge", "children"), 
+        Output("cart-items-content", "children")], 
+        [Input("url", "pathname")]
+    )
     def init_and_control_cart(pathname):
-        if pathname not in ["/dashboard/planner", "/dashboard/attractions"]: return {'display': 'none'}, "", ""
+        # 僅在特定路徑顯示籃子按鈕
+        if pathname not in ["/dashboard/planner", "/dashboard/attractions"]: 
+            return {'display': 'none'}, "", ""
+        
         cart_html, badge = generate_cart_html()
-        return {'position': 'fixed', 'bottom': '30px', 'right': '30px', 'width': '60px', 'height': '60px', 'zIndex': '1000', 'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center'}, badge, cart_html
+        
+        # 確保回傳的樣式支持長橢圓形與內部對齊
+        return {
+            'position': 'fixed', 
+            'bottom': '30px', 
+            'right': '30px', 
+            'height': '50px', 
+            'zIndex': '1000', 
+            'display': 'flex', 
+            'alignItems': 'center', 
+            'justifyContent': 'center',
+            'border': 'none'
+        }, badge, cart_html
 
     @app.callback(Output("itinerary-cart-sidebar", "is_open", allow_duplicate=True), [Input("btn-open-cart", "n_clicks")], [State("itinerary-cart-sidebar", "is_open")], prevent_initial_call=True)
     def toggle_sidebar(n, is_open): return not is_open if n else is_open
