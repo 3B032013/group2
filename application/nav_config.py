@@ -39,6 +39,12 @@ SIDEBAR_ITEMS = [
     },
     {
         "type": "link", 
+        "label": "為你推薦", 
+        "href": "/recommend",  # 這裡要確保與你的 routes.py 路由對應
+        "icon": "✨ "
+    },
+    {
+        "type": "link", 
         "label": "我的收藏行程", 
         "href": "/favorites", 
         "icon": "❤️ "

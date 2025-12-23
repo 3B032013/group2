@@ -5,6 +5,10 @@ from . import db
 from .models import User, Favorite, Itinerary, ItineraryDetail
 from .nav_config import SIDEBAR_ITEMS
 from datetime import datetime
+from flask import session
+from .utils.attraction_mapping import ATTRACTION_TYPE_MAPPING
+from .utils.accommodation_mapping import ACCOMMODATION_TYPE_MAPPING
+from .utils.restaurant_mapping import RESTAURANT_TYPE_MAPPING
 import pandas as pd
 import json
 import os
@@ -122,19 +126,155 @@ member_bp = Blueprint('member', __name__)
 def inject_common_vars():
     return dict(sidebar_items=SIDEBAR_ITEMS)
 
+@member_bp.route('/recommend')
+@login_required
+def recommend():
+    # Step 1-1：讀取會員偏好
+    preferences = session.get("preferences", {})
+    content_types = preferences.get("content_types", [])
+    attraction_types = preferences.get("attraction_types", [])
+    accommodation_types = preferences.get("accommodation_types", [])
+    food_types = preferences.get("food_types", [])
+
+    print("🧱 attraction_df columns:", attraction_df.columns.tolist())
+
+    # Step 1-2：準備推薦清單（先空的）
+    recommended_attractions = []
+    recommended_restaurants = []
+    recommended_hotels = []
+
+    # Step 1-3：依 content_types 決定要不要放資料
+    if 'attractions' in content_types:
+        filtered_df = attraction_df.copy()   # ✅ 這裡要用 attraction_df
+
+         # ✅ Step B-2.1：只保留「有圖片」的景點
+        if "ThumbnailURL" in filtered_df.columns:
+            filtered_df = filtered_df[
+                filtered_df["ThumbnailURL"].notna() &
+                (filtered_df["ThumbnailURL"] != "")
+            ]
+
+
+        # ⭐️ 有選「文化 / 景觀 / 戶外」才進行分類
+        if attraction_types:
+            allowed_classes = []
+            for t in attraction_types:
+                allowed_classes += ATTRACTION_TYPE_MAPPING.get(t, [])
+
+            if "PrimaryCategory" in filtered_df.columns:
+                filtered_df = filtered_df[
+                    filtered_df["PrimaryCategory"].isin(allowed_classes)
+                ]
+    
+
+        recommended_attractions = filtered_df.head(10).to_dict('records')
+
+    if 'food' in content_types:
+        food_df = restaurant_df.copy()
+
+        def force_extract(row):
+            # 1. 深度解析分類 (對付「未分類」)
+            # JSON 結構為: "RestaurantCategoryName": [{"Name": "中式料理"}]
+            cat_data = row.get('RestaurantCategoryName')
+            category = "未分類"
+            
+            if isinstance(cat_data, list) and len(cat_data) > 0:
+                first_item = cat_data[0]
+                if isinstance(first_item, dict):
+                    category = first_item.get('Name', '未分類')
+            elif isinstance(cat_data, str) and cat_data.strip() != "":
+                category = cat_data
+            
+            # 2. 深度解析城市 (對付「台灣」)
+            # JSON 結構為: "PostalAddress": {"City": "桃園市", ...}
+            addr = row.get('PostalAddress')
+            city = "台灣"
+            
+            if isinstance(addr, dict):
+                city = addr.get('City') or addr.get('Town') or "台灣"
+            elif isinstance(row.get('City'), str):
+                city = row.get('City')
+            
+            # 3. 提取圖片
+            pic = row.get('Picture')
+            img = ""
+            if isinstance(pic, dict):
+                img = pic.get('PictureUrl1', '')
+            else:
+                img = row.get('ThumbnailURL') or ""
+            
+            return pd.Series([category, city, img], index=['RestaurantCategory', 'City', 'ThumbnailURL'])
+
+        # 執行轉換
+        food_df[['RestaurantCategory', 'City', 'ThumbnailURL']] = food_df.apply(force_extract, axis=1)
+
+        # 4. 篩選邏輯 (寬鬆比對)
+        food_types = preferences.get("food_types", [])
+        if food_types:
+            allowed_cats = []
+            for ft in food_types:
+                allowed_cats += RESTAURANT_TYPE_MAPPING.get(ft, [])
+            
+            if allowed_cats:
+                # 使用 isin 過濾，且確保 RestaurantCategory 欄位不為空
+                filtered_df = food_df[food_df["RestaurantCategory"].isin(allowed_cats)]
+                if not filtered_df.empty:
+                    food_df = filtered_df
+
+        # 5. 排序與輸出 (圖片優先)
+        food_df['has_img'] = food_df['ThumbnailURL'].apply(lambda x: 1 if x and str(x) != 'nan' and x != "" else 0)
+        food_df = food_df.sort_values(by='has_img', ascending=False)
+        
+        recommended_restaurants = food_df.head(9).to_dict('records')
+    if 'accommodation' in content_types:
+        filtered_hotel_df = hotel_df.copy()
+        # ⭐️ 根據會員選的住宿類型進行篩選
+        if accommodation_types:
+            allowed_keywords = []
+
+            for t in accommodation_types:
+                allowed_keywords += ACCOMMODATION_TYPE_MAPPING.get(t, [])
+
+            # 依「名稱關鍵字」篩選
+            mask = filtered_hotel_df["HotelName"].astype(str).apply(
+                lambda name: any(keyword in name for keyword in allowed_keywords)
+            )
+
+            filtered_hotel_df = filtered_hotel_df[mask]
+        has_image = filtered_hotel_df["ThumbnailURL"].notna() & (filtered_hotel_df["ThumbnailURL"] != "")
+        with_image_df = filtered_hotel_df[has_image]
+        no_image_df = filtered_hotel_df[~has_image]
+
+        sorted_df = pd.concat([with_image_df, no_image_df])
+
+
+        # ⚠️ 效能保護：最多取前 50，再由前端顯示 9
+        recommended_hotels = sorted_df.head(50).to_dict('records')
+
+    return render_template(
+            'member/recommend.html',
+            attractions=recommended_attractions if recommended_attractions else [],
+            restaurants=recommended_restaurants if recommended_restaurants else [],
+            hotels=recommended_hotels if recommended_hotels else []
+        )
 @member_bp.route('/preferences', methods=['GET', 'POST'])
 @login_required
 def preferences():
     if request.method == 'POST':
-        preferences = {
-            "activity_types": request.form.getlist("activity_type"),
-            "travel_pace": request.form.get("travel_pace"),
-            "season": request.form.getlist("season")
+        preferences_data = {
+            "content_types": request.form.getlist("content_types"),          
+            "attraction_types": request.form.getlist("attraction_types"),    
+            "accommodation_types": request.form.getlist("accommodation_types"), 
+            "food_types": request.form.getlist("food_types"),  # ✅ 確保有這行
+            "travel_pace": request.form.get("travel_pace")                   
         }
-        print(preferences)  # 示意用
-        return redirect(url_for('member.preferences'))
+        session["preferences"] = preferences_data
+        session.modified = True 
 
-    return render_template('member/preferences.html')
+        flash('偏好已更新，正在為你生成推薦內容！', 'success')
+        return redirect(url_for('member.recommend'))  # 跳轉到推薦頁
+
+    return render_template('member/preferences.html', preferences=session.get("preferences", {}))
 
 @member_bp.route('/favorites')
 @login_required

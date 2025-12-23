@@ -1,0 +1,98 @@
+{% extends "member/base_member.html" %}
+
+{% block title %}為你推薦的內容{% endblock %}
+
+{% block content %}
+
+{# 1. 先定義小盒子 (Macro) #}
+{% macro card_ui(item, type) %}
+<div class="recommend-card">
+    <div class="img-wrapper">
+        <img src="{{ item.ThumbnailURL or 'https://placehold.co/400x300?text=No+Image' }}" alt="img">
+    </div>
+    <div class="recommend-body">
+        <div class="recommend-title">
+            {% if type == 'attraction' %}{{ item.AttractionName }}
+            {% elif type == 'restaurant' %}{{ item.RestaurantName }}
+            {% else %}{{ item.HotelName }}{% endif %}
+        </div>
+        <div class="recommend-category">{{ item.RestaurantCategory or '推薦項目' }}</div>
+        <div class="recommend-location">📍 {{ item.City or '台灣' }}</div>
+        <div class="recommend-actions mt-auto">
+            <button class="btn btn-sm btn-outline-primary w-100">➕ 加入行程</button>
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+{# 2. CSS 樣式 #}
+<style>
+  .recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .recommend-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    min-height: 330px;
+  }
+  .img-wrapper { width: 100%; height: 160px; background: #f2f2f2; overflow: hidden; }
+  .img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+  .recommend-body { padding: 12px 14px; display: flex; flex-direction: column; flex: 1; }
+  .recommend-title { font-size: 15px; font-weight: 700; min-height: 40px; margin-bottom: 6px; }
+  .recommend-category { font-size: 13px; color: #ff9f6e; font-weight: 600; }
+  .recommend-location { font-size: 13px; color: #555; margin-bottom: 10px; }
+  
+  .nav-pills .nav-link { border-radius: 50px; padding: 8px 20px; color: #555; border: 1px solid #ddd; margin-right: 10px; }
+  .nav-pills .nav-link.active { background-color: #ff9f6e; border-color: #ff9f6e; color: white !important; }
+  
+  @media (max-width: 1200px) { .recommend-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) { .recommend-grid { grid-template-columns: 1fr; } }
+</style>
+
+{# 3. 頁面主要內容 #}
+<div class="container">
+    <h1 class="mb-2">為你推薦的內容</h1>
+    <p class="text-muted mb-4">根據你的偏好設定，我們為你準備了以下精選項目。</p>
+
+    <ul class="nav nav-pills mb-4" id="recommendTab" role="tablist">
+        <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-all">推薦總覽</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-attractions">🏛 景點</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-food">🥘 美食</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-hotels">🏨 住宿</button></li>
+    </ul>
+
+    <hr>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="tab-all">
+            {% if attractions %}<h4 class="mt-4 mb-3">🏞 精選景點</h4><div class="recommend-grid">{% for item in attractions[:3] %}{{ card_ui(item, 'attraction') }}{% endfor %}</div>{% endif %}
+            {% if restaurants %}<h4 class="mt-5 mb-3">🍽 精選美食</h4><div class="recommend-grid">{% for item in restaurants[:3] %}{{ card_ui(item, 'restaurant') }}{% endfor %}</div>{% endif %}
+            {% if hotels %}<h4 class="mt-5 mb-3">🏨 精選住宿</h4><div class="recommend-grid">{% for item in hotels[:3] %}{{ card_ui(item, 'hotel') }}{% endfor %}</div>{% endif %}
+        </div>
+
+        <div class="tab-pane fade" id="tab-attractions">
+            <h4 class="mt-4 mb-3">所有推薦景點</h4>
+            <div class="recommend-grid">{% for item in attractions %}{{ card_ui(item, 'attraction') }}{% endfor %}</div>
+        </div>
+
+        <div class="tab-pane fade" id="tab-food">
+            <h4 class="mt-4 mb-3">所有推薦美食</h4>
+            <div class="recommend-grid">{% for item in restaurants %}{{ card_ui(item, 'restaurant') }}{% endfor %}</div>
+        </div>
+
+        <div class="tab-pane fade" id="tab-hotels">
+            <h4 class="mt-4 mb-3">所有推薦住宿</h4>
+            <div class="recommend-grid">{% for item in hotels %}{{ card_ui(item, 'hotel') }}{% endfor %}</div>
+        </div>
+    </div>
+</div>
+
+{% endblock %} {# 所有的 endmacro 都在這個 endblock 之前關閉了 #}

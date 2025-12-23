@@ -3,23 +3,151 @@
 {% block title %}個人偏好設定{% endblock %}
 
 {% block content %}
-<h1>個人偏好設定</h1>
 
-<p>請設定你的旅遊偏好，系統將依此提供推薦行程。</p>
+<style>
+  /* ===============================
+     Preferences Page – UI Upgrade
+     =============================== */
+  .pref-section { margin-bottom: 36px; }
+  .pref-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+  .pref-subtitle { color: #777; font-size: 14px; margin-bottom: 20px; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  
+  .select-card {
+    border: 2px solid #eee;
+    border-radius: 16px;
+    padding: 18px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background: #fff;
+    position: relative;
+  }
+  .select-card:hover { border-color: #ffb48a; box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+  .select-card.active { border-color: #ff9f6e; background: #fff5ee; }
+  .select-card input { display: none; }
+  .select-card .icon { font-size: 28px; margin-bottom: 10px; }
+  .select-card .label { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .select-card .desc { font-size: 13px; color: #777; }
+
+  .sub-options { margin-top: 20px; padding-left: 12px; border-left: 3px solid #ffe1cf; }
+  .sub-title { font-weight: 600; margin-bottom: 12px; }
+  .sub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+  
+  .sub-card {
+    border: 1.5px solid #eee;
+    border-radius: 12px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .sub-card.active { border-color: #ff9f6e; background: #fff7f1; }
+  .sub-card input { display: none; }
+  .save-bar { margin-top: 40px; }
+</style>
+
+<h1 class="mb-2">打造你的旅遊偏好</h1>
+<p class="text-muted mb-4">
+  告訴我們你喜歡怎樣的旅行方式，系統會為你推薦更適合的內容。
+</p>
 
 <form method="post">
-    <p>
-        <strong>偏好活動類型：</strong><br>
-        <label><input type="checkbox" name="activity_type" value="festival"> 節慶</label><br>
-        <label><input type="checkbox" name="activity_type" value="art"> 藝文</label><br>
-        <label><input type="checkbox" name="activity_type" value="outdoor"> 戶外</label>
-    </p>
 
-    <p>
-        <strong>旅遊節奏：</strong><br>
-        <input type="range" name="travel_pace" min="1" max="5">
-    </p>
+  <div class="pref-section">
+    <div class="pref-title">你想探索哪些內容？</div>
+    <div class="pref-subtitle">可複選，之後仍可隨時調整</div>
+    <div class="card-grid">
+      <label class="select-card {% if 'attractions' in preferences.get('content_types', []) %}active{% endif %}">
+        <input type="checkbox" name="content_types" value="attractions" {% if 'attractions' in preferences.get('content_types', []) %}checked{% endif %}>
+        <div class="icon">🏞</div>
+        <div class="label">景點</div>
+        <div class="desc">自然景觀、文化、戶外活動</div>
+      </label>
+      <label class="select-card {% if 'food' in preferences.get('content_types', []) %}active{% endif %}">
+        <input type="checkbox" name="content_types" value="food" {% if 'food' in preferences.get('content_types', []) %}checked{% endif %}>
+        <div class="icon">🍽</div>
+        <div class="label">美食</div>
+        <div class="desc">餐廳、夜市、在地小吃</div>
+      </label>
+      <label class="select-card {% if 'accommodation' in preferences.get('content_types', []) %}active{% endif %}">
+        <input type="checkbox" name="content_types" value="accommodation" {% if 'accommodation' in preferences.get('content_types', []) %}checked{% endif %}>
+        <div class="icon">🏨</div>
+        <div class="label">住宿</div>
+        <div class="desc">飯店、民宿、特色住宿</div>
+      </label>
+    </div>
+  </div>
 
-    <button type="submit">儲存設定</button>
+  <div class="pref-section sub-options" id="attraction-options" style="display: none;">
+    <div class="sub-title">你比較偏好哪種類型的景點？</div>
+    <div class="sub-grid">
+      {% for key, label, icon in [('scenery','景觀','🌄'),('culture','文化','🏛'),('outdoor','戶外','🥾')] %}
+      <label class="sub-card {% if key in preferences.get('attraction_types', []) %}active{% endif %}">
+        <input type="checkbox" name="attraction_types" value="{{ key }}" {% if key in preferences.get('attraction_types', []) %}checked{% endif %}>
+        {{ icon }} {{ label }}
+      </label>
+      {% endfor %}
+    </div>
+  </div>
+
+    <div class="pref-section sub-options" id="food-options">
+    <div class="sub-title">你喜歡哪種料理？</div>
+    <div class="sub-grid">
+        {% for key, label, icon in [('chinese','中式/火鍋','🥘'),('japanese','日式/燒烤','🍣'),('western','西式/異國','🍕'),('cafe','咖啡甜點','🍰'),('local','在地小吃','🍜')] %}
+        <label class="sub-card {% if key in preferences.get('food_types', []) %}active{% endif %}">
+        <input type="checkbox" name="food_types" value="{{ key }}"
+            {% if key in preferences.get('food_types', []) %}checked{% endif %}>
+        {{ icon }} {{ label }}
+        </label>
+        {% endfor %}
+    </div>
+  </div>
+
+  <div class="pref-section sub-options" id="accommodation-options" style="display: none;">
+    <div class="sub-title">你偏好哪種住宿？</div>
+    <div class="sub-grid">
+      {% for key, label, icon in [('hotel','飯店','🏨'),('bnb','民宿','🏡'),('business','商旅','💼'),('special','特色住宿','✨')] %}
+      <label class="sub-card {% if key in preferences.get('accommodation_types', []) %}active{% endif %}">
+        <input type="checkbox" name="accommodation_types" value="{{ key }}" {% if key in preferences.get('accommodation_types', []) %}checked{% endif %}>
+        {{ icon }} {{ label }}
+      </label>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="save-bar">
+    <button type="submit" class="btn btn-primary btn-lg">儲存我的旅遊偏好</button>
+  </div>
 </form>
+
+<script>
+  function syncCards() {
+    // 處理卡片點擊後的視覺效果（變橘色背景）
+    document.querySelectorAll('.select-card, .sub-card').forEach(card => {
+      const input = card.querySelector('input');
+      if (input.checked) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+
+    // 根據大類勾選狀態顯示/隱藏細分類
+    const showAtt = document.querySelector('input[value="attractions"]').checked;
+    const showFood = document.querySelector('input[value="food"]').checked;
+    const showAcc = document.querySelector('input[value="accommodation"]').checked;
+
+    document.getElementById('attraction-options').style.display = showAtt ? 'block' : 'none';
+    document.getElementById('food-options').style.display = showFood ? 'block' : 'none';
+    document.getElementById('accommodation-options').style.display = showAcc ? 'block' : 'none';
+  }
+
+  // 監聽所有 input 變化
+  document.querySelectorAll('input').forEach(i => {
+    i.addEventListener('change', syncCards);
+  });
+
+  // 初始執行一次，確保從資料庫讀取的勾選狀態能正確顯示
+  syncCards();
+</script>
+
 {% endblock %}
