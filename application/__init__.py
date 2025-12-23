@@ -203,6 +203,104 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     return R * c
 
 # ==========================================
+# new. 首頁 UI 生成函式
+# ==========================================
+def generate_home_page():
+    return html.Div([
+        # --- 1. 標題區 ---
+        html.Div([
+            html.H1("探索 SlowDays", className="text-center mb-2 animate-fade-up", 
+                    style={"color": "#FFA97F", "fontWeight": "bold", "fontSize": "3.2rem"}),
+            html.P("整合全台旅遊數據，規劃您的專屬節奏", className="text-center text-muted animate-fade-up", 
+                   style={"animationDelay": "0.1s"}),
+        ], style={"padding": "40px 0 30px"}),
+
+        # --- 2. 第一層：行程規劃 (左) 與 數據統計 (右) ---
+        dbc.Row([
+            # 左側：開始規劃行程 (加入 animate-fade-up)
+            dbc.Col(
+                html.A([
+                    html.Div([
+                        html.Div([
+                            html.H2("開始規劃行程", className="fw-bold mb-2", style={"color": "#2c3e50"}),
+                            html.P("隨心所欲，為收藏的風景排好專屬節奏", style={"color": "#5d6d7e", "margin": "0"})
+                        ], style={
+                            "backgroundColor": "rgba(255, 255, 255, 0.75)", 
+                            "padding": "30px 40px", "borderRadius": "20px",
+                            "backdropFilter": "blur(8px)", "textAlign": "center"
+                        })
+                    ], style={
+                        "backgroundImage": "url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=800&q=80')",
+                        "backgroundSize": "cover", "backgroundPosition": "center",
+                        "height": "100%", "display": "flex", "alignItems": "center",
+                        "justifyContent": "center", "borderRadius": "25px", "minHeight": "ˇ200px"
+                    })
+                ], href="/dashboard/planner", className="quick-link-card animate-fade-up", 
+                   style={"textDecoration": "none", "display": "block", "height": "100%", "animationDelay": "0.2s"}),
+                width=12, lg=7, className="equal-height-col" # 調整比例為 6:6 或 7:5
+            ),
+            
+            # 右側：三個數據統計方框 (活動、景點、餐廳)
+            dbc.Col(
+                html.Div([
+                    html.Div(generate_stats_card("目前活動總數", nums_of_event_name, "assets/calendar.svg"), 
+                             className="animate-fade-up", style={"animationDelay": "0.3s"}),
+                    html.Div(generate_stats_card("目前景點總數", nums_of_name, "assets/landmark.png"), 
+                             className="animate-fade-up", style={"animationDelay": "0.4s"}),
+                    html.Div(generate_stats_card("目前餐廳總數", nums_of_restaurant_name, "assets/dinner.png"), 
+                             className="animate-fade-up", style={"animationDelay": "0.5s"}),
+                ], className="stats-container"),
+                width=12, lg=5, className="equal-height-col"
+            )
+        ], className="mb-5 g-4 equal-height-row"),
+
+        # --- 3. 第二層：快速入口 (修正訂機票圖片) ---
+        html.H5("🚀 找尋靈感", className="mb-4 fw-bold px-2", style={"color": "#4A4A4A"}),
+        dbc.Row([
+            generate_quick_entry("找飯店", "精選全台風格旅宿", 
+                                "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80", 
+                                "https://www.booking.com"),
+            
+            # 修正：更換為航空攝影主題，並確保解析度參數正確
+            generate_quick_entry("訂機票", "全球航線輕鬆比價", 
+                                "https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?auto=compress&cs=tinysrgb&w=600", 
+                                "https://www.eztravel.com.tw"),
+            
+            generate_quick_entry("買門票", "在地體驗與優惠票券", 
+                                "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=600&q=80", 
+                                "https://www.klook.com"),
+        ], className="g-4 mb-5"),
+    ], className="custom-home-container", style={"padding": "0 80px", "minHeight": "100vh"})
+
+# ⭐️ 這是你漏掉的輔助函式，請務必貼上
+def generate_quick_entry(title, sub, img_url, link):
+    return dbc.Col(
+        html.A([
+            html.Div([
+                # 圖片層：加入 className="entry-img"
+                html.Div(style={
+                    "backgroundImage": f"url('{img_url}')", # 加上單引號保護 URL
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center",
+                    "height": "160px",
+                    "transition": "transform 0.5s ease"
+                }, className="entry-img"),
+                
+                # 文字層
+                html.Div([
+                    html.H6(title, className="fw-bold mb-1 text-dark"),
+                    html.Small(sub, className="text-muted")
+                ], style={"padding": "20px", "textAlign": "center", "backgroundColor": "white"})
+            ], style={
+                "borderRadius": "25px", 
+                "overflow": "hidden", 
+                "boxShadow": "0 4px 15px rgba(0,0,0,0.05)",
+                "border": "1px solid rgba(0,0,0,0.05)"
+            }, className="quick-link-card-inner")
+        ], href=link, target="_blank", style={"textDecoration": "none"}, className="quick-link-card"),
+        width=12, md=4
+    )
+# ==========================================
 # 3. Create App & Callbacks
 # ==========================================
 def create_app():
@@ -261,9 +359,19 @@ def create_app():
         return html.Div([
             dcc.Location(id="url", refresh=False),
             dcc.Location(id="redirect-login", refresh=True),
-            html.Div([html.Div([html.Button("☰", id="sidebar-toggle", className="toggle-btn"), html.Div("SlowDays Dashboard", className="header-logo")], className="header-left"), auth_component], className="custom-header"),
-            sidebar,
-            html.Div(id="page-content", className="custom-content"),
+            html.Div([
+            html.Div([
+                html.Button("☰", id="sidebar-toggle", className="toggle-btn"), 
+                # 使用 dcc.Link 確保在 Dash 頁面切換時不重整
+                dcc.Link(
+                    "SlowDays",href="/dashboard/home", className="header-logo",style={"textDecoration": "none","color": "#FFA97F", "fontWeight": "800","fontSize": "1.8rem","letterSpacing": "1px"}
+                )
+            ], className="header-left"),auth_component
+        ], className="custom-header"),
+        
+        sidebar,
+        html.Div(id="page-content", className="custom-content"),
+
             
             # 全域購物車按鈕
             html.Button([html.I(className="bi bi-calendar-week", style={'fontSize': '1.5rem'}), html.Span("", id="cart-badge", className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger")], id="btn-open-cart", className="btn btn-primary rounded-circle shadow-lg", style=cart_btn_style),
@@ -303,9 +411,11 @@ def register_callbacks(app):
     # --------------------------------------------------------------------------------
     @app.callback(Output('page-content', 'children'), [Input('url', 'pathname')])
     def render_page_content(pathname):
-        if pathname in ["/dashboard/", "/dashboard"]: pathname = "/dashboard/overview"
+        # 修改預設路徑為 home
+        if pathname in ["/dashboard/", "/dashboard", "/dashboard/home"]: 
+            return generate_home_page() # 呼叫下方定義的首頁生成函式
 
-        if pathname == "/dashboard/overview":
+        elif pathname == "/dashboard/overview":
             return html.Div([
                 dbc.Row([
                     dbc.Col(generate_stats_card("縣市總數", num_of_city, "assets/earth.svg"), width=4),

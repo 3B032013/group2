@@ -376,3 +376,104 @@ body.sidebar-collapsed .custom-content {
 .link-details:hover {
     text-decoration: underline;
 }
+
+/* 首頁快捷鍵容器基礎樣式 */
+.quick-link-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* 滑鼠移上去的效果：浮起來 + 陰影加深 + 邊框變色 */
+.quick-link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important;
+    border-color: #FFA97F;
+    background-color: #fffaf8 !important;
+}
+
+/* 圖示放大效果 */
+.quick-link-card:hover i, .quick-link-card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* 背景微漸層，增加溫潤感 */
+.custom-home-container {
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+/* 卡片懸停效果優化 */
+.quick-link-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.quick-link-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+}
+
+/* 讓圖片入口看起來更吸引人 */
+.quick-link-card img {
+    transition: filter 0.3s;
+}
+
+.quick-link-card:hover img {
+    filter: brightness(1.1);
+}
+
+/* 1. 標題向上浮移進入動畫 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    opacity: 0; /* 初始隱藏，避免閃爍 */
+}
+
+/* 2. 齊平佈局優化 */
+.equal-height-row {
+    display: flex;
+    align-items: stretch; /* 確保左右兩大欄高度絕對齊平 */
+}
+
+.equal-height-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 讓右側三個方框等高且填滿間隙 */
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 均勻分散 */
+    height: 100%;
+}
+
+.stats-container > div {
+    flex: 1; /* 讓三個方塊平分高度 */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.stats-container > div:last-child {
+    margin-bottom: 0;
+}
+
+/* 修正圖片路徑確保顯示 */
+.entry-img {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 160px;
+}
+
+.entry-img { display: block !important; width: 100%; }
