@@ -734,6 +734,135 @@ def register_callbacks(app):
         favs = {fav.item_id for fav in Favorite.query.filter_by(user_id=current_user.id).all()} if current_user.is_authenticated else set()
         cards = [generate_trip_card(row, "景點", favs) for _, row in df_p.iterrows()]
         return html.Div(cards, className="planner-grid"), f" / {pages} 頁", curr
+
+    @app.callback(
+        [Output('result-event', 'children'), Output('label-total-event', 'children'), Output('input-page-event', 'value')],
+        [Input('planner-event-city', 'value'), Input('planner-event-categories', 'value'), 
+         Input('planner-event-date-range', 'start_date'), Input('planner-event-date-range', 'end_date'),
+         Input('btn-prev-event', 'n_clicks'), Input('btn-next-event', 'n_clicks'), Input('input-page-event', 'value')]
+    )
+    def update_event_cards(city, cats, start_date, end_date, btn_prev, btn_next, page_input):
+        trigger = ctx.triggered_id
+        df = preprocess_event_df(event_df).copy()
+
+        # 篩選邏輯
+        if city: 
+            df = df[df['PostalAddress.City'] == city]
+        
+        cats = sanitize_list_input(cats)
+        if cats: 
+            # 假設 EventCategoryNames 是字串，若有多個類別需視資料結構調整
+            # 這裡使用簡單的字串包含或 isin
+            mask = df['EventCategoryNames'].apply(lambda x: any(cat in str(x) for cat in cats))
+            df = df[mask]
+
+        if start_date and end_date:
+            # 簡單的日期篩選：活動結束時間 >= 查詢開始時間 且 活動開始時間 <= 查詢結束時間
+            df = df[(df['EndDateTime'] >= start_date) & (df['StartDateTime'] <= end_date)]
+
+        # 分頁邏輯
+        per_page = 15
+        pages = math.ceil(len(df) / per_page) or 1
+        if trigger == 'btn-prev-event': curr = max(1, (page_input or 1) - 1)
+        elif trigger == 'btn-next-event': curr = min(pages, (page_input or 1) + 1)
+        elif trigger == 'input-page-event': curr = max(1, min(pages, page_input or 1))
+        else: curr = 1
+
+        if df.empty: return html.Div("無符合資料", className="text-center mt-5 text-muted"), " / 1 頁", 1
+        
+        df_p = df.iloc[(curr-1)*per_page : curr*per_page]
+        favs = {fav.item_id for fav in Favorite.query.filter_by(user_id=current_user.id).all()} if current_user.is_authenticated else set()
+        cards = [generate_trip_card(row, "活動", favs) for _, row in df_p.iterrows()]
+        
+        return html.Div(cards, className="planner-grid"), f" / {pages} 頁", curr
+    
+    @app.callback(
+        [Output('result-hotel', 'children'), Output('label-total-hotel', 'children'), Output('input-page-hotel', 'value')],
+        [Input('planner-hotel-city', 'value'), Input('planner-cost-min', 'value'), Input('planner-cost-max', 'value'),
+         Input('planner-hotel-stars', 'value'),
+         Input('btn-prev-hotel', 'n_clicks'), Input('btn-next-hotel', 'n_clicks'), Input('input-page-hotel', 'value')]
+    )
+    def update_hotel_cards(city, min_price, max_price, stars_types, btn_prev, btn_next, page_input):
+        trigger = ctx.triggered_id
+        df = preprocess_hotel_df(hotel_df).copy()
+
+        # 篩選邏輯
+        if city: 
+            df = df[df['PostalAddress.City'] == city]
+
+        # 價格篩選 (假設資料欄位有 LowestPrice 或 CeilingPrice，需依實際欄位調整)
+        # 這裡先做個範例，如果你的資料沒有價格欄位，這段會被忽略
+        if min_price is not None or max_price is not None:
+             if 'LowestPrice' in df.columns:
+                if min_price: df = df[df['LowestPrice'] >= min_price]
+                if max_price: df = df[df['LowestPrice'] <= max_price]
+
+        # 星級與類型篩選 (混合在同一個 dropdown)
+        stars_types = sanitize_list_input(stars_types)
+        if stars_types:
+            # 分離星級(數字)與類型(文字)
+            selected_stars = [x for x in stars_types if isinstance(x, int) or (isinstance(x, str) and x.isdigit())]
+            selected_types = [x for x in stars_types if isinstance(x, str) and not x.isdigit()]
+            
+            mask = pd.Series(False, index=df.index)
+            if selected_stars:
+                # 假設 HotelStars 是數值
+                mask |= df['HotelStars'].isin([int(s) for s in selected_stars])
+            if selected_types:
+                mask |= df['HotelClassName'].isin(selected_types)
+            
+            df = df[mask]
+
+        # 分頁邏輯
+        per_page = 15
+        pages = math.ceil(len(df) / per_page) or 1
+        if trigger == 'btn-prev-hotel': curr = max(1, (page_input or 1) - 1)
+        elif trigger == 'btn-next-hotel': curr = min(pages, (page_input or 1) + 1)
+        elif trigger == 'input-page-hotel': curr = max(1, min(pages, page_input or 1))
+        else: curr = 1
+
+        if df.empty: return html.Div("無符合資料", className="text-center mt-5 text-muted"), " / 1 頁", 1
+        
+        df_p = df.iloc[(curr-1)*per_page : curr*per_page]
+        favs = {fav.item_id for fav in Favorite.query.filter_by(user_id=current_user.id).all()} if current_user.is_authenticated else set()
+        cards = [generate_trip_card(row, "住宿", favs) for _, row in df_p.iterrows()]
+        
+        return html.Div(cards, className="planner-grid"), f" / {pages} 頁", curr
+    
+    @app.callback(
+        [Output('result-restaurant', 'children'), Output('label-total-restaurant', 'children'), Output('input-page-restaurant', 'value')],
+        [Input('planner-restaurant-city', 'value'), Input('planner-restaurant-cuisine', 'value'),
+         Input('btn-prev-restaurant', 'n_clicks'), Input('btn-next-restaurant', 'n_clicks'), Input('input-page-restaurant', 'value')]
+    )
+    def update_restaurant_cards(city, cuisines, btn_prev, btn_next, page_input):
+        trigger = ctx.triggered_id
+        df = restaurant_df.copy() # 餐廳似乎沒有 preprocess 函式，直接用原始 df
+
+        # 篩選邏輯
+        if city: 
+            df = df[df['PostalAddress.City'] == city]
+        
+        cuisines = sanitize_list_input(cuisines)
+        if cuisines:
+            # 假設 CuisineNames 包含多個分類
+            mask = df['CuisineNames'].apply(lambda x: any(c in str(x) for c in cuisines))
+            df = df[mask]
+
+        # 分頁邏輯
+        per_page = 15
+        pages = math.ceil(len(df) / per_page) or 1
+        if trigger == 'btn-prev-restaurant': curr = max(1, (page_input or 1) - 1)
+        elif trigger == 'btn-next-restaurant': curr = min(pages, (page_input or 1) + 1)
+        elif trigger == 'input-page-restaurant': curr = max(1, min(pages, page_input or 1))
+        else: curr = 1
+
+        if df.empty: return html.Div("無符合資料", className="text-center mt-5 text-muted"), " / 1 頁", 1
+        
+        df_p = df.iloc[(curr-1)*per_page : curr*per_page]
+        favs = {fav.item_id for fav in Favorite.query.filter_by(user_id=current_user.id).all()} if current_user.is_authenticated else set()
+        cards = [generate_trip_card(row, "餐廳", favs) for _, row in df_p.iterrows()]
+        
+        return html.Div(cards, className="planner-grid"), f" / {pages} 頁", curr
     # --------------------------------------------------------------------------------
     # 4-A. 以圖搜圖 Modal 開關
     # --------------------------------------------------------------------------------    
