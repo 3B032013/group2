@@ -609,16 +609,16 @@ def register_callbacks(app):
                 dcc.Loading(id="poi-loading", type="default", color=THEME['primary'], children=[dcc.Graph(id='poi-map-graph', style={'height': '600px', 'borderRadius': '12px'})]),
 
                 # ⭐️ 新增：全域共用的 Modal (ID 必須與 toggle_detail_modal callback 一致)
-                dbc.Modal([
-                    dbc.ModalHeader(dbc.ModalTitle(id="modal-detail-title"), close_button=True),
-                    dbc.ModalBody(id="modal-detail-body"),
-                    dbc.ModalFooter([html.Div(id="map-modal-footer-action"), dbc.Button("關閉", id="btn-close-modal", className="ms-auto", n_clicks=0)]),
-                ], id="modal-detail", size="lg", is_open=False, scrollable=True, centered=True),
+                # dbc.Modal([
+                #     dbc.ModalHeader(dbc.ModalTitle(id="modal-detail-title"), close_button=True),
+                #     dbc.ModalBody(id="modal-detail-body"),
+                #     dbc.ModalFooter([html.Div(id="map-modal-footer-action"), dbc.Button("關閉", id="btn-close-modal", className="ms-auto", n_clicks=0)]),
+                # ], id="modal-detail", size="lg", is_open=False, scrollable=True, centered=True),
                 
-                # ⭐️ 新增：購物車按鈕 (ID 必須與 init_and_control_cart callback 一致)
-                html.Button([html.I(className="bi bi-calendar-week", style={'fontSize': '1.5rem'}), html.Span("", id="cart-badge", className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger")], id="btn-open-cart", className="btn btn-primary rounded-circle shadow-lg", style={'position': 'fixed', 'bottom': '30px', 'right': '30px', 'width': '60px', 'height': '60px', 'zIndex': '1000', 'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center'}),
+                # # ⭐️ 新增：購物車按鈕 (ID 必須與 init_and_control_cart callback 一致)
+                # html.Button([html.I(className="bi bi-calendar-week", style={'fontSize': '1.5rem'}), html.Span("", id="cart-badge", className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger")], id="btn-open-cart", className="btn btn-primary rounded-circle shadow-lg", style={'position': 'fixed', 'bottom': '30px', 'right': '30px', 'width': '60px', 'height': '60px', 'zIndex': '1000', 'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center'}),
                 
-                dbc.Offcanvas(id="itinerary-cart-sidebar", title="🗓️ 分配景點至行程", is_open=False, placement="end", children=[html.Div([html.Label("1. 選擇目標行程專案", className="fw-bold small mb-1"), dcc.Dropdown(id="select-target-itinerary", placeholder="--- 請選擇行程 ---", className="mb-3"), html.Hr(), html.Label("2. 待分配的項目", className="fw-bold small mb-1"), html.Div(id="cart-items-content"), dbc.Button("確認存入選定行程", id="btn-save-to-itinerary", color="primary", className="w-100 mt-4 rounded-pill"), html.Div(id="save-status-message", className="mt-2 small text-center")], className="p-2")]),
+                # dbc.Offcanvas(id="itinerary-cart-sidebar", title="🗓️ 分配景點至行程", is_open=False, placement="end", children=[html.Div([html.Label("1. 選擇目標行程專案", className="fw-bold small mb-1"), dcc.Dropdown(id="select-target-itinerary", placeholder="--- 請選擇行程 ---", className="mb-3"), html.Hr(), html.Label("2. 待分配的項目", className="fw-bold small mb-1"), html.Div(id="cart-items-content"), dbc.Button("確認存入選定行程", id="btn-save-to-itinerary", color="primary", className="w-100 mt-4 rounded-pill"), html.Div(id="save-status-message", className="mt-2 small text-center")], className="p-2")]),
             ])
 
     # --------------------------------------------------------------------------------
